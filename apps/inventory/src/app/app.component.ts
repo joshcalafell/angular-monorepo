@@ -9,5 +9,5 @@ import { ProductListComponent } from '@angular-monorepo/products';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'inventory';
+  title = 'Inventory';
 }

@@ -7,7 +7,7 @@ describe('ProductListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProductListComponent],
+      imports: [ProductListComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProductListComponent);
@@ -17,5 +17,14 @@ describe('ProductListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it(`should have as title 'Products'`, () => {
+    expect(component.title).toEqual('Products');
+  });
+
+  it('should render title', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Products');
   });
 });
