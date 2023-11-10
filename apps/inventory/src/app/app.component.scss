@@ -43,22 +43,12 @@ body {
   align-items: center;
 }
 
-button {
+.btn-primary {
   color: #333;
   border: none;
   background-color: white;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 0px;
   padding: 6px 12px;
-
-  /* &:hover {
-    color: white;
-    border: solid 2px #333;
-    background-color: #8b13b7;
-    animation: round($number: 20);
-    transition-delay: 0s;
-    transition-duration: 0.23s;
-    transition-property: padding;
-    transition-timing-function: line;
-  } */
+  text-decoration: underline;
 }
