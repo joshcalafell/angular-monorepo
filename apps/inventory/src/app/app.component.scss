@@ -43,15 +43,15 @@ body {
   align-items: center;
 }
 
-button.btn-primary {
+button {
   color: #333;
-  border: solid 2px #333;
+  border: none;
   background-color: white;
-  font-size: 18px;
-  border-radius: 5px;
+  font-size: 16px;
+  border-radius: 0px;
   padding: 6px 12px;
 
-  &:hover {
+  /* &:hover {
     color: white;
     border: solid 2px #333;
     background-color: #8b13b7;
@@ -60,5 +60,5 @@ button.btn-primary {
     transition-duration: 0.23s;
     transition-property: padding;
     transition-timing-function: line;
-  }
+  } */
 }
