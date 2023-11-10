@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./order-list.component.scss'],
 })
 export class OrderListComponent {
-  title = 'Orders';
+  title = '- Recent Orders';
   sortedByIdAsc: boolean = true;
   sortedByTotalAsc: boolean = true;
   lastSortedBy: string = 'id';

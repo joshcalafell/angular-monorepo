@@ -22,7 +22,7 @@ h2,
 }
 
 .text-muted {
-  color: #a7a1ae;
+  color: #555;
 }
 
 body {
@@ -54,7 +54,7 @@ button.btn-primary {
   &:hover {
     color: white;
     border: solid 2px #333;
-    background-color: #333;
+    background-color: #8b13b7;
     animation: round($number: 20);
     transition-delay: 0s;
     transition-duration: 0.23s;
