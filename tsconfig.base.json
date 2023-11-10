@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-monorepo/blockquote": ["libs/blockquote/ui/src/index.ts"],
       "@angular-monorepo/orders": ["libs/orders/src/index.ts"],
       "@angular-monorepo/products": ["libs/products/src/index.ts"],
       "@angular-monorepo/shared": ["libs/shared/ui/src/index.ts"]

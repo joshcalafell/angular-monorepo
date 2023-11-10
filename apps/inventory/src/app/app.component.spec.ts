@@ -19,7 +19,7 @@ describe('AppComponent', () => {
     );
   });
 
-  it(`should have as title '📦 Inventory'`, () => {
+  it(`should have as title '📦 Inventory App'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('📦 Inventory App');
@@ -33,6 +33,4 @@ describe('AppComponent', () => {
       '📦 Inventory App'
     );
   });
-
 });
-
