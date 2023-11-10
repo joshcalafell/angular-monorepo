@@ -11,7 +11,9 @@ import { CommonModule } from '@angular/common';
 export class OrderListComponent {
   title = 'Orders';
   sortedByIdAsc: boolean = true;
-  sortedByCustomerNameAsc: boolean = true;
+  sortedByTotalAsc: boolean = true;
+  lastSortedBy: string = 'id';
+  sorted: boolean = false;
   orders = [
     {
       id: 1,
@@ -50,20 +52,29 @@ export class OrderListComponent {
     },
   ];
 
+  sortedOrders = this.orders;
+
   sortOrdersById() {
+    this.sorted = true;
+    this.lastSortedBy = 'id';
     this.sortedByIdAsc = !this.sortedByIdAsc;
-    this.orders.sort((order) => {
-      return order.id * -1;
+    this.orders.sort((a, b) => {
+      return this.sortedByIdAsc ? (a.id > b.id ? 1 : -1) : a.id < b.id ? 1 : -1;
     });
   }
 
-  sortOrdersByCustomerName() {
-    if (!this.sortedByCustomerNameAsc) {
-      this.sortedByCustomerNameAsc = true;
-      return this.orders.sort();
-    } else {
-      this.sortedByCustomerNameAsc = false;
-      return this.orders.sort().reverse();
-    }
+  sortOrdersByTotal() {
+    this.sorted = true;
+    this.lastSortedBy = 'total';
+    this.sortedByTotalAsc = !this.sortedByTotalAsc;
+    this.orders.sort((a, b) => {
+      return this.sortedByTotalAsc
+        ? a.order_total > b.order_total
+          ? 1
+          : -1
+        : a.order_total < b.order_total
+        ? 1
+        : -1;
+    });
   }
 }

@@ -7,16 +7,32 @@
           <thead>
             <tr>
               <th class="sort" (click)="sortOrdersById()">
-                Order ID @if (sortedByIdAsc) {
-                {{ '↓' }}
-                } @else {
-                {{ '↑' }}
-                }
+                Order ID
+                <span
+                  [ngClass]="lastSortedBy === 'id' && sorted ? 'sort-last' : ''"
+                  >@if (sortedByIdAsc) {
+                  {{ '↓' }}
+                  } @else {
+                  {{ '↑' }}
+                  }</span
+                >
               </th>
               <th>Customer Name</th>
               <th>Order Date</th>
               <th>Order Status</th>
-              <th>Order Total</th>
+              <th class="sort" (click)="sortOrdersByTotal()">
+                Order Total
+                <span
+                  [ngClass]="
+                    lastSortedBy === 'total' && sorted ? 'sort-last' : ''
+                  "
+                  >@if (sortedByTotalAsc) {
+                  {{ '↓' }}
+                  } @else {
+                  {{ '↑' }}
+                  }</span
+                >
+              </th>
               <th>Actions</th>
             </tr>
           </thead>

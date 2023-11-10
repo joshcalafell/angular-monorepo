@@ -11,8 +11,18 @@ h1 {
   font-family: 'Anton', sans-serif;
 }
 
-h2 {
+h2,
+.footer {
   font-family: 'Inconsolata', sans-serif;
+}
+
+.footer {
+  margin: 8px;
+  text-align: center;
+}
+
+.text-muted {
+  color: #a7a1ae;
 }
 
 body {
