@@ -9,6 +9,6 @@ describe('inventory-e2e', () => {
 
     // Function helper example, see `../support/app.po.ts` file
     // getGreeting().contains(/Inventory/);
-    getGreeting().contains('📦 Genesis Candles');
+    getGreeting().contains('Genesis Candles');
   });
 });
