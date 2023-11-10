@@ -1,22 +1,20 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 
-$odd_row_color: #f0dea5;
+$odd_row_color: #ffffff;
 $header_color: #333333;
 
 table {
   font-family: "Inter", sans-serif;
   border-collapse: collapse;
   width: 100%;
-
   font-size: 14px;
   text-align: left;
-  border-radius: 10px;
   overflow: hidden;
   margin-top: 24px;
   margin-bottom: 50px;
-  margin: auto;
+  border: solid 1px #333;
 }
 
 table th {
@@ -24,33 +22,42 @@ table th {
   color: #fff;
   font-weight: bold;
   padding: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-top: 1px solid #fff;
+  border: 1px solid #333;
+  text-align: center;
 
 }
 
 table tr:nth-child(even) td {
-  background-color: lighten($odd_row_color, 15%);
+  background-color: lighten($odd_row_color, 25%);
 }
 
 table tr:hover td {
-  background-color: lighten($odd_row_color, 5%);
+  background-color: #fafcb3;
+  font-weight: 600;
 }
+
+
 
 table td {
+  text-align: center;
   background-color: #ffffff;
   padding: 10px;
-  border-bottom: 1px solid #d0d0d0;
-  font-weight: bold;
+  border: 1px solid #333;
+  font-weight:500;
 }
 
-.btn-primary {
-  background-color: #333333;
-  color: white;
+.btn {
+  color: #333;
+  border: solid 2px #333;
+  background-color: white;
   border-radius: 3px;
   padding: 6px 10px;
-  border: none;
+  border: solid 1px #333;
   width: 60px;
   margin-left: 8px;
+  font-weight: 500;
+
+  &:hover {
+    font-weight: 600px;
+  }
 }

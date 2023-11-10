@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
 
 * {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
   font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color: #a7a1ae;
+  background-color: #1f2739;
 }
 
 .wrapper {
   margin: 10px 10px;
 }
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -14,15 +26,22 @@
   align-items: center;
 }
 
-.btn-primary {
-  background-color: #333333;
-  color: white;
-
+button.btn-primary {
+  color: #333;
+  border: solid 2px #333;
+  background-color: white;
   font-size: 18px;
-  border-radius: 3px;
-  padding: 8px 16px;
-  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
 
-
+  &:hover {
+    color: white;
+    border: solid 2px #333;
+    background-color: #333;
+    animation: round($number: 20);
+    transition-delay: 0s;
+    transition-duration: 0.23s;
+    transition-property: padding;
+    transition-timing-function: line;
+  }
 }
-
