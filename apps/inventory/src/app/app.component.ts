@@ -16,5 +16,5 @@ import { BlockquoteComponent } from '@angular-monorepo/blockquote';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = '📦 Inventory App';
+  title = '📦 Genesis Candles';
 }
