@@ -1,1 +1,1 @@
-export const getGreeting = () => cy.get('div.wrapper > div.flex-row > h1');
+// export const getGreeting = () => cy.get('div.wrapper div.flex-row h1');

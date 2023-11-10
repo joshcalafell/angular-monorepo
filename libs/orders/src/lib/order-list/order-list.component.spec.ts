@@ -18,4 +18,8 @@ describe('OrderListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`title should be 'Orders'`, () => {  
+    expect(component.title).toEqual('Orders');
+  });
 });
