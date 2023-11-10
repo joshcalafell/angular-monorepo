@@ -10,5 +10,5 @@ import { OrderListComponent, OrdersComponent } from '@angular-monorepo/orders';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Inventory App';
+  title = '📦 Inventory App';
 }

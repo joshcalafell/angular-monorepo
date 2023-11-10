@@ -15,14 +15,14 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Inventory App'
+      '📦 Inventory App'
     );
   });
 
-  it(`should have as title 'Inventory'`, () => {
+  it(`should have as title '📦 Inventory'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Inventory App');
+    expect(app.title).toEqual('📦 Inventory App');
   });
 
   it('should render title', () => {
@@ -30,7 +30,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Inventory App'
+      '📦 Inventory App'
     );
   });
 
