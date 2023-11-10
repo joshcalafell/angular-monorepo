@@ -19,7 +19,7 @@ describe('OrderListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`title should be 'Orders'`, () => {  
+  it(`title should be 'Orders'`, () => {
     expect(component.title).toEqual('Orders');
   });
 });
