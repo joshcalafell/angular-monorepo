@@ -88,6 +88,53 @@
         "buildTarget": "angular-store:build",
         "staticFilePath": "dist/apps/angular-store/browser"
       }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/angular-store/.storybook",
+        "browserTarget": "angular-store:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/angular-store",
+        "configDir": "apps/angular-store/.storybook",
+        "browserTarget": "angular-store:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/angular-store/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "angular-store:build-storybook",
+        "staticFilePath": "dist/storybook/angular-store"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "angular-store:build-storybook:ci"
+        }
+      }
     }
   }
 }
