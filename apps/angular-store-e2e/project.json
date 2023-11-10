@@ -1,0 +1,33 @@
+{
+  "name": "angular-store-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/angular-store-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/angular-store-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "angular-store:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "angular-store:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "angular-store:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/angular-store-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["angular-store"]
+}
