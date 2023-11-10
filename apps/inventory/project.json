@@ -88,6 +88,53 @@
         "buildTarget": "inventory:build",
         "staticFilePath": "dist/apps/inventory/browser"
       }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/inventory/.storybook",
+        "browserTarget": "inventory:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/inventory",
+        "configDir": "apps/inventory/.storybook",
+        "browserTarget": "inventory:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/inventory/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "inventory:build-storybook",
+        "staticFilePath": "dist/storybook/inventory"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "inventory:build-storybook:ci"
+        }
+      }
     }
   }
 }

@@ -6,7 +6,7 @@ import { ProductListComponent } from '@angular-monorepo/products';
   imports: [ProductListComponent],
   selector: 'angular-monorepo-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'inventory';
