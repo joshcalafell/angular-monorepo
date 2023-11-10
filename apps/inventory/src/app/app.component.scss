@@ -3,3 +3,26 @@
 * {
   font-family: "Inter", sans-serif;
 }
+
+.wrapper {
+  margin: 10px 10px;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #333;
+  color: white;
+
+  font-size: 18px;
+  border-radius: 3px;
+  padding: 8px 16px;
+  border: none;
+
+
+}
+

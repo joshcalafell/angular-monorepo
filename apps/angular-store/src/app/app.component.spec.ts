@@ -19,9 +19,9 @@ describe('AppComponent', () => {
     );
   });
 
-  it(`should have as title 'angular-store'`, () => {
+  it(`should have as title 'Angular Store'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-store');
+    expect(app.title).toEqual('Angular Store');
   });
 });
