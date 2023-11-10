@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@300;400;500;700;800&family=Linefont:wght@100&family=Anton:wght@400;500;700&family=Poppins:wght@400;500&family=Raleway+Dots&display=swap');
 
 * {
-  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-h1 {  
+h1 {
   font-size: 36px;
   font-weight: 500;
+  font-family: 'Anton', sans-serif;
+}
+
+h2 {
+  font-family: 'Inconsolata', sans-serif;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   font-weight: 300;
   line-height: 1.42em;
   color: #a7a1ae;

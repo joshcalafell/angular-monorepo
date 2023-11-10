@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class OrderListComponent {
   title = 'Orders';
+  sortedByIdAsc: boolean = true;
+  sortedByCustomerNameAsc: boolean = true;
   orders = [
     {
       id: 1,
@@ -47,4 +49,21 @@ export class OrderListComponent {
       order_total: 1002.33,
     },
   ];
+
+  sortOrdersById() {
+    this.sortedByIdAsc = !this.sortedByIdAsc;
+    this.orders.sort((order) => {
+      return order.id * -1;
+    });
+  }
+
+  sortOrdersByCustomerName() {
+    if (!this.sortedByCustomerNameAsc) {
+      this.sortedByCustomerNameAsc = true;
+      return this.orders.sort();
+    } else {
+      this.sortedByCustomerNameAsc = false;
+      return this.orders.sort().reverse();
+    }
+  }
 }
