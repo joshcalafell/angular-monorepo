@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@300;400;500;700;800&family=Linefont:wght@100&family=Inter:wght@400;500;700&family=Poppins:wght@400;500&family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Inter:wght@300;400;500;700;800&family=Linefont:wght@100&family=Inter:wght@400;500;700&family=Poppins:wght@400;500&family=Raleway+Dots&display=swap');
 
 $odd_row_color: hsl(0, 0%, 100%);
 $header_color: #8b13b7;
@@ -65,6 +65,7 @@ table td:last-child {
   width: 70px;
   margin-left: 8px;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
 
   &:hover {
     font-weight: 700px;
