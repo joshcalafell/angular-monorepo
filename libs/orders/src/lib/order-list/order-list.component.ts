@@ -10,10 +10,14 @@ import { CommonModule } from '@angular/common';
 })
 export class OrderListComponent {
   title = '- Recent Orders';
+
   sortedByIdAsc: boolean = true;
   sortedByTotalAsc: boolean = true;
+
   lastSortedBy: string = 'id';
+
   sorted: boolean = false;
+
   orders = [
     {
       id: 1,
@@ -58,9 +62,9 @@ export class OrderListComponent {
     this.sorted = true;
     this.lastSortedBy = 'id';
     this.sortedByIdAsc = !this.sortedByIdAsc;
-    this.orders.sort((a, b) => {
-      return this.sortedByIdAsc ? (a.id > b.id ? 1 : -1) : a.id < b.id ? 1 : -1;
-    });
+    this.orders.sort((a, b) =>
+      this.sortedByIdAsc ? a.id - b.id : b.id - a.id
+    );
   }
 
   sortOrdersByTotal() {
@@ -69,12 +73,8 @@ export class OrderListComponent {
     this.sortedByTotalAsc = !this.sortedByTotalAsc;
     this.orders.sort((a, b) => {
       return this.sortedByTotalAsc
-        ? a.order_total > b.order_total
-          ? 1
-          : -1
-        : a.order_total < b.order_total
-        ? 1
-        : -1;
+        ? a.order_total - b.order_total
+        : b.order_total - a.order_total;
     });
   }
 }
