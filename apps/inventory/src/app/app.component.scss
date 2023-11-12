@@ -14,7 +14,7 @@ h2,
 }
 
 .wrapper {
-  padding: 16px;
+  padding: 8px 16px;
   margin: 0px;
   background: linear-gradient(90deg, #fdfdfd 0%, #ffffff 90%);
 }
@@ -33,7 +33,7 @@ h2,
 }
 
 .wrapper {
-  margin: 10px 10px;
+  margin: 6px 6px;
 }
 
 .flex-row {
@@ -115,7 +115,6 @@ div[class*='box'] {
   position: absolute;
   bottom: 0;
   left: 0;
-
   height: 100%;
   z-index: 1;
   opacity: 0;
