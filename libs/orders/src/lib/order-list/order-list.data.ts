@@ -34,4 +34,11 @@ export const FAKE_ORDERS_DATA = [
     order_status: 'Fulfilled',
     order_total: 1002.33,
   },
+  {
+    id: 6,
+    customer_name: 'Henry Hicks',
+    order_date: '2021-01-01',
+    order_status: 'Fulfilled',
+    order_total: 50.54,
+  },
 ];

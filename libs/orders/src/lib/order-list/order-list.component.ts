@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Order } from '../order.model';
-import { FAKE_ORDERS_DATA } from './order-list.data';
+import { Order, mockOrders } from '../order.model';
 
 @Component({
   selector: 'angular-monorepo-order-list',
@@ -20,7 +19,7 @@ export class OrderListComponent implements OnInit {
 
   sorted = false;
 
-  orders = FAKE_ORDERS_DATA;
+  orders = mockOrders();
 
   sortedOrders: Order[] = [];
 
