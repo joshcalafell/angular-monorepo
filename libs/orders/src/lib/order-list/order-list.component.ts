@@ -1,49 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { Order, mockOrders } from '../order.model';
+import { Component } from '@angular/core';
+import { mockOrders } from '../order.model';
+import { OrderListTableComponent } from '../order-list-table/order-list-table.component';
 
 @Component({
   selector: 'angular-monorepo-order-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, OrderListTableComponent],
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.scss'],
 })
-export class OrderListComponent implements OnInit {
+export class OrderListComponent {
   title = '- Recent Orders';
 
-  sortedByIdAsc = true;
-  sortedByTotalAsc = true;
-
-  lastSortedBy = 'id';
-
-  sorted = false;
-
   orders = mockOrders();
-
-  sortedOrders: Order[] = [];
-
-  ngOnInit() {
-    this.sortedOrders = this.orders;
-  }
-
-  sortOrdersById() {
-    this.sorted = true;
-    this.lastSortedBy = 'id';
-    this.sortedByIdAsc = !this.sortedByIdAsc;
-    this.orders.sort((a, b) =>
-      this.sortedByIdAsc ? a.id - b.id : b.id - a.id
-    );
-  }
-
-  sortOrdersByTotal() {
-    this.sorted = true;
-    this.lastSortedBy = 'total';
-    this.sortedByTotalAsc = !this.sortedByTotalAsc;
-    this.orders.sort((a, b) => {
-      return this.sortedByTotalAsc
-        ? a.order_total - b.order_total
-        : b.order_total - a.order_total;
-    });
-  }
 }

@@ -1,0 +1,43 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="sort" (click)="sortOrdersById()">
+        Order ID
+        <span [ngClass]="lastSortedBy === 'id' && sorted ? 'sort-last' : ''"
+          >@if (sortedByIdAsc) {
+          {{ '↓' }}
+          } @else {
+          {{ '↑' }}
+          }</span
+        >
+      </th>
+      <th>Customer Name</th>
+      <th>Order Date</th>
+      <th>Order Status</th>
+      <th class="sort" (click)="sortOrdersByTotal()">
+        Order Total
+        <span [ngClass]="lastSortedBy === 'total' && sorted ? 'sort-last' : ''"
+          >@if (sortedByTotalAsc) {
+          {{ '↓' }}
+          } @else {
+          {{ '↑' }}
+          }</span
+        >
+      </th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders; let i = index">
+      <td>{{ order.id }}</td>
+      <td>{{ order.customer_name }}</td>
+      <td>{{ order.order_date | date }}</td>
+      <td>{{ order.order_status }}</td>
+      <td>{{ order.order_total | currency }}</td>
+      <td>
+        <!-- <a [routerLink]="['/order', order.id]" class="btn btn-primary">View</a> -->
+        <button class="btn btn-primary">View</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Inter:wght@100;300;400;500;600;700;800&family=Linefont:wght@100&family=Open+Sans:wght@400;500;700&family=Anton:wght@300;400&family=Merriweather:wght@400;500&family=Quicksand:wght@300;400&family=Raleway+Dots&family=Rubik:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Inter:wght@100;300;400;500;600;700;800&family=Linefont:wght@100&family=Open+Sans:wght@400;500;700&family=Anton:wght@300;400&family=Merriweather:wght@400;500&family=Quicksand:wght@300;400&family=Raleway+Dots&family=Rubik:wght@300;500&family=Open+Sans+Condensed:300;400;500$display=swap');
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
 h1 {
   font-size: 36px;
@@ -42,6 +44,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-right: 16px;
+}
+
+.flex-row-fs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .btn-primary {
@@ -53,4 +63,95 @@ body {
   border-radius: 0px;
   padding: 6px 12px;
   text-decoration: underline;
+}
+
+/* .btn-primary {
+  padding: 16px;
+  background-color: #333;
+  color: #fae754;
+  font-weight: 500;
+  font-size: 22px;
+  margin-right: 16px;
+  color: #e0cc47;
+  //border-radius: 20px;
+}
+
+.btn-primary:hover {
+  font-weight: 500;
+} */
+
+//
+
+div[class*='box'] {
+  height: 33.33%;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.box-2 {
+  background-color: #3c3c3c;
+}
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  background-color: #ff6766;
+}
+
+/* 
+========================
+      BUTTON ONE
+========================
+*/
+.btn-one {
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 20px;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-one::after {
+  content: '';
+
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
 }

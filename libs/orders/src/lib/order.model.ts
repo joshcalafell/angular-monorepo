@@ -92,7 +92,7 @@ export class Order {
     public id: number,
     public customer_name: string,
     public order_date: Date,
-    public order_status: OrderStatus,
+    public order_status: string,
     public order_total: number
   ) {
     this.id = id;
@@ -114,12 +114,8 @@ function generateRandomName(): string {
   return names[Math.floor(Math.random() * names.length)];
 }
 
-function getRandomOrderStatus(): OrderStatus {
-  const keys = Object.keys(OrderStatus).filter(
-    (key) => !isNaN(Number(OrderStatus[Number(key)]))
-  );
-  const randomKey = keys[Math.floor(Math.random() * keys.length)];
-  return OrderStatus[randomKey as keyof typeof OrderStatus];
+function getRandomOrderStatus(): string {
+  return OrderStatus[Math.floor(Math.random() * 17) + 1];
 }
 
 function getRandomDateWithinPastYear(): Date {
@@ -137,7 +133,9 @@ const fillWithRandomData = (itemCount: number): Order[] => {
   const orders: Order[] = [];
 
   for (let i = 0; i < itemCount; i++) {
-    const randomStatus: OrderStatus = getRandomOrderStatus();
+    const randomStatus: string = getRandomOrderStatus()
+      .split(/(?=[A-Z])/)
+      .join(' ');
     const randomDateWithinPastYear = getRandomDateWithinPastYear();
     const randomName = generateRandomName();
     orders.push(
