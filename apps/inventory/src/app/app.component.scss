@@ -21,7 +21,10 @@ h2,
 
 .footer {
   margin: 16px 16px;
-  text-align: left;
+  text-align: center;
+  a {
+    color: #ff6766;
+  }
 }
 
 .text-muted {
@@ -44,7 +47,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-right: 16px;
 }
 
 .flex-row-fs {
@@ -84,7 +86,7 @@ body {
 
 div[class*='box'] {
   height: 33.33%;
-  margin-right: 16px;
+
   display: flex;
   justify-content: center;
   align-items: center;
