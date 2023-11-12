@@ -22,6 +22,7 @@ h2,
 .footer {
   margin: 16px 16px;
   text-align: center;
+  font-size: 18px;
   a {
     color: #ff6766;
   }
@@ -29,13 +30,6 @@ h2,
 
 .text-muted {
   color: #555;
-}
-
-body {
-  font-weight: 300;
-  line-height: 1.42em;
-  color: #a7a1ae;
-  background-color: #1f2739;
 }
 
 .wrapper {
@@ -91,10 +85,6 @@ div[class*='box'] {
   justify-content: center;
   align-items: center;
   font-family: 'Open Sans Condensed', sans-serif;
-}
-
-.box-2 {
-  background-color: #3c3c3c;
 }
 
 .btn {

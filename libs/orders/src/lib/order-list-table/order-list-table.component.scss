@@ -60,7 +60,6 @@ table th {
 
 table tr:hover td {
   background-color: $quaternary;
-  font-weight: 500;
 }
 
 table td {
@@ -93,7 +92,7 @@ table td:last-child {
   color: white;
 }
 
-tr:hover .btn {
+.btn:hover {
   color: white;
   background-color: #ff6766;
 }
