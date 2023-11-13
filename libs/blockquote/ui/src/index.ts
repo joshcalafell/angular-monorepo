@@ -1,1 +1,1 @@
-export * from './lib/blockquote/blockquote.component';
+export * from './lib/blockquote/blockquote.component'
