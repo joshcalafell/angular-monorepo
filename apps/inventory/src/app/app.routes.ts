@@ -1,6 +1,6 @@
-import { OrdersComponent } from '@angular-monorepo/orders'
-import { ProductsComponent } from '@angular-monorepo/products'
 import { Route } from '@angular/router'
+import { InventoryPageComponent } from './inventory-page/inventory-page.component'
+import { OrdersPageComponent } from './orders-page/orders-page.component'
 
 export const appRoutes: Route[] = [
 	{
@@ -10,10 +10,10 @@ export const appRoutes: Route[] = [
 	},
 	{
 		path: 'inventory',
-		component: ProductsComponent,
+		component: InventoryPageComponent,
 	},
 	{
 		path: 'orders',
-		component: OrdersComponent,
+		component: OrdersPageComponent,
 	},
 ]

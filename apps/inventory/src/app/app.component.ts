@@ -3,7 +3,7 @@ import { ProductListComponent } from '@angular-monorepo/products'
 import { OrderListComponent, OrdersComponent } from '@angular-monorepo/orders'
 import { BlockquoteComponent } from '@angular-monorepo/blockquote'
 import { UpperCasePipe } from '@angular/common'
-import { RouterLink } from '@angular/router'
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router'
 
 @Component({
 	standalone: true,
@@ -14,6 +14,8 @@ import { RouterLink } from '@angular/router'
 		OrderListComponent,
 		UpperCasePipe,
 		RouterLink,
+		RouterLinkActive,
+		RouterOutlet,
 	],
 	selector: 'angular-monorepo-root',
 	templateUrl: './app.component.html',

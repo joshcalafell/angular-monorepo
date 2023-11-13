@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './blockquote.component.html',
-	styleUrls: ['./blockquote.component.scss'],
+	styleUrls: ['./blockquote.component.css'],
 })
 export class BlockquoteComponent {}
