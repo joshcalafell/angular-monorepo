@@ -3,62 +3,62 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
 h1 {
-  font-size: 36px;
-  font-weight: 500;
-  font-family: 'Megrim', sans-serif;
+	font-size: 36px;
+	font-weight: 500;
+	font-family: 'Megrim', sans-serif;
 }
 
 h2,
 .footer {
-  font-family: 'Inconsolata', sans-serif;
+	font-family: 'Inconsolata', sans-serif;
 }
 
 .wrapper {
-  padding: 8px 16px;
-  margin: 0px;
-  background: linear-gradient(90deg, #fdfdfd 0%, #ffffff 90%);
+	padding: 8px 16px;
+	margin: 0px;
+	background: linear-gradient(90deg, #fdfdfd 0%, #ffffff 90%);
 }
 
 .footer {
-  margin: 16px 16px;
-  text-align: center;
-  font-size: 18px;
-  a {
-    color: #ff6766;
-  }
+	margin: 16px 16px;
+	text-align: center;
+	font-size: 18px;
+	a {
+		color: #ff6766;
+	}
 }
 
 .text-muted {
-  color: #555;
+	color: #555;
 }
 
 .wrapper {
-  margin: 6px 6px;
+	margin: 6px 6px;
 }
 
 .flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .flex-row-fs {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .btn-primary {
-  font-family: 'Inconsolata', sans-serif;
-  color: #333;
-  border: none;
-  background-color: white;
-  font-size: 18px;
-  border-radius: 0px;
-  padding: 6px 12px;
-  text-decoration: underline;
+	font-family: 'Inconsolata', sans-serif;
+	color: #333;
+	border: none;
+	background-color: white;
+	font-size: 18px;
+	border-radius: 0px;
+	padding: 6px 12px;
+	text-decoration: underline;
 }
 
 /* .btn-primary {
@@ -79,21 +79,21 @@ h2,
 //
 
 div[class*='box'] {
-  height: 33.33%;
+	height: 33.33%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Open Sans Condensed', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .btn {
-  line-height: 50px;
-  height: 50px;
-  text-align: center;
-  width: 250px;
-  cursor: pointer;
-  background-color: #ff6766;
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	width: 250px;
+	cursor: pointer;
+	background-color: #ff6766;
 }
 
 /* 
@@ -102,47 +102,47 @@ div[class*='box'] {
 ========================
 */
 .btn-one {
-  color: #fff;
-  transition: all 0.3s;
-  position: relative;
-  font-size: 20px;
+	color: #fff;
+	transition: all 0.3s;
+	position: relative;
+	font-size: 20px;
 }
 .btn-one span {
-  transition: all 0.3s;
+	transition: all 0.3s;
 }
 .btn-one::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-top-color: rgba(255, 255, 255, 0.5);
-  border-bottom-color: rgba(255, 255, 255, 0.5);
-  transform: scale(0.1, 1);
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(255, 255, 255, 0.5);
+	border-bottom-color: rgba(255, 255, 255, 0.5);
+	transform: scale(0.1, 1);
 }
 .btn-one:hover span {
-  letter-spacing: 2px;
+	letter-spacing: 2px;
 }
 .btn-one:hover::before {
-  opacity: 1;
-  transform: scale(1, 1);
+	opacity: 1;
+	transform: scale(1, 1);
 }
 .btn-one::after {
-  content: '';
+	content: '';
 
-  height: 100%;
-  z-index: 1;
-  transition: all 0.3s;
-  background-color: rgba(255, 255, 255, 0.1);
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 .btn-one:hover::after {
-  opacity: 0;
-  transform: scale(0.1, 1);
+	opacity: 0;
+	transform: scale(0.1, 1);
 }
