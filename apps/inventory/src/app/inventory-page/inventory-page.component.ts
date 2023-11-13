@@ -7,6 +7,6 @@ import { BlockquoteComponent } from '@angular-monorepo/blockquote'
 	standalone: true,
 	imports: [CommonModule, BlockquoteComponent],
 	templateUrl: './inventory-page.component.html',
-	styleUrls: ['./inventory-page.component.css'],
+	styleUrls: ['./inventory-page.component.scss'],
 })
 export class InventoryPageComponent {}

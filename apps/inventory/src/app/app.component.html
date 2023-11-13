@@ -1,4 +1,4 @@
-<div class="wrapper">
+<section class="wrapper">
 	<header class="header flex-row">
 		<div class="flex-row-fs header-left">
 			<svg width="50" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -9,13 +9,12 @@
 			</svg>
 			<h1>{{ title }}</h1>
 			<nav class="nav flex-row-fs">
-				<a href="#">About</a>
 				<a routerLink="inventory" routerLinkActive="active">Inventory</a>
 				<a routerLink="orders" routerLinkActive="active">Orders</a>
 			</nav>
 		</div>
 
-		<div class="header-right box-1">
+		<div class="header-right">
 			<button class="btn btn-primary">
 				<span>Login / Sign Up</span>
 			</button>
@@ -27,18 +26,14 @@
 	<br />
 
 	<router-outlet></router-outlet>
-</div>
 
-<br />
-<hr />
-<br />
+	<footer class="footer">
+		<span class="text-muted">
+			{{ '∆' }}ngular Monorepo with Standalone Components example by
+			<a target="_blank" href="https://www.joshuamichael.me">Joshua Calafell</a>
+			2023</span
+		>
+	</footer>
 
-<footer class="footer">
-	<span class="text-muted">
-		{{ '∆' }} Angular Monorepo with Standalone Components example by
-		<a target="_blank" href="https://www.joshuamichael.me">Joshua Calafell</a>
-		2023</span
-	>
-</footer>
-
-<br />
+	<br />
+</section>

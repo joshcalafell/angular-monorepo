@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Linefont:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter:wght@300;400;500;700;800&family=Linefont:wght@100&display=swap');
 
 $odd_row_color: hsl(0, 0%, 100%);
 
@@ -32,7 +32,7 @@ $padding-small: 8px;
 $padding-large: 24px;
 $padding-x-large: 32px;
 // fonts
-$font-family-header: 'Inconsolata', sans-serif;
+$font-family-header: 'DM+Mono', sans-serif;
 $font-family-body: 'Inter', sans-serif;
 $font-family-quote: 'Merriweather', sans-serif;
 $font-family-bold: 'Rubik', sans-serif;
@@ -41,62 +41,62 @@ $font-size-header: 36px;
 $font-size-body: 16px;
 
 table {
-  border-collapse: collapse;
-  width: 100%;
-  text-align: left;
-  overflow: hidden;
-  font-family: $font-family-body;
-  font-size: $font-size-body;
-  margin-top: $margin-large;
-  margin-bottom: $margin-x-large;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	overflow: hidden;
+	font-family: $font-family-body;
+	font-size: $font-size-body;
+	margin-top: $margin-large;
+	margin-bottom: $margin-common;
 }
 
 table th {
-  color: $med-dark;
-  font-weight: bold;
-  padding: $padding-common;
-  border: 1px solid $med-dark;
+	color: $med-dark;
+	font-weight: bold;
+	padding: $padding-common;
+	border: 1px solid $med-dark;
 }
 
 table tr:hover td {
-  background-color: $quaternary;
+	background-color: $quaternary;
 }
 
 table td {
-  background-color: #ffffff;
-  padding: 10px;
-  border: 1px solid #333;
-  font-weight: 400;
+	background-color: #ffffff;
+	padding: 10px;
+	border: 1px solid #333;
+	font-weight: 400;
 }
 
 table th:last-child,
 table td:last-child {
-  text-align: center;
+	text-align: center;
 }
 
 .sort {
-  margin-left: 4px;
-  cursor: pointer;
+	margin-left: 4px;
+	cursor: pointer;
 }
 
 .btn {
-  z-index: 1000;
-  border-radius: 3px;
-  padding: 8px 4px;
-  width: 70px;
-  margin-left: 8px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  border: none;
-  background-color: #535353;
-  color: white;
+	z-index: 1000;
+	border-radius: 3px;
+	padding: 8px 4px;
+	width: 70px;
+	margin-left: 8px;
+	font-weight: 600;
+	font-family: 'Inter', sans-serif;
+	border: none;
+	background-color: #535353;
+	color: white;
 }
 
 .btn:hover {
-  color: white;
-  background-color: #ff6766;
+	color: white;
+	background-color: #ff6766;
 }
 
 .sort-last {
-  color: #ff6766;
+	color: #ff6766;
 }
