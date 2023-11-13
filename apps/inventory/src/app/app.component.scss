@@ -11,6 +11,21 @@ h2,
 	font-family: 'Inconsolata', sans-serif;
 }
 
+nav {
+	font-family: 'Inconsolata', sans-serif;
+	font-size: 18px;
+	margin: 0px 16px;
+	a {
+		margin: 8px 16px;
+		color: black;
+		text-decoration: none;
+	}
+	a.active {
+		text-decoration: underline;
+		color: #ff6766;
+	}
+}
+
 .wrapper {
 	padding: 8px 16px;
 	margin: 0px;
@@ -49,98 +64,17 @@ h2,
 }
 
 .btn-primary {
-	font-family: 'Inconsolata', sans-serif;
-	color: #333;
-	border: none;
+	padding: 16px;
 	background-color: white;
-	font-size: 18px;
-	border-radius: 0px;
-	padding: 6px 12px;
-	text-decoration: underline;
-}
-
-/* .btn-primary {
-  padding: 16px;
-  background-color: #333;
-  color: #fae754;
-  font-weight: 500;
-  font-size: 22px;
-  margin-right: 16px;
-  color: #e0cc47;
-  //border-radius: 20px;
-}
-
-.btn-primary:hover {
-  font-weight: 500;
-} */
-
-//
-
-div[class*='box'] {
-	height: 33.33%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Open Sans Condensed', sans-serif;
-}
-
-.btn {
-	line-height: 50px;
-	height: 50px;
-	text-align: center;
-	width: 250px;
+	border: solid #333 1px;
+	border-radius: 2px;
+	font-weight: 500;
+	font-size: 22px;
+	margin-right: 16px;
+	color: #333;
 	cursor: pointer;
-	background-color: #ff6766;
-}
 
-/* 
-========================
-      BUTTON ONE
-========================
-*/
-.btn-one {
-	color: #fff;
-	transition: all 0.3s;
-	position: relative;
-	font-size: 20px;
-}
-.btn-one span {
-	transition: all 0.3s;
-}
-.btn-one::before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 100%;
-	z-index: 1;
-	opacity: 0;
-	transition: all 0.3s;
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
-	border-top-color: rgba(255, 255, 255, 0.5);
-	border-bottom-color: rgba(255, 255, 255, 0.5);
-	transform: scale(0.1, 1);
-}
-.btn-one:hover span {
-	letter-spacing: 2px;
-}
-.btn-one:hover::before {
-	opacity: 1;
-	transform: scale(1, 1);
-}
-.btn-one::after {
-	content: '';
+	font-family: 'Inconsolata', sans-serif;
 
-	height: 100%;
-	z-index: 1;
-	transition: all 0.3s;
-	background-color: rgba(255, 255, 255, 0.1);
-}
-.btn-one:hover::after {
-	opacity: 0;
-	transform: scale(0.1, 1);
+	//border-radius: 20px;
 }

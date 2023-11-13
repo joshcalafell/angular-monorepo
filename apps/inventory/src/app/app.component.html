@@ -8,10 +8,15 @@
 				<circle cx="15" cy="30" r="15" fill="#ff6766" />
 			</svg>
 			<h1>{{ title }}</h1>
+			<nav class="nav flex-row-fs">
+				<a href="#">About</a>
+				<a routerLink="inventory" routerLinkActive="active">Inventory</a>
+				<a routerLink="orders" routerLinkActive="active">Orders</a>
+			</nav>
 		</div>
 
 		<div class="header-right box-1">
-			<button class="btn btn-one">
+			<button class="btn btn-primary">
 				<span>Login / Sign Up</span>
 			</button>
 		</div>
@@ -20,8 +25,6 @@
 	<br />
 	<hr />
 	<br />
-
-	<angular-monorepo-order-list></angular-monorepo-order-list>
 
 	<h2>- Testimonials</h2>
 
