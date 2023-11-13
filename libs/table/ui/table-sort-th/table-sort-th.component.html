@@ -1,0 +1,10 @@
+<th class="sort" (click)="sortFn()">
+	{{ title }}
+	<span [ngClass]="isCurrSort ? 'sort-last' : ''"
+		>@if (sortedAsc) {
+		{{ '↑' }}
+		} @else {
+		{{ '↓' }}
+		}</span
+	>
+</th>

@@ -1,68 +1,68 @@
 table {
-  font-family: 'Inter', sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 16px;
-  text-align: left;
-  overflow: hidden;
-  margin-top: 24px;
-  margin-bottom: 50px;
-  border: solid 1px #333;
+	font-family: 'Inter', sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 16px;
+	text-align: left;
+	overflow: hidden;
+	margin-top: 24px;
+	margin-bottom: 50px;
+	border: solid 1px #333;
 }
 
 table th {
-  background-color: $header_color;
-  color: white;
-  font-weight: bold;
-  padding: 10px;
-  border: 1px solid #333;
+	background-color: white;
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+	border: 1px solid #333;
 }
 
 table tr:nth-child(even) td {
-  background-color: lighten($odd_row_color, 25%);
+	background-color: lighten(white, 25%);
 }
 
 table tr:hover td {
-  background-color: #f2f3c1;
-  font-weight: 500;
+	background-color: #f2f3c1;
+	font-weight: 500;
 }
 
 table td {
-  background-color: #ffffff;
-  padding: 10px;
-  border: 1px solid #333;
-  font-weight: 400;
+	background-color: #ffffff;
+	padding: 10px;
+	border: 1px solid #333;
+	font-weight: 400;
 }
 
 table th:last-child,
 table td:last-child {
-  text-align: center;
+	text-align: center;
 }
 
 .sort {
-  margin-left: 4px;
-  cursor: pointer;
+	margin-left: 4px;
+	cursor: pointer;
 }
 
 .btn {
-  z-index: 1000;
-  color: #333;
-  border: solid 2px #333;
-  background-color: white;
-  border-radius: 20px;
-  padding: 6px 3px;
-  border: solid 1px #333;
-  width: 70px;
-  margin-left: 8px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
+	z-index: 1000;
+	color: #333;
+	border: solid 2px #333;
+	background-color: white;
+	border-radius: 20px;
+	padding: 6px 3px;
+	border: solid 1px #333;
+	width: 70px;
+	margin-left: 8px;
+	font-weight: 600;
+	font-family: 'Inter', sans-serif;
 
-  &:hover {
-    font-weight: 700px;
-    border: solid 1px black;
-  }
+	&:hover {
+		font-weight: 700px;
+		border: solid 1px black;
+	}
 }
 
 .sort-last {
-  color: deeppink;
+	color: rgb(192, 20, 255);
 }

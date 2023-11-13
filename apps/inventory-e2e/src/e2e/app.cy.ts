@@ -1,14 +1,27 @@
-import { getGreeting } from '../support/app.po'
-
 describe('inventory-e2e', () => {
 	beforeEach(() => cy.visit('/'))
 
-	it('should display welcome message', () => {
+	it('should accept support commands', () => {
 		// Custom command example, see `../support/commands.ts` file
 		cy.login('my-email@something.com', 'myPassword')
+	})
 
+	it('should display login button', () => {
 		// Function helper example, see `../support/app.po.ts` file
-		// getGreeting().contains(/Inventory/);
-		getGreeting().contains('GENESIS CANDLES')
+		cy.get('div.wrapper header.header .header-right button').should(
+			'contain',
+			'Login / Sign Up'
+		)
+	})
+
+	it('should display svg icon', () => {
+		cy.get('div.wrapper header.header .header-left svg').should('be.visible')
+	})
+
+	it('should display "GENESIS CANDLES"', () => {
+		cy.get('div.wrapper header.header .header-left h1').should(
+			'contain',
+			'GENESIS CANDLES'
+		)
 	})
 })

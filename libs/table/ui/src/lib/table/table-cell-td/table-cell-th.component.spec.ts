@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { TableComponent } from './table.component'
+import { TableCellThComponent } from './table-cell-th.component'
 
-describe('TableComponent', () => {
-	let component: TableComponent
-	let fixture: ComponentFixture<TableComponent>
+describe('TableCellThComponent', () => {
+	let component: TableCellThComponent
+	let fixture: ComponentFixture<TableCellThComponent>
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [TableComponent],
+			imports: [TableCellThComponent],
 		}).compileComponents()
 
-		fixture = TestBed.createComponent(TableComponent)
+		fixture = TestBed.createComponent(TableCellThComponent)
 		component = fixture.componentInstance
 		fixture.detectChanges()
 	})

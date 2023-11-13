@@ -1,22 +1,19 @@
 <div class="wrapper">
-	<header>
-		<div class="flex-row">
-			<div class="flex-row-fs">
-				<svg width="50" height="100" xmlns="http://www.w3.org/2000/svg">
-					<!-- Candle body -->
-					<rect x="5" y="36" width="20" height="50" fill="#FFD700" />
-					<!-- Flame -->
-					<circle cx="15" cy="30" r="15" fill="#ff6766" />
-				</svg>
-				<h1>{{ title | uppercase }}</h1>
-			</div>
+	<header class="header flex-row">
+		<div class="flex-row-fs header-left">
+			<svg width="50" height="100" xmlns="http://www.w3.org/2000/svg">
+				<!-- Candle body -->
+				<rect x="5" y="36" width="20" height="50" fill="#FFD700" />
+				<!-- Flame -->
+				<circle cx="15" cy="30" r="15" fill="#ff6766" />
+			</svg>
+			<h1>{{ title }}</h1>
+		</div>
 
-			<!--<button class="btn-primary">Login / Sign Up</button>-->
-			<div class="box-1">
-				<div class="btn btn-one">
-					<span>Login / Sign Up</span>
-				</div>
-			</div>
+		<div class="header-right box-1">
+			<button class="btn btn-one">
+				<span>Login / Sign Up</span>
+			</button>
 		</div>
 	</header>
 
