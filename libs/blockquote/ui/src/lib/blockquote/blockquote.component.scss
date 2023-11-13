@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=DM+Mono:wght@100;300;400;500;600;700;800&family=Linefont:wght@100&family=Open+Sans:wght@400;500;700&family=Oxygen:wght@300;400&family=Merriweather:wght@400;500&family=Quicksand:wght@300;400&family=Raleway+Dots&family=Rubik:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=DM+Mono:wght@100;200;300;400;&family=Merriweather:wght@400;500&display=swap');
 
 .ui-blockquote {
 	display: block;
@@ -6,7 +6,7 @@
 	padding: 0 1em;
 	border-left: 5px solid #333;
 	font-family: 'DM Mono', monospace;
-	font-weight: 300;
+	font-weight: 200;
 	font-size: 1.2em;
 	font-style: italic;
 	line-height: 1.5;
@@ -16,6 +16,7 @@
 	content: open-quote;
 	font-size: 3em;
 	font-family: 'Merriweather', sans-serif;
+	font-weight: 400;
 	line-height: 0.1em;
 	margin-right: 0.25em;
 	vertical-align: -0.4em;
