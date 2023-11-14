@@ -5,12 +5,12 @@ h2,
 	font-family: 'DM Mono', sans-serif;
 }
 
-p {
+blockquote {
 	display: block;
 	margin: 1em 0;
 	padding: 0 1em;
-
-	font-family: 'Inter', monospace;
+	font-weight: 300;
+	font-family: 'DM Mono', monospace;
 	font-size: 20px;
 	// font-style: italic;
 	line-height: 1.5;
