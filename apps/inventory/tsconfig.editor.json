@@ -1,7 +1,7 @@
 {
-  "extends": "./tsconfig.json",
-  "include": ["src/**/*.ts", "../../libs/orders/src/lib/order.model.ts"],
-  "compilerOptions": {
-    "types": ["jest", "node"]
-  }
+	"extends": "./tsconfig.json",
+	"include": ["src/**/*.ts", "src/app/orders/order.model.ts"],
+	"compilerOptions": {
+		"types": ["jest", "node"]
+	}
 }

@@ -1,7 +1,8 @@
 /* eslint-disable @nx/enforce-module-boundaries */
-import { OrdersComponent } from '@angular-monorepo/orders'
+
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
+import { OrdersComponent } from '../orders/orders.component'
 
 @Component({
 	selector: 'angular-monorepo-orders-page',

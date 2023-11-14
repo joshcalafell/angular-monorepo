@@ -1,8 +1,10 @@
 import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { BlockquoteComponent } from '@angular-monorepo/blockquote'
-import { OrdersComponent } from '@angular-monorepo/orders'
+
 import { ButtonComponent } from '@angular-monorepo/button'
+import { OrdersComponent } from '../orders/orders.component'
+import { RouterLink } from '@angular/router'
 
 @Component({
 	selector: 'angular-monorepo-inventory-page',
@@ -12,6 +14,7 @@ import { ButtonComponent } from '@angular-monorepo/button'
 		BlockquoteComponent,
 		OrdersComponent,
 		ButtonComponent,
+		RouterLink,
 	],
 	templateUrl: './inventory-page.component.html',
 	styleUrls: ['./inventory-page.component.scss'],

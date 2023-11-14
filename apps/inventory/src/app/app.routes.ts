@@ -4,6 +4,8 @@ import { InventoryPageComponent } from './inventory-page/inventory-page.componen
 import { OrdersPageComponent } from './orders-page/orders-page.component'
 import { ProductDetailComponent } from './product-detail/product-detail.component'
 import { OrderDetailComponent } from './order-detail/order-detail.component'
+import { TestimonialsPageComponent } from './testimonials-page/testimonials-page.component'
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component'
 
 export const appRoutes: Route[] = [
 	{
@@ -30,5 +32,18 @@ export const appRoutes: Route[] = [
 	{
 		path: 'orders/:id',
 		component: OrderDetailComponent,
+	},
+	{
+		path: 'testimonials',
+		component: TestimonialsPageComponent,
+	},
+	{
+		path: '**',
+		redirectTo: '404',
+		pathMatch: 'full',
+	},
+	{
+		path: '404',
+		component: NotFoundPageComponent,
 	},
 ]
