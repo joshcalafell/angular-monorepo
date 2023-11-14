@@ -2,6 +2,26 @@
 
 *,
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: linear-gradient(
+		90deg,
+		hsl(180, 100%, 100%) 350%,
+		hsl(60, 84%, 95%) 75%
+	);
+}
+
+footer {
+	position: relative;
+	bottom: 16px;
+	font-family: 'DM Mono', sans-serif;
+	margin: 64px 0px 0px 0px;
+	text-align: left;
+	font-size: 18px;
+	a {
+		color: #ff6766;
+	}
 }
