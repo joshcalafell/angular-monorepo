@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,400&family=Inconsolata&family=Inter:wght@100;300;400;500;600;700;800&family=Linefont:wght@100&family=Megrim&family=Open+Sans:wght@400;500;700&family=Oxygen:wght@300;400&family=Poppins:wght@400;500&family=Quicksand:wght@300;400&family=Raleway+Dots&family=Rubik:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Megrim&display=swap');
 
-body {
+/* body {
 	background: linear-gradient(
 		90deg,
 		hsl(180, 100%, 100%) 350%,
 		hsl(60, 84%, 95%) 65%
 	);
 	height: 100vh;
-}
+} */
 
 h1 {
 	font-size: 36px;
@@ -36,16 +36,16 @@ nav {
 }
 
 .wrapper {
-	padding: 8px 16px;
+	padding: 16px 16px;
 	margin: 0px;
 }
 
 .footer {
-	position: fixed;
+	position: relative;
 	bottom: 16px;
 	font-family: 'DM Mono', sans-serif;
-	margin: 16px 16px;
-	text-align: center;
+	margin: 64px 0px 0px 0px;
+	text-align: left;
 	font-size: 18px;
 	a {
 		color: #ff6766;

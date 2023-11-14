@@ -79,7 +79,7 @@ table td:last-child {
 	cursor: pointer;
 }
 
-.btn {
+.btn-primary {
 	z-index: 1000;
 	border-radius: 3px;
 	padding: 8px 4px;
@@ -92,7 +92,7 @@ table td:last-child {
 	color: white;
 }
 
-.btn:hover {
+.btn-primary:hover {
 	color: white;
 	background-color: #ff6766;
 }
