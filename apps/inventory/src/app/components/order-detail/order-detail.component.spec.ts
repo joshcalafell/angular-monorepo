@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { OrderDetailComponent } from './order-detail.component'
 import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
+import { OrdersService } from '../../service/orders/orders.service'
 
 describe('OrderDetailComponent', () => {
 	let component: OrderDetailComponent
@@ -20,7 +21,10 @@ describe('OrderDetailComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			imports: [RouterTestingModule.withRoutes([]), OrderDetailComponent],
-			providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],
+			providers: [
+				{ provide: ActivatedRoute, useValue: fakeActivatedRoute },
+				{ provide: OrdersService, useValue: {} },
+			],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(OrderDetailComponent)
