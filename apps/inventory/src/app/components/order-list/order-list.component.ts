@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
-import { mockOrders } from '../../models/order.model'
+
+import { getMockOrders } from '../../service/orders/orders.service'
 import { OrderListTableComponent } from '../order-list-table/order-list-table.component'
 
 @Component({
@@ -14,5 +15,5 @@ export class OrderListComponent {
 	title = '- Recent Orders'
 
 	// TODO: Come back and find way to get from real DB
-	orders = mockOrders()
+	orders = getMockOrders()
 }

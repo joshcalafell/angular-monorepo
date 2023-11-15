@@ -1,14 +1,5 @@
-export const header = () => cy.get('div[class="wrapper"]').get('h1')
+export const header = () => cy.get('section.wrapper header.header')
 
-export const headerLeft = () =>
-	cy
-		.get('<div[class="wrapper"]>')
-		.get('<header[class="header"]')
-		.get('div[class="header-left"]')
-		.parent()
+export const headerLeft = () => header().get('hgroup.header-left')
 
-export const headerRight = () =>
-	cy
-		.get('div[class="wrapper"]')
-		.get('header[class="header"]')
-		.get('div[class="header-right"]')
+export const headerRight = () => cy.get('hgroup.header-right')

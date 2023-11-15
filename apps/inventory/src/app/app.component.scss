@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Megrim&display=swap');
 
+@mixin flex-row() {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
 html,
 body,
 app-root {
@@ -14,10 +21,16 @@ app-root {
 	height: 100vh !important;
 }
 
-h1 {
+h1.title a.title-link {
 	font-size: 36px;
-	font-weight: 400;
+	color: #333;
 	font-family: 'Megrim', sans-serif !important;
+	text-decoration: none;
+	&:active,
+	&:hover,
+	&:visited {
+		text-decoration: none;
+	}
 }
 
 h2 {
@@ -25,6 +38,14 @@ h2 {
 }
 
 nav {
+	ul {
+		margin: 0;
+		padding: 0;
+		@include flex-row();
+	}
+	ul li {
+		list-style: none;
+	}
 	font-family: 'DM Mono', sans-serif;
 	font-size: 20px;
 	margin: 0px 16px;
@@ -68,21 +89,23 @@ nav {
 	align-items: center;
 }
 
-.btn-primary {
+#btn-login {
+	position: inherit;
+	width: 110px;
 	padding: 16px;
-
-	border: solid #434343 1px;
-	border-radius: 2px;
+	background: #333333;
+	border: none;
+	border-radius: 0px;
 	font-weight: 300;
 	font-size: 16px;
-	margin-right: 16px;
-	background-color: #434343;
-	color: white;
-	cursor: pointer;
 	font-family: 'DM Mono', sans-serif;
-}
-
-.btn-primary:hover {
-	background-color: #ff6766;
-	color: white;
+	background-color: #434343;
+	color: white !important;
+	cursor: pointer;
+	&:active,
+	&:hover,
+	&:visited {
+		background-color: #ff6766;
+		color: white;
+	}
 }
