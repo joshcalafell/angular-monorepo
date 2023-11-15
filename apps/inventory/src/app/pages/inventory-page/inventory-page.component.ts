@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common'
 import { BlockquoteComponent } from '@angular-monorepo/blockquote'
 
 import { ButtonComponent } from '@angular-monorepo/button'
-import { OrdersComponent } from '../orders/orders.component'
+import { OrdersComponent } from '../../components/orders/orders.component'
 import { RouterLink } from '@angular/router'
 
 @Component({

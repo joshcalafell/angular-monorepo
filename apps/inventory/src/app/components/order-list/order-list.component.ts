@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
-import { mockOrders } from '../orders/order.model'
+import { mockOrders } from '../../models/order.model'
 import { OrderListTableComponent } from '../order-list-table/order-list-table.component'
 
 @Component({

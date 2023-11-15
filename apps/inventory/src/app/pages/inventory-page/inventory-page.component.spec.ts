@@ -1,13 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { ActivatedRoute } from '@angular/router'
+import { InventoryPageComponent } from './inventory-page.component'
+import { BlockquoteComponent } from '@angular-monorepo/blockquote'
+import { OrdersComponent } from '../../components/orders/orders.component'
+import { ButtonComponent } from '@angular-monorepo/button'
+import { ActivatedRoute, RouterLink } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
-import { OrderListTableComponent } from '../order-list-table/order-list-table.component'
-import { OrdersComponent } from '../orders/orders.component'
-import { OrdersPageComponent } from './orders-page.component'
 
-describe('OrdersPageComponent', () => {
-	let component: OrdersPageComponent
-	let fixture: ComponentFixture<OrdersPageComponent>
+describe('InventoryPageComponent', () => {
+	let component: InventoryPageComponent
+	let fixture: ComponentFixture<InventoryPageComponent>
 
 	const fakeActivatedRoute = {
 		snapshot: {
@@ -23,14 +24,16 @@ describe('OrdersPageComponent', () => {
 		await TestBed.configureTestingModule({
 			imports: [
 				RouterTestingModule.withRoutes([]),
-				OrdersPageComponent,
+				InventoryPageComponent,
+				BlockquoteComponent,
 				OrdersComponent,
-				OrderListTableComponent,
+				ButtonComponent,
+				RouterLink,
 			],
 			providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],
 		}).compileComponents()
 
-		fixture = TestBed.createComponent(OrdersPageComponent)
+		fixture = TestBed.createComponent(InventoryPageComponent)
 		component = fixture.componentInstance
 		fixture.detectChanges()
 	})
