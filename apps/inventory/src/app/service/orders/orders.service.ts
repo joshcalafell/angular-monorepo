@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Order, OrderStatus } from '../../models/order.model'
+import { Order, OrderStatus } from './order.model'
 import { randomFirstNames, randomLastNames } from './orders.data'
 
 @Injectable({
@@ -47,6 +47,7 @@ export class OrdersService {
 			orders.push(
 				new Order(
 					i + (i + 1) * 100,
+					'321645987',
 					randomName,
 					randomDateWithinPastYear,
 					randomStatus,

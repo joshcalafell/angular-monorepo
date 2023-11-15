@@ -11,7 +11,18 @@ p {
 	padding: 0 1em;
 }
 
-.row {
+.card-header {
+	margin-left: 32px;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-row {
 	display: flex;
 	flex-wrap: wrap;
 	margin-right: -15px;
@@ -47,7 +58,6 @@ p {
 	p {
 		font-family: 'Inter', monospace;
 		font-size: 20px;
-		// font-style: italic;
 		line-height: 1.5;
 		margin-left: 8px;
 		padding-left: 0;

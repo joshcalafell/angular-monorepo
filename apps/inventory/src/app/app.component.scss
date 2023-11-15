@@ -33,6 +33,7 @@ app-root {
 }
 
 a.title-link {
+	margin: 0 16px;
 	font-size: 36px;
 	color: #333;
 	font-family: 'Megrim', sans-serif !important;
@@ -52,7 +53,7 @@ nav.nav {
 	@include flex-row-fs();
 }
 ul {
-	margin: 0;
+	margin: 0 16px;
 	padding: 0;
 	@include flex-row();
 	li {
@@ -74,7 +75,7 @@ ul {
 }
 
 .wrapper {
-	padding: 16px 16px;
+	padding: 16px 32px;
 	margin: 0px;
 	height: 100vh;
 }

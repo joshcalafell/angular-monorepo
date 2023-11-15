@@ -8,6 +8,6 @@ import { OrderListComponent } from '../order-list/order-list.component'
 	standalone: true,
 	imports: [CommonModule, OrderListComponent, OrderListTableComponent],
 	templateUrl: './orders.component.html',
-	styleUrls: ['./orders.component.css'],
+	styleUrls: ['./orders.component.scss'],
 })
 export class OrdersComponent {}

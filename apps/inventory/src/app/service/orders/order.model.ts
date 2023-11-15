@@ -21,6 +21,7 @@ export enum OrderStatus {
 export class Order {
 	constructor(
 		public id: number,
+		public sku: string,
 		public customer_name: string,
 		public order_date: Date,
 		public order_status: string,

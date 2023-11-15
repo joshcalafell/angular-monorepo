@@ -1,6 +1,6 @@
 {
 	"extends": "./tsconfig.json",
-	"include": ["src/**/*.ts", "src/app/models/order.model.ts"],
+	"include": ["src/**/*.ts", "src/app/service/orders/order.model.ts"],
 	"compilerOptions": {
 		"types": ["jest", "node"]
 	}
