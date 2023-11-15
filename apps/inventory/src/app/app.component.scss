@@ -7,6 +7,21 @@
 	align-items: center;
 }
 
+@mixin flex-row-fs() {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.flex-row {
+	@include flex-row();
+}
+
+.flex-row-fs {
+	@include flex-row-fs();
+}
+
 html,
 body,
 app-root {
@@ -17,11 +32,7 @@ app-root {
 	);
 }
 
-.wrapper {
-	height: 100vh !important;
-}
-
-h1.title a.title-link {
+a.title-link {
 	font-size: 36px;
 	color: #333;
 	font-family: 'Megrim', sans-serif !important;
@@ -37,20 +48,21 @@ h2 {
 	font-family: 'DM Mono', sans-serif;
 }
 
-nav {
-	ul {
-		margin: 0;
-		padding: 0;
-		@include flex-row();
-	}
-	ul li {
+nav.nav {
+	@include flex-row-fs();
+}
+ul {
+	margin: 0;
+	padding: 0;
+	@include flex-row();
+	li {
 		list-style: none;
 	}
-	font-family: 'DM Mono', sans-serif;
-	font-size: 20px;
-	margin: 0px 16px;
-	font-weight: 400;
 	a {
+		font-family: 'DM Mono', sans-serif;
+		font-size: 20px;
+		margin: 0px 16px;
+		font-weight: 400;
 		margin: 8px 16px;
 		color: black;
 		text-decoration: none;
@@ -71,28 +83,9 @@ nav {
 	color: #555;
 }
 
-.wrapper {
-	margin: 6px 6px;
-}
-
-.flex-row {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.flex-row-fs {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-}
-
 #btn-login {
 	position: inherit;
-	width: 110px;
-	padding: 16px;
+	padding: 16px 32px;
 	background: #333333;
 	border: none;
 	border-radius: 0px;
