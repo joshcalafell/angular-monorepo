@@ -3,7 +3,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 
 import { BlockquoteComponent } from '@angular-monorepo/blockquote'
-import { OrdersComponent } from '../../components/orders/orders.component'
+
 import { InventoryPageComponent } from './inventory-page.component'
 
 describe('InventoryPageComponent', () => {
@@ -26,7 +26,6 @@ describe('InventoryPageComponent', () => {
 				RouterTestingModule.withRoutes([]),
 				InventoryPageComponent,
 				BlockquoteComponent,
-				OrdersComponent,
 				RouterLink,
 			],
 			providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],
