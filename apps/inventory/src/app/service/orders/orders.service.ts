@@ -1,12 +1,20 @@
 import { Injectable } from '@angular/core'
 import { Order, OrderStatus } from './order.model'
 import { randomFirstNames, randomLastNames } from './orders.data'
+import { Observable } from 'rxjs'
 
 @Injectable({
 	providedIn: 'root',
 })
 export class OrdersService {
-	constructor() {}
+	$orders: Observable<Order[]> = new Observable<Order[]>()
+
+	constructor() {
+		const orders = this.fillWithRandomData(10)
+		this.$orders = new Observable<Order[]>((observer) => {
+			observer.next(orders)
+		})
+	}
 
 	generateRandomName(): string {
 		const names = []
@@ -57,14 +65,4 @@ export class OrdersService {
 		}
 		return orders
 	}
-
-	mockOrders = () => {
-		const orders: Order[] = this.fillWithRandomData(10)
-		return orders
-	}
-}
-
-export const getMockOrders = () => {
-	const orders: Order[] = new OrdersService().mockOrders()
-	return orders
 }

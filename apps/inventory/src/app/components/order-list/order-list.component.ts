@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
-import { getMockOrders } from '../../service/orders/orders.service'
+import { Order } from '../../service/orders/order.model'
+import { OrdersService } from '../../service/orders/orders.service'
 import { OrderListTableComponent } from '../order-list-table/order-list-table.component'
 
 @Component({
@@ -11,9 +12,15 @@ import { OrderListTableComponent } from '../order-list-table/order-list-table.co
 	templateUrl: './order-list.component.html',
 	styleUrls: ['./order-list.component.scss'],
 })
-export class OrderListComponent {
+export class OrderListComponent implements OnInit {
 	title = '- Recent Orders'
+	orders: Order[] = []
 
+	constructor(private orderService: OrdersService) {}
 	// TODO: Come back and find way to get from real DB
-	orders = getMockOrders()
+	ngOnInit(): void {
+		this.orderService.$orders.subscribe((orders) => {
+			this.orders = orders
+		})
+	}
 }

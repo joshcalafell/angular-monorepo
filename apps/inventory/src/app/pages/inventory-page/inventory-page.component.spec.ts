@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { InventoryPageComponent } from './inventory-page.component'
-import { BlockquoteComponent } from '@angular-monorepo/blockquote'
-import { OrdersComponent } from '../../components/orders/orders.component'
-import { ButtonComponent } from '@angular-monorepo/button'
 import { ActivatedRoute, RouterLink } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
+
+import { BlockquoteComponent } from '@angular-monorepo/blockquote'
+import { OrdersComponent } from '../../components/orders/orders.component'
+import { InventoryPageComponent } from './inventory-page.component'
 
 describe('InventoryPageComponent', () => {
 	let component: InventoryPageComponent
@@ -27,7 +27,6 @@ describe('InventoryPageComponent', () => {
 				InventoryPageComponent,
 				BlockquoteComponent,
 				OrdersComponent,
-				ButtonComponent,
 				RouterLink,
 			],
 			providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],
