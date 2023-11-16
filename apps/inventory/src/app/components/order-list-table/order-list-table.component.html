@@ -1,30 +1,29 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th class="sort" (click)="sortOrdersById()">
-				Order ID
-				<span [ngClass]="lastSortedBy === 'id' && sorted ? 'sort-last' : ''"
-					>@if (sortedByIdAsc) {
+			<th
+				*ngFor="let column of displayedColumns"
+				class="sort"
+				(click)="
+					column.sortFn();
+					column.sortDirections.reverse();
+					lastSortedBy = column.column_key;
+					sorted = true
+				"
+			>
+				{{ column.title }}
+				<span
+					*ngIf="column.sortable"
+					[ngClass]="
+						lastSortedBy === column.column_key && sorted ? 'sort-last' : ''
+					"
+					>@if (column.sortDirections[0] === 'asc') {
 					{{ '↓' }}
 					} @else {
 					{{ '↑' }}
 					}</span
 				>
 			</th>
-			<th>Customer Name</th>
-			<th>Order Date</th>
-			<th>Order Status</th>
-			<th class="sort" (click)="sortOrdersByTotal()">
-				Order Total
-				<span [ngClass]="lastSortedBy === 'total' && sorted ? 'sort-last' : ''"
-					>@if (sortedByTotalAsc) {
-					{{ '↓' }}
-					} @else {
-					{{ '↑' }}
-					}</span
-				>
-			</th>
-			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
