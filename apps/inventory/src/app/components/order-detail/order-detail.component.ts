@@ -3,11 +3,12 @@ import { Component, OnInit, inject } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { Order } from '../../service/orders/order.model'
 import { OrdersService } from '../../service/orders/orders.service'
+import { HeaderComponent } from '../header/header.component'
 
 @Component({
 	selector: 'angular-monorepo-order-detail',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, HeaderComponent],
 	templateUrl: './order-detail.component.html',
 	styleUrls: ['./order-detail.component.scss'],
 })
