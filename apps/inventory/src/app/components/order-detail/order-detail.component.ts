@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component, OnInit, inject } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { Order } from '../../service/orders/order.model'
 import { OrdersService } from '../../service/orders/orders.service'
 
@@ -14,17 +14,16 @@ import { OrdersService } from '../../service/orders/orders.service'
 export class OrderDetailComponent implements OnInit {
 	private orderService = inject(OrdersService)
 	private activatedRoute = inject(ActivatedRoute)
-
+	private router = inject(Router)
 	order: Order = {} as Order
-
-	id = this.activatedRoute.snapshot.params['id']
 
 	ngOnInit(): void {
 		this.orderService.$orders
 			.subscribe((orders) => {
-				const found = orders.find((order) => order.id == this.id)
+				const id = this.activatedRoute.snapshot.params['id']
+				const found = orders.find((order) => order.id == id)
 				if (found) this.order = found
-				else alert('Order not found')
+				else this.router.navigate(['/404'])
 			})
 			.unsubscribe()
 	}

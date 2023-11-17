@@ -52,13 +52,16 @@ h2 {
 nav.nav {
 	@include flex-row-fs();
 }
+
 ul {
+	@include flex-row();
 	margin: 0 16px;
 	padding: 0;
-	@include flex-row();
+
 	li {
 		list-style: none;
 	}
+
 	a {
 		font-family: 'DM Mono', sans-serif;
 		font-size: 20px;
@@ -68,6 +71,7 @@ ul {
 		color: black;
 		text-decoration: none;
 	}
+
 	a.active {
 		text-decoration: none;
 		color: #ff6766;
@@ -96,10 +100,15 @@ ul {
 	background-color: #434343;
 	color: white !important;
 	cursor: pointer;
+
 	&:active,
 	&:hover,
 	&:visited {
 		background-color: #ff6766;
 		color: white;
 	}
+}
+
+footer {
+	text-align: center;
 }
