@@ -1,9 +1,9 @@
 import { TableSortComponent } from '@angular-monorepo/table'
 import { CommonModule } from '@angular/common'
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, inject } from '@angular/core'
+import { RouterLink } from '@angular/router'
 import { Order } from '../../service/orders/order.model'
 import { OrdersService } from '../../service/orders/orders.service'
-import { RouterLink } from '@angular/router'
 
 export type DisplayColumns =
 	| 'id'
@@ -30,6 +30,7 @@ export interface Column {
 	styleUrls: ['./orders-page.component.scss'],
 })
 export class OrdersPageComponent implements OnInit {
+	private orderService = inject(OrdersService)
 	title = '- Recent Orders'
 	orders: Order[] = []
 
@@ -90,8 +91,6 @@ export class OrdersPageComponent implements OnInit {
 			sortFn: () => {},
 		},
 	]
-
-	constructor(private orderService: OrdersService) {}
 
 	// TODO: Come back and find way to get from real DB
 	ngOnInit(): void {
