@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common'
-import { Component, inject } from '@angular/core'
-import { Order } from '../../service/orders/order.model'
+import { Component, OnInit, inject } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
+import { Order } from '../../service/orders/order.model'
 import { OrdersService } from '../../service/orders/orders.service'
 
 @Component({
@@ -11,17 +11,21 @@ import { OrdersService } from '../../service/orders/orders.service'
 	templateUrl: './order-detail.component.html',
 	styleUrls: ['./order-detail.component.scss'],
 })
-export class OrderDetailComponent {
+export class OrderDetailComponent implements OnInit {
 	private orderService = inject(OrdersService)
 	private activatedRoute = inject(ActivatedRoute)
+
 	order: Order = {} as Order
-	constructor() {
-		this.orderService.$orders.subscribe((orders) => {
-			const id = this.activatedRoute.snapshot.params['id']
-			const found = orders.find((order) => order.id === id)
-			if (found) {
-				this.order = found
-			}
-		})
+
+	id = this.activatedRoute.snapshot.params['id']
+
+	ngOnInit(): void {
+		this.orderService.$orders
+			.subscribe((orders) => {
+				const found = orders.find((order) => order.id == this.id)
+				if (found) this.order = found
+				else alert('Order not found')
+			})
+			.unsubscribe()
 	}
 }

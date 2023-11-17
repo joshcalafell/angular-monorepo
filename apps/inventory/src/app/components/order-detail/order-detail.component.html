@@ -11,19 +11,24 @@
 				<div class="card">
 					<div class="flex-row-between">
 						<div class="flex-col-fs">
-							<p><strong>Cost: $10</strong></p>
-							<p>Weight: <strong>200g</strong></p>
-							<p>Dimensions: <strong>5x5x10 cm</strong></p>
+							<p>
+								Status: <strong>{{ order.order_status }}</strong>
+							</p>
+							<p>
+								Date Updated:
+								<strong>{{ order.order_date | date : 'mediumDate' }} </strong>
+							</p>
+							<p>
+								Customer Name: <strong>{{ order.customer_name }} </strong>
+							</p>
 						</div>
 						<div class="flex-col-fs">
-							<p>Wax Type: <strong>Paraffin, Soy</strong></p>
-							<p>Wick: <strong>Cotton</strong></p>
 							<p>
-								Date Added:
-								<strong
-									>{{ '2023-01-01' | date : 'longDate' }}
-									{{ '2023-01-01' | date : 'shortTime' }}</strong
-								>
+								SKU: <strong>{{ order.sku }}</strong>
+							</p>
+							<p>
+								Order Total:
+								<strong>{{ order.order_total | currency }}</strong>
 							</p>
 						</div>
 					</div>
