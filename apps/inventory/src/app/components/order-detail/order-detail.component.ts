@@ -18,10 +18,10 @@ export class OrderDetailComponent implements OnInit {
 	order: Order = {} as Order
 
 	ngOnInit(): void {
+		const id = this.activatedRoute.snapshot.params['id']
 		this.orderService.$orders
-			.subscribe((orders) => {
-				const id = this.activatedRoute.snapshot.params['id']
-				const found = orders.find((order) => order.id == id)
+			.subscribe((orders: Order[]) => {
+				const found = orders?.length && orders.find((order) => order.id == id)
 				if (found) this.order = found
 				else this.router.navigate(['/404'])
 			})
