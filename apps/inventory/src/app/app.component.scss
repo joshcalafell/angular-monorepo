@@ -18,54 +18,11 @@ app-root {
 	);
 }
 
-a.title-link {
-	margin: 0 16px;
-	font-size: 36px;
-	color: #333;
-	font-family: 'Megrim', sans-serif !important;
-	text-decoration: none;
-	&:active,
-	&:hover,
-	&:visited {
+h1 {
+	font-size: 32px;
+	text-align: center;
+	font-family: 'Megrim', cursive;
+	a {
 		text-decoration: none;
 	}
-}
-
-h2 {
-	font-family: 'DM Mono', sans-serif;
-}
-
-.wrapper {
-	padding: 16px 32px;
-	margin: 0px;
-	height: 100vh;
-}
-
-.text-muted {
-	color: #555;
-}
-
-#btn-login {
-	position: inherit;
-	padding: 16px 32px;
-	background: #333333;
-	border: none;
-	border-radius: 0px;
-	font-weight: 300;
-	font-size: 16px;
-	font-family: 'DM Mono', sans-serif;
-	background-color: #434343;
-	color: white !important;
-	cursor: pointer;
-
-	&:active,
-	&:hover,
-	&:visited {
-		background-color: #ff6766;
-		color: white;
-	}
-}
-
-footer {
-	text-align: center;
 }

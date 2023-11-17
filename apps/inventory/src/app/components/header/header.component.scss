@@ -3,3 +3,16 @@
 .section-title {
 	font-family: 'DM Mono', monospace;
 }
+
+h2 {
+	margin: 0 0px;
+	font-size: 24px;
+	color: #333;
+	font-family: 'Inter', sans-serif;
+	text-decoration: none;
+	&:active,
+	&:hover,
+	&:visited {
+		text-decoration: none;
+	}
+}

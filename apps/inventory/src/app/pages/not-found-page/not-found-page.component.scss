@@ -1,6 +1,17 @@
+@import '../../../styles/mixin';
+
 h2 {
-	padding-top: 48px;
-	font-size: 48px;
+	font-size: 64px;
 	text-align: center;
-	font-family: 'DM Mono';
+	margin: 128px 16px 32px 16px;
+	padding-top: $padding-x-large;
+	font-family: $font-family-header;
+}
+
+button {
+	@include flex-row();
+}
+
+.flex-column {
+	@include flex-column();
 }

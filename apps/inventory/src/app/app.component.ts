@@ -3,6 +3,7 @@ import { Component } from '@angular/core'
 import { UpperCasePipe } from '@angular/common'
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router'
 import { NavComponent } from './components/nav/nav.component'
+import { FooterComponent } from './components/footer/footer.component'
 
 @Component({
 	standalone: true,
@@ -12,6 +13,7 @@ import { NavComponent } from './components/nav/nav.component'
 		RouterLinkActive,
 		RouterOutlet,
 		NavComponent,
+		FooterComponent,
 	],
 	selector: 'angular-monorepo-root',
 	templateUrl: './app.component.html',
