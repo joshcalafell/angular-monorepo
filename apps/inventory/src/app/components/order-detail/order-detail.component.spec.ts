@@ -3,6 +3,7 @@ import { OrderDetailComponent } from './order-detail.component'
 import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 import { OrdersService } from '../../service/orders/orders.service'
+import { of } from 'rxjs'
 
 describe('OrderDetailComponent', () => {
 	let component: OrderDetailComponent
@@ -18,12 +19,14 @@ describe('OrderDetailComponent', () => {
 		},
 	} as ActivatedRoute
 
+	const mockService = { $orders: of([]) }
+
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			imports: [RouterTestingModule.withRoutes([]), OrderDetailComponent],
 			providers: [
 				{ provide: ActivatedRoute, useValue: fakeActivatedRoute },
-				{ provide: OrdersService, useValue: {} },
+				{ provide: OrdersService, useValue: mockService },
 			],
 		}).compileComponents()
 
