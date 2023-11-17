@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'
 import { Component, OnInit } from '@angular/core'
 import { Order } from '../../service/orders/order.model'
 import { OrdersService } from '../../service/orders/orders.service'
+import { RouterLink } from '@angular/router'
 
 export type DisplayColumns =
 	| 'id'
@@ -24,7 +25,7 @@ export interface Column {
 @Component({
 	selector: 'angular-monorepo-orders-page',
 	standalone: true,
-	imports: [CommonModule, TableSortComponent],
+	imports: [CommonModule, TableSortComponent, RouterLink],
 	templateUrl: './orders-page.component.html',
 	styleUrls: ['./orders-page.component.scss'],
 })

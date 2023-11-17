@@ -29,6 +29,8 @@ export class Order {
 		public order_total: number
 	) {
 		this.id = id
+		this.sku = sku
+		this.customer_name = customer_name
 		this.order_date = order_date
 		this.order_status = order_status
 		this.order_total = order_total
@@ -44,7 +46,7 @@ export class Order {
 })
 export class TableSortComponent {
 	@Input() displayedColumns: Column[] = []
-	@Input() columns: Order[] = []
+	@Input() columns: unknown[] = []
 
 	sorted: boolean = false
 	sort: string = ''

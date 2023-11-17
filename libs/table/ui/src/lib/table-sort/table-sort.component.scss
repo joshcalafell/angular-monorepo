@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:wght@300;400;500;700;800&family=Linefont:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Linefont:wght@100&display=swap');
 
 $odd_row_color: hsl(0, 0%, 100%);
 
@@ -77,24 +77,6 @@ table td:last-child {
 .sort {
 	margin-left: 4px;
 	cursor: pointer;
-}
-
-.btn-primary {
-	z-index: 1000;
-	border-radius: 3px;
-	padding: 8px 4px;
-	width: 70px;
-	margin-left: 8px;
-	font-weight: 600;
-	font-family: 'Inter', sans-serif;
-	border: none;
-	background-color: #535353;
-	color: white;
-}
-
-.btn-primary:hover {
-	color: white;
-	background-color: #ff6766;
 }
 
 .sort-last {

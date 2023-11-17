@@ -27,18 +27,6 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let order of columns; let i = index">
-			<td>{{ order.id }}</td>
-			<td>{{ order.customer_name }}</td>
-			<td>{{ order.order_date | date }}</td>
-			<td>{{ order.order_status }}</td>
-			<td>{{ order.order_total | currency }}</td>
-			<td>
-				<!-- <a [routerLink]="['/order', order.id]" class="btn btn-primary">View</a> -->
-				<button class="btn btn-primary" [routerLink]="['/orders', order.id]">
-					View
-				</button>
-			</td>
-		</tr>
+		<ng-content> </ng-content>
 	</tbody>
 </table>
