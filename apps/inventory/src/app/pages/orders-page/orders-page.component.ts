@@ -42,10 +42,6 @@ export class OrdersPageComponent implements OnInit {
 
 	lastSortedBy = 'id'
 
-	sorted = false
-
-	sortedOrders: Order[] = []
-
 	displayedColumns: Column[] = [
 		{
 			title: 'Order ID',
@@ -104,14 +100,12 @@ export class OrdersPageComponent implements OnInit {
 	}
 
 	sortOrdersById() {
-		this.sorted = true
 		this.lastSortedBy = 'id'
 		this.sortedByIdAsc = !this.sortedByIdAsc
 		this.orders.sort((a, b) => (this.sortedByIdAsc ? a.id - b.id : b.id - a.id))
 	}
 
 	sortOrdersByName() {
-		this.sorted = true
 		this.lastSortedBy = 'customer_name'
 		this.sortedByNameAsc = !this.sortedByNameAsc
 		this.orders.sort((a, b) => {
@@ -126,7 +120,6 @@ export class OrdersPageComponent implements OnInit {
 	}
 
 	sortOrdersByDate() {
-		this.sorted = true
 		this.lastSortedBy = 'order_date'
 		this.sortedByDateAsc = !this.sortedByDateAsc
 		this.orders.sort((a, b) => {
@@ -137,7 +130,6 @@ export class OrdersPageComponent implements OnInit {
 	}
 
 	sortOrdersByStatus(): void {
-		this.sorted = true
 		this.lastSortedBy = 'order_status'
 		this.sortedByStatus = !this.sortedByStatus
 		this.orders.sort((a, b): number => {
@@ -148,7 +140,6 @@ export class OrdersPageComponent implements OnInit {
 	}
 
 	sortOrdersByTotal() {
-		this.sorted = true
 		this.lastSortedBy = 'total'
 		this.sortedByTotalAsc = !this.sortedByTotalAsc
 		this.orders.sort((a, b) => {
