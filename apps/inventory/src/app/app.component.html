@@ -7,7 +7,6 @@
 				<!-- Flame -->
 				<circle cx="15" cy="30" r="15" fill="#ff6766" />
 			</svg>
-
 			<h1 class="title">
 				<a
 					class="title-link"
@@ -18,26 +17,8 @@
 					>{{ title }}</a
 				>
 			</h1>
-
-			<nav class="nav">
-				<ul>
-					<li>
-						<a routerLink="testimonials" routerLinkActive="active"
-							>Testimonials</a
-						>
-					</li>
-
-					<li>
-						<a routerLink="inventory" routerLinkActive="active">Inventory</a>
-					</li>
-
-					<li>
-						<a routerLink="orders" routerLinkActive="active">Orders</a>
-					</li>
-				</ul>
-			</nav>
+			<angular-monorepo-nav></angular-monorepo-nav>
 		</hgroup>
-
 		<hgroup class="header-right">
 			<button class="btn btn-primary" id="btn-login">
 				<span>Login / Sign Up</span>
@@ -53,7 +34,7 @@
 
 	<footer class="footer">
 		<p>
-			{{ '∆' }}ngular Monorepo with Standalone Components example by
+			{{ '∆' }} Angular 17 / Nx Monorepo example by
 			<a target="_blank" href="https://www.joshuamichael.me">Joshua Calafell</a>
 			2023
 		</p>

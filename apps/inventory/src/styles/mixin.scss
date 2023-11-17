@@ -1,1 +1,15 @@
 @import './variables.scss';
+
+@mixin flex-row() {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flex-row-fs() {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
