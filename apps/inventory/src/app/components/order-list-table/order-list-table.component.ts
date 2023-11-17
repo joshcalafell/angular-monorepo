@@ -98,7 +98,9 @@ export class OrderListTableComponent implements OnInit, OnDestroy {
 		this.sorted = true
 		this.lastSortedBy = 'id'
 		this.sortedByIdAsc = !this.sortedByIdAsc
-		this.orders.sort((a, b) => (this.sortedByIdAsc ? a.id - b.id : b.id - a.id))
+		this.orders.sort((a, b) =>
+			this.sortedByIdAsc ? a.id.localeCompare(b.id) : b.id.localeCompare(a.id)
+		)
 	}
 
 	sortOrdersByName() {

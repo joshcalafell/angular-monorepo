@@ -54,12 +54,20 @@ export class OrdersService {
 			const randomName = this.generateRandomName()
 			orders.push(
 				new Order(
-					'' + i + (i + 1) * 100,
-					'321645987',
+					new Array(8)
+						.fill(null)
+						.map(() => Math.round(Math.random() * 9))
+						.join('')
+						.toString(),
+					new Array(8)
+						.fill(null)
+						.map(() => Math.round(Math.random() * 9))
+						.join('')
+						.toString(),
 					randomName,
 					randomDateWithinPastYear,
 					randomStatus,
-					Math.floor(Math.random() * 100)
+					Math.floor(Math.random() * 100 + 30)
 				)
 			)
 		}

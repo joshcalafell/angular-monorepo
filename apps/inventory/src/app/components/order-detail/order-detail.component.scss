@@ -1,3 +1,5 @@
+@import '../../../styles/mixin';
+
 h2,
 .footer {
 	font-family: 'DM Mono', sans-serif;
@@ -7,6 +9,7 @@ p {
 	display: block;
 	margin: 1em 0;
 	padding: 0 1em;
+	font-family: 'Inter', monospace;
 }
 
 .card-header {
@@ -46,21 +49,19 @@ p {
 	display: flex;
 	background-color: #fff;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	padding: 16px;
+	padding: 8px;
 	border-radius: 8px;
 	text-align: left;
 	font-family: 'Inter', sans-serif;
-	h2 {
-		margin-bottom: 32px;
-	}
-	p {
-		font-family: 'Inter', monospace;
-		font-size: 20px;
-		line-height: 1.5;
-		margin-left: 8px;
-		padding-left: 0;
-		margin-top: 8px;
-	}
+}
+
+p {
+	font-family: 'Inter', monospace !important;
+	font-size: 20px;
+	line-height: 1.5;
+	margin-left: 8px;
+	padding-left: 0;
+	margin-top: 8px;
 }
 
 img {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Mono:wght@300;400&family=DM+Mono:wght@100;200;300;400;&display=swap');
+@import '../../../styles/mixin';
 
 h2,
 .footer {
@@ -7,6 +7,7 @@ h2,
 
 h2 {
 	margin-left: 16px;
+	font-size: $font-size-header;
 }
 
 .row {
@@ -35,7 +36,6 @@ h2 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
-	padding: 20px;
 }
 
 .card {

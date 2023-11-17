@@ -22,11 +22,6 @@ export interface Column {
 	sortFn: () => void
 }
 
-export interface TableHeaderKeys {
-	key: string
-	type: string
-}
-
 @Component({
 	selector: 'angular-monorepo-orders-page',
 	standalone: true,
@@ -37,7 +32,7 @@ export interface TableHeaderKeys {
 export class OrdersPageComponent implements OnInit {
 	private orderService = inject(OrdersService)
 	title = '- Recent Orders'
-	data: Order[] = [] as Order[]
+	orders: Order[] = []
 
 	sortedByIdAsc = true
 	sortedByTotalAsc = true
@@ -46,16 +41,6 @@ export class OrdersPageComponent implements OnInit {
 	sortedByStatus = true
 
 	lastSortedBy = 'id'
-
-	tableHeaders: TableHeaderKeys[] = [
-		{ key: 'id', type: 'string' },
-		{ key: 'order_number', type: 'string' },
-		{ key: 'customer_name', type: 'string' },
-		{ key: 'order_date', type: 'date' },
-		{ key: 'order_status', type: 'string' },
-		{ key: 'order_total', type: 'number' },
-		{ key: 'action', type: 'button' },
-	]
 
 	displayedColumns: Column[] = [
 		{
@@ -107,9 +92,9 @@ export class OrdersPageComponent implements OnInit {
 	ngOnInit(): void {
 		this.orderService.$orders.subscribe((orders) => {
 			if (orders.length > 0) {
-				this.data = orders
+				this.orders = orders
 			} else {
-				this.data = []
+				this.orders = []
 			}
 		})
 	}
@@ -117,17 +102,15 @@ export class OrdersPageComponent implements OnInit {
 	sortOrdersById() {
 		this.lastSortedBy = 'id'
 		this.sortedByIdAsc = !this.sortedByIdAsc
-		this.data.sort((a, b) =>
-			this.sortedByIdAsc
-				? parseInt(a.id) - parseInt(b.id)
-				: parseInt(b.id) - parseInt(a.id)
+		this.orders.sort((a, b) =>
+			this.sortedByIdAsc ? a.id.localeCompare(b.id) : b.id.localeCompare(a.id)
 		)
 	}
 
 	sortOrdersByName() {
 		this.lastSortedBy = 'customer_name'
 		this.sortedByNameAsc = !this.sortedByNameAsc
-		this.data.sort((a, b) => {
+		this.orders.sort((a, b) => {
 			return this.sortedByNameAsc
 				? a.customer_name
 						.split(' ')[1]
@@ -141,7 +124,7 @@ export class OrdersPageComponent implements OnInit {
 	sortOrdersByDate() {
 		this.lastSortedBy = 'order_date'
 		this.sortedByDateAsc = !this.sortedByDateAsc
-		this.data.sort((a, b) => {
+		this.orders.sort((a, b) => {
 			return this.sortedByDateAsc
 				? a.order_date.getTime() - b.order_date.getTime()
 				: b.order_date.getTime() - a.order_date.getTime()
@@ -151,7 +134,7 @@ export class OrdersPageComponent implements OnInit {
 	sortOrdersByStatus(): void {
 		this.lastSortedBy = 'order_status'
 		this.sortedByStatus = !this.sortedByStatus
-		this.data.sort((a, b): number => {
+		this.orders.sort((a, b): number => {
 			return this.sortedByStatus
 				? a.order_status.localeCompare(b.order_status)
 				: b.order_status.localeCompare(a.order_status)
@@ -161,7 +144,7 @@ export class OrdersPageComponent implements OnInit {
 	sortOrdersByTotal() {
 		this.lastSortedBy = 'total'
 		this.sortedByTotalAsc = !this.sortedByTotalAsc
-		this.data.sort((a, b) => {
+		this.orders.sort((a, b) => {
 			return this.sortedByTotalAsc
 				? a.order_total - b.order_total
 				: b.order_total - a.order_total

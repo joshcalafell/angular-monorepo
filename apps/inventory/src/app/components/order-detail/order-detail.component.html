@@ -9,26 +9,23 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
+					<img src="assets/candle1.png" alt="Candle 1" />
 					<div class="flex-row-between">
 						<div class="flex-col-fs">
+							<p><strong>Order ID:</strong> {{ order.id }}</p>
+							<p><strong>Order Status:</strong> {{ order.order_status }}</p>
 							<p>
-								Status: <strong>{{ order.order_status }}</strong>
+								<strong>Last Updated:</strong>
+								{{ order.order_date | date : 'mediumDate' }}
+								{{ order.order_date | date : 'shortTime' }}
 							</p>
-							<p>
-								Date Updated:
-								<strong>{{ order.order_date | date : 'mediumDate' }} </strong>
-							</p>
-							<p>
-								Customer Name: <strong>{{ order.customer_name }} </strong>
-							</p>
+							<p><strong>Customer Name:</strong> {{ order.customer_name }}</p>
 						</div>
 						<div class="flex-col-fs">
+							<p><strong>SKU:</strong> {{ order.sku }}</p>
 							<p>
-								SKU: <strong>{{ order.sku }}</strong>
-							</p>
-							<p>
-								Order Total:
-								<strong>{{ order.order_total | currency }}</strong>
+								<strong>Order Total:</strong>
+								{{ order.order_total | currency }}
 							</p>
 						</div>
 					</div>

@@ -7,15 +7,16 @@
 		</div>
 		<angular-monorepo-table-sort
 			[displayedColumns]="displayedColumns"
-			[columns]="data"
+			[columns]="orders"
 		>
-			<tr *ngFor="let order of data; let i = index">
+			<tr *ngFor="let order of orders; let i = index">
 				<td>{{ order.id }}</td>
 				<td>{{ order.customer_name }}</td>
 				<td>{{ order.order_date | date }}</td>
 				<td>{{ order.order_status }}</td>
 				<td>{{ order.order_total | currency }}</td>
 				<td>
+					<!-- <a [routerLink]="['/order', order.id]" class="btn btn-primary">View</a> -->
 					<button class="btn btn-primary" [routerLink]="['/orders', order.id]">
 						View
 					</button>
