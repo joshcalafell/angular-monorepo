@@ -1,0 +1,33 @@
+export class InventoryItem {
+	constructor(
+		public brand: string,
+		public burnTime: number,
+		public category: string,
+		public collection: string,
+		public colors: string,
+		public cost: number,
+		public date: Date,
+		public description: string,
+		public dimensions: number[],
+		public id: number,
+		public imageUrl: string,
+		public inventoryDate: Date,
+		public inventoryStatus: string,
+		public material: string,
+		public name: string,
+		public price: number,
+		public quantity: number,
+		public scent: string,
+		public shape: string,
+		public size: string,
+		public starRating: number,
+		public style: string,
+		public tags: string[],
+		public theme: string,
+		public type: string,
+		public vendor: string,
+		public waxType: string,
+		public weight: number,
+		public wickType: string
+	) {}
+} // TODO: Widdle this down
