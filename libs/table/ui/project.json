@@ -19,6 +19,53 @@
 			"options": {
 				"lintFilePatterns": ["libs/table/ui/**/*.ts", "libs/table/ui/**/*.html"]
 			}
+		},
+		"storybook": {
+			"executor": "@storybook/angular:start-storybook",
+			"options": {
+				"port": 4400,
+				"configDir": "libs/table/ui/.storybook",
+				"browserTarget": "table-sort:build-storybook",
+				"compodoc": false
+			},
+			"configurations": {
+				"ci": {
+					"quiet": true
+				}
+			}
+		},
+		"build-storybook": {
+			"executor": "@storybook/angular:build-storybook",
+			"outputs": ["{options.outputDir}"],
+			"options": {
+				"outputDir": "dist/storybook/table-sort",
+				"configDir": "libs/table/ui/.storybook",
+				"browserTarget": "table-sort:build-storybook",
+				"compodoc": false
+			},
+			"configurations": {
+				"ci": {
+					"quiet": true
+				}
+			}
+		},
+		"test-storybook": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "test-storybook -c libs/table/ui/.storybook --url=http://localhost:4400"
+			}
+		},
+		"static-storybook": {
+			"executor": "@nx/web:file-server",
+			"options": {
+				"buildTarget": "table-sort:build-storybook",
+				"staticFilePath": "dist/storybook/table-sort"
+			},
+			"configurations": {
+				"ci": {
+					"buildTarget": "table-sort:build-storybook:ci"
+				}
+			}
 		}
 	}
 }
