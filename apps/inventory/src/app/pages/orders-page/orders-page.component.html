@@ -7,9 +7,9 @@
 		</div>
 		<angular-monorepo-table-sort
 			[displayedColumns]="displayedColumns"
-			[columns]="orders"
+			[columns]="data"
 		>
-			<tr *ngFor="let order of orders; let i = index">
+			<tr *ngFor="let order of data; let i = index">
 				<td>{{ order.id }}</td>
 				<td>{{ order.customer_name }}</td>
 				<td>{{ order.order_date | date }}</td>

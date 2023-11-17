@@ -20,7 +20,7 @@ export enum OrderStatus {
 
 export class Order {
 	constructor(
-		public id: number,
+		public id: string,
 		public sku: string,
 		public customer_name: string,
 		public order_date: Date,
@@ -28,6 +28,8 @@ export class Order {
 		public order_total: number
 	) {
 		this.id = id
+		this.sku = sku
+		this.customer_name = customer_name
 		this.order_date = order_date
 		this.order_status = order_status
 		this.order_total = order_total

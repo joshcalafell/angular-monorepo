@@ -54,7 +54,7 @@ export class OrdersService {
 			const randomName = this.generateRandomName()
 			orders.push(
 				new Order(
-					i + (i + 1) * 100,
+					'' + i + (i + 1) * 100,
 					'321645987',
 					randomName,
 					randomDateWithinPastYear,
