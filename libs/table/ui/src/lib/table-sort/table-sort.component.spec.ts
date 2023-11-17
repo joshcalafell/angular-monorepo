@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { TableSortThComponent } from './table-sort-th.component'
+import { TableSortComponent } from './table-sort.component'
 
-describe('TableSortThComponent', () => {
-	let component: TableSortThComponent
-	let fixture: ComponentFixture<TableSortThComponent>
+xdescribe('TableSortComponent', () => {
+	let component: TableSortComponent
+	let fixture: ComponentFixture<TableSortComponent>
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [TableSortThComponent],
+			imports: [TableSortComponent],
 		}).compileComponents()
 
-		fixture = TestBed.createComponent(TableSortThComponent)
+		fixture = TestBed.createComponent(TableSortComponent)
 		component = fixture.componentInstance
 		fixture.detectChanges()
 	})

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:wght@300;400;500;700;800&family=Linefont:wght@100&display=swap');
+
+$odd_row_color: hsl(0, 0%, 100%);
+
+// Colors
+$med-dark: hsl(0, 0%, 20%);
+$dark: hsl(0, 0%, 10%);
+$light: hsl(0, 0%, 90%);
+$lightest: hsl(0, 0%, 98%);
+$primary: hsl(0, 0%, 50%);
+$secondary: hsl(0, 0%, 70%);
+$tertiary: hsl(0, 0%, 90%);
+$quaternary: hsl(0, 0%, 95%);
+$quinary: hsl(0, 0%, 98%);
+$success: hsl(120, 60%, 50%);
+$info: hsl(180, 60%, 50%);
+$warning: hsl(60, 60%, 50%);
+$danger: hsl(0, 60%, 50%);
+$light-blue: hsl(200, 60%, 50%);
+$dark-blue: hsl(240, 60%, 50%);
+$purple: hsl(280, 60%, 50%);
+$pink: hsl(320, 60%, 50%);
+$odd-row-color: hsl(0, 0%, 100%);
+// Margin
+$margin-common: 16px;
+$margin-small: 8px;
+$margin-large: 24px;
+$margin-x-large: 32px;
+// Padding
+$padding-common: 16px;
+$padding-small: 8px;
+$padding-large: 24px;
+$padding-x-large: 32px;
+// fonts
+$font-family-header: 'DM+Mono', sans-serif;
+$font-family-body: 'Inter', sans-serif;
+$font-family-quote: 'Merriweather', sans-serif;
+$font-family-bold: 'Rubik', sans-serif;
+
+$font-size-header: 36px;
+$font-size-body: 16px;
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	overflow: hidden;
+	font-family: $font-family-body;
+	font-size: $font-size-body;
+	margin-top: $margin-large;
+	margin-bottom: $margin-common;
+}
+
+table th {
+	color: $med-dark;
+	font-weight: bold;
+	padding: $padding-common;
+	border: 1px solid $med-dark;
+}
+
+table tr:hover td {
+	background-color: $quaternary;
+}
+
+table td {
+	background-color: #ffffff;
+	padding: 10px;
+	border: 1px solid #333;
+	font-weight: 400;
+}
+
+table th:last-child,
+table td:last-child {
+	text-align: center;
+}
+
+.sort {
+	margin-left: 4px;
+	cursor: pointer;
+}
+
+.btn-primary {
+	z-index: 1000;
+	border-radius: 3px;
+	padding: 8px 4px;
+	width: 70px;
+	margin-left: 8px;
+	font-weight: 600;
+	font-family: 'Inter', sans-serif;
+	border: none;
+	background-color: #535353;
+	color: white;
+}
+
+.btn-primary:hover {
+	color: white;
+	background-color: #ff6766;
+}
+
+.sort-last {
+	color: #ff6766;
+}

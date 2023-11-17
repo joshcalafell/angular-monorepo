@@ -5,8 +5,10 @@
 				<h2>- Orders</h2>
 			</div>
 		</div>
-		<angular-monorepo-order-list-table
-			[orders]="orders"
-		></angular-monorepo-order-list-table>
+		<angular-monorepo-table-sort
+			[displayedColumns]="displayedColumns"
+			[columns]="orders"
+		>
+		</angular-monorepo-table-sort>
 	</div>
 </section>
