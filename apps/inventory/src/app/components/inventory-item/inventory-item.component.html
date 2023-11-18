@@ -1,15 +1,68 @@
-<div class="card" [routerLink]="['/inventory', 1]">
-	<img src="assets/candle1.png" alt="Candle 1" />
-	<h2>Candle Set 1</h2>
-	<div class="flex-row-between">
-		<div class="flex-col-fs">
-			<p><strong>Cost:</strong> $10</p>
-			<p><strong>Weight:Dimensions:</strong> 5x5x10 cm</p>
+<div class="card" [routerLink]="['/inventory', item.id]">
+	<div class="card-row">
+		<div class="card-item-header">
+			<span class="item-title">{{ item.name || 'Candle 1' }}</span>
+			<span class="item-cost-pill"> ${{ item.price || 33 }} </span>
 		</div>
-		<div class="flex-col-fs">
-			<p><strong>Wax Type:</strong> Paraffin</p>
-			<p><strong>Wick:</strong>Wick: Cotton</p>
-			<p><strong>Date:</strong> 2023-01-01</p>
+	</div>
+	<div class="card-row">
+		<div class="card-column"></div>
+		<div class="card-image">
+			<img src="assets/candle3.png" alt="Candle 1" />
+			<div class="card-row">
+				<div class="card-body-column">
+					<div class="card-body-item">
+						<span class="item-key">Weight:</span>
+						<span class="item-value">240g</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Dimensions:</span>
+						<span class="item-value">5x5x10 cm</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Wax Type:</span>
+						<span class="item-value">Paraffin, Soy</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Wick:</span>
+						<span class="item-value">Cotton</span>
+					</div>
+				</div>
+				<div class="card-body-column">
+					<div class="card-body-item">
+						<span class="item-key">Cost:</span>
+						<span class="item-value">$33</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Weight:</span>
+						<span class="item-value">240g</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Dimensions:</span>
+						<span class="item-value">50x50x100cm</span>
+					</div>
+
+					<div class="card-body-item">
+						<span class="item-key">Burn Time:</span>
+						<span class="item-value">24 hours</span>
+					</div>
+				</div>
+
+				<div class="card-body-column">
+					<div class="card-body-item">
+						<span class="item-key">Scent:</span>
+						<span class="item-value">Vanilla</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Colors:</span>
+						<span class="item-value">Red, Yellow, Aqua</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Date Added:</span>
+						<span class="item-value"> {{ mockDate | date : 'longDate' }}</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

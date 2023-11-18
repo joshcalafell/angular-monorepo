@@ -4,30 +4,8 @@
 			[title]="'Inventory Detail'"
 		></angular-monorepo-header>
 		<br />
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card">
-					<img src="assets/candle3.png" alt="Candle 1" />
-
-					<div class="flex-row-between">
-						<div class="flex-col-fs">
-							<p><strong>Cost:</strong> $33</p>
-							<p><strong>Weight:</strong> 240g</p>
-							<p><strong>Dimensions:</strong> 5x5x10 cm</p>
-						</div>
-						<div class="flex-col-fs">
-							<p><strong>Wax Type:</strong> Paraffin, Soy</p>
-							<p><strong>Wick:</strong> Cotton</p>
-							<p>
-								<strong>Date Added:</strong>
-								{{ mockDate | date : 'longDate' }}
-								{{ ' • ' }}
-								{{ mockDate | date : 'shortTime' }}
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<angular-monorepo-inventory-item
+			[item]="product"
+		></angular-monorepo-inventory-item>
 	</div>
 </section>

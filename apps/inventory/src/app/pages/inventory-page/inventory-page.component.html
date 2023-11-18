@@ -5,27 +5,10 @@
 		<div class="grid-container">
 			<!-- Mock content for 9 items -->
 
-			<div *ngFor="let item of $inventory | async" class="grid-item">
-				<div class="card" [routerLink]="['/inventory', item.id]">
-					<h2>{{ item.name }}</h2>
-					<img src="assets/candle1.png" alt="Candle 1" />
-					<div class="flex-row-between">
-						<div class="flex-col-fs">
-							<p><strong>Cost:</strong> {{ item.price }}</p>
-							<p><strong>Weight:</strong> {{ item.weight }}</p>
-							<p><strong>Dimensions:</strong> {{ item.dimensions }} inches</p>
-						</div>
-						<div class="flex-col-fs">
-							<p><strong>Wax Type:</strong> {{ item.waxType }}</p>
-							<p><strong>Wick:</strong> {{ item.wickType }}</p>
-							<p>
-								<strong>Date Added:</strong>
-								{{ item.inventoryDate | date : 'longDate' }}
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<angular-monorepo-inventory-item
+				*ngFor="let item of $inventory | async"
+				[item]="item"
+			></angular-monorepo-inventory-item>
 			<!-- Repeat this block for other items -->
 		</div>
 	</div>

@@ -2,28 +2,53 @@
 	<div class="container">
 		<angular-monorepo-header [title]="'Order Detail'"></angular-monorepo-header>
 		<br />
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card">
+
+		<div class="card">
+			<div class="card-row">
+				<div class="card-item-header">
+					<span class="item-title">Candle Order</span>
+					<span class="item-cost-pill"> ${{ order.order_total }}</span>
+				</div>
+			</div>
+			<div class="card-row">
+				<div class="card-image">
 					<img src="assets/candle1.png" alt="Candle 1" />
-					<div class="flex-row-between">
-						<div class="flex-col-fs">
-							<p><strong>Order ID:</strong> {{ order.id }}</p>
-							<p><strong>Order Status:</strong> {{ order.order_status }}</p>
-							<p>
-								<strong>Last Updated:</strong>
-								{{ order.order_date | date : 'mediumDate' }}
-								{{ order.order_date | date : 'shortTime' }}
-							</p>
-							<p><strong>Customer Name:</strong> {{ order.customer_name }}</p>
-						</div>
-						<div class="flex-col-fs">
-							<p><strong>SKU:</strong> {{ order.sku }}</p>
-							<p>
-								<strong>Order Total:</strong>
-								{{ order.order_total | currency }}
-							</p>
-						</div>
+				</div>
+			</div>
+			<div class="card-row">
+				<div class="card-body-column">
+					<div class="card-body-item">
+						<span class="item-key">Order ID:</span>
+						<span class="item-value">{{ order.id }}</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Order Status:</span>
+						<span class="item-value">{{ order.order_status }}</span>
+					</div>
+					<div class="card-body-item">
+						<span class="item-key">Last Updated:</span>
+						<span class="item-value">
+							{{ order.order_date | date : 'mediumDate' }}</span
+						>
+					</div>
+
+					<div class="card-body-item">
+						<span class="item-key">Shipping Fee:</span>
+						<span class="item-value">$10</span>
+					</div>
+
+					<div class="card-body-item">
+						<span class="item-key">Taxes:</span>
+						<span class="item-value">{{
+							order.order_total / 3 | currency
+						}}</span>
+					</div>
+
+					<div class="card-body-item">
+						<span class="item-key">Order Total:</span>
+						<span class="item-value">{{
+							order.order_total + order.order_total / 3 + 10 | currency
+						}}</span>
 					</div>
 				</div>
 			</div>

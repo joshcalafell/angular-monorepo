@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterLink } from '@angular/router'
 import { InventoryItem } from '../../service/inventory/inventory.model'
@@ -11,25 +11,6 @@ import { InventoryItem } from '../../service/inventory/inventory.model'
 	styleUrls: ['./inventory-item.component.scss'],
 })
 export class InventoryItemComponent {
-	data: InventoryItem[] = Array(30)
-		.fill(null)
-		.map(
-			(_, i) =>
-				new InventoryItem(
-					i,
-					'Candle Set',
-					'Set of 3 candles',
-					33,
-					'./assets/images/candle-set.jpg',
-					new Date(),
-					5,
-					3,
-					'Available',
-					'30x10x5 cm',
-					'Parafin, Soy Wax, Glass',
-					'440g',
-					'Hemp Rope, Paper, Cardboard',
-					'24 Hours'
-				)
-		)
+	mockDate: string = new Date().toISOString()
+	@Input() item: InventoryItem = {} as InventoryItem
 }

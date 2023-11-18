@@ -1,0 +1,82 @@
+@import '../../../styles/mixin';
+
+.card {
+	width: 100%;
+	font-family: $font-family-body;
+	background-color: $lightest;
+	border: 1px solid $tertiary;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	margin: $margin-common;
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.03);
+	}
+
+	.card-row {
+		border-bottom: 1px solid $secondary;
+
+		&:last-child {
+			border: none;
+		}
+	}
+
+	.card-item-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: $padding-common;
+
+		.item-title {
+			font-family: $font-family-header;
+			font-size: $font-size-header;
+			color: $dark;
+		}
+
+		.item-cost-pill {
+			background-color: $primary;
+			color: $lightest;
+			padding: $padding-small $padding-common;
+			border-radius: 20px;
+			font-weight: bold;
+		}
+	}
+
+	.card-image {
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+		}
+	}
+
+	.card-body-column {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: $padding-common;
+
+		.card-body-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: $padding-small;
+
+			.item-key {
+				color: $dark;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			.item-value {
+				color: $med-dark;
+			}
+		}
+	}
+}

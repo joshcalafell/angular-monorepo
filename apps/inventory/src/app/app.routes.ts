@@ -18,6 +18,10 @@ export const appRoutes: Route[] = [
 		component: AboutPageComponent,
 	},
 	{
+		path: 'testimonials',
+		component: TestimonialsPageComponent,
+	},
+	{
 		path: 'inventory',
 		component: InventoryPageComponent,
 	},
@@ -32,10 +36,6 @@ export const appRoutes: Route[] = [
 	{
 		path: 'orders/:id',
 		component: OrderDetailComponent,
-	},
-	{
-		path: 'testimonials',
-		component: TestimonialsPageComponent,
 	},
 	{
 		path: '**',
