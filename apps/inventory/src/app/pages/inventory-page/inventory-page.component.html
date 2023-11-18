@@ -5,142 +5,27 @@
 		<div class="grid-container">
 			<!-- Mock content for 9 items -->
 
-			<div class="card" [routerLink]="['/inventory', 2]">
-				<img src="assets/candle2.png" alt="Candle 1" />
-				<h2>Candle Set 2</h2>
-				<div class="flex-row-between">
-					<div class="flex-col-fs">
-						<p>Cost: $10</p>
-						<p>Weight: 200g</p>
-						<p>Dimensions: 5x5x10 cm</p>
-					</div>
-					<div class="flex-col-fs">
-						<p>Wax Type: Paraffin</p>
-						<p>Wick: Cotton</p>
-						<p>Date: 2023-01-01</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" [routerLink]="['/inventory', 3]">
-				<img src="assets/candle3.png" alt="Candle 1" />
-				<h2>Candle Set 3</h2>
-				<div class="flex-row-between">
-					<div class="flex-col-fs">
-						<p>Cost: $10</p>
-						<p>Weight: 200g</p>
-						<p>Dimensions: 5x5x10 cm</p>
-					</div>
-					<div class="flex-col-fs">
-						<p>Wax Type: Paraffin</p>
-						<p>Wick: Cotton</p>
-						<p>Date: 2023-01-01</p>
+			<div *ngFor="let item of $inventory | async" class="grid-item">
+				<div class="card" [routerLink]="['/inventory', item.id]">
+					<h2>{{ item.name }}</h2>
+					<img src="assets/candle1.png" alt="Candle 1" />
+					<div class="flex-row-between">
+						<div class="flex-col-fs">
+							<p><strong>Cost:</strong> {{ item.price }}</p>
+							<p><strong>Weight:</strong> {{ item.weight }}</p>
+							<p><strong>Dimensions:</strong> {{ item.dimensions }} inches</p>
+						</div>
+						<div class="flex-col-fs">
+							<p><strong>Wax Type:</strong> {{ item.waxType }}</p>
+							<p><strong>Wick:</strong> {{ item.wickType }}</p>
+							<p>
+								<strong>Date Added:</strong>
+								{{ item.inventoryDate | date : 'longDate' }}
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="card" [routerLink]="['/inventory', 4]">
-				<img src="assets/candle1.png" alt="Candle 1" />
-				<h2>Candle Set 4</h2>
-				<div class="flex-row-between">
-					<div class="flex-col-fs">
-						<p>Cost: $10</p>
-						<p>Weight: 200g</p>
-						<p>Dimensions: 5x5x10 cm</p>
-					</div>
-					<div class="flex-col-fs">
-						<p>Wax Type: Paraffin</p>
-						<p>Wick: Cotton</p>
-						<p>Date: 2023-01-01</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" [routerLink]="['/inventory', 5]">
-				<img src="assets/candle2.png" alt="Candle 1" />
-				<h2>Candle Set 5</h2>
-				<div class="flex-row-between">
-					<div class="flex-col-fs">
-						<p>Cost: $10</p>
-						<p>Weight: 200g</p>
-						<p>Dimensions: 5x5x10 cm</p>
-					</div>
-					<div class="flex-col-fs">
-						<p>Wax Type: Paraffin</p>
-						<p>Wick: Cotton</p>
-						<p>Date: 2023-01-01</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" [routerLink]="['/inventory', 6]">
-				<img src="assets/candle3.png" alt="Candle 1" />
-				<h2>Candle Set 6</h2>
-				<div class="flex-row-between">
-					<div class="flex-col-fs">
-						<p>Cost: $10</p>
-						<p>Weight: 200g</p>
-						<p>Dimensions: 5x5x10 cm</p>
-					</div>
-					<div class="flex-col-fs">
-						<p>Wax Type: Paraffin</p>
-						<p>Wick: Cotton</p>
-						<p>Date: 2023-01-01</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" [routerLink]="['/inventory', 7]">
-				<img src="assets/candle1.png" alt="Candle 1" />
-				<h2>Candle Set 7</h2>
-				<div class="flex-row-between">
-					<div class="flex-col-fs">
-						<p>Cost: $10</p>
-						<p>Weight: 200g</p>
-						<p>Dimensions: 5x5x10 cm</p>
-					</div>
-					<div class="flex-col-fs">
-						<p>Wax Type: Paraffin</p>
-						<p>Wick: Cotton</p>
-						<p>Date: 2023-01-01</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" [routerLink]="['/inventory', 8]">
-				<img src="assets/candle2.png" alt="Candle 1" />
-				<h2>Candle Set 8</h2>
-				<div class="flex-row-between">
-					<div class="flex-col-fs">
-						<p>Cost: $10</p>
-						<p>Weight: 200g</p>
-						<p>Dimensions: 5x5x10 cm</p>
-					</div>
-					<div class="flex-col-fs">
-						<p>Wax Type: Paraffin</p>
-						<p>Wick: Cotton</p>
-						<p>Date: 2023-01-01</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" [routerLink]="['/inventory', 9]">
-				<img src="assets/candle3.png" alt="Candle 1" />
-				<h2>Candle Set 9</h2>
-				<div class="flex-row-between">
-					<div class="flex-col-fs">
-						<p>Cost: $10</p>
-						<p>Weight: 200g</p>
-						<p>Dimensions: 5x5x10 cm</p>
-					</div>
-					<div class="flex-col-fs">
-						<p>Wax Type: Paraffin</p>
-						<p>Wick: Cotton</p>
-						<p>Date: 2023-01-01</p>
-					</div>
-				</div>
-			</div>
-
 			<!-- Repeat this block for other items -->
 		</div>
 	</div>

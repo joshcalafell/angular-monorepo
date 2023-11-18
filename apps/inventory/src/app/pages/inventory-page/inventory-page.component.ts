@@ -1,22 +1,20 @@
-import { BlockquoteComponent } from '@angular-monorepo/blockquote'
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { Component, inject } from '@angular/core'
 
-import { ButtonComponent } from '@angular-monorepo/button'
 import { RouterLink } from '@angular/router'
 import { HeaderComponent } from '../../components/header/header.component'
+import { InventoryService } from '../../service/inventory/inventory.service'
 
 @Component({
 	selector: 'angular-monorepo-inventory-page',
 	standalone: true,
-	imports: [
-		CommonModule,
-		BlockquoteComponent,
-		ButtonComponent,
-		RouterLink,
-		HeaderComponent,
-	],
+	imports: [CommonModule, HeaderComponent, RouterLink],
 	templateUrl: './inventory-page.component.html',
 	styleUrls: ['./inventory-page.component.scss'],
+	providers: [InventoryService, RouterLink],
 })
-export class InventoryPageComponent {}
+export class InventoryPageComponent {
+	router = inject(RouterLink)
+	inventoryService = inject(InventoryService)
+	$inventory = this.inventoryService.$inventory
+}
