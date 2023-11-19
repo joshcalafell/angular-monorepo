@@ -28,7 +28,7 @@ export class OrderDetailComponent implements OnInit {
 			})
 		} catch (error) {
 			console.error(error)
-			this.router.navigate(['/orders'])
+			this.router.navigate(['/404'])
 		}
 	}
 }
