@@ -54,11 +54,7 @@ export class OrdersService {
 			const randomName = this.generateRandomName()
 			orders.push(
 				new Order(
-					new Array(8)
-						.fill(null)
-						.map(() => Math.round(Math.random() * 9))
-						.join('')
-						.toString(),
+					i.toString(),
 					new Array(8)
 						.fill(null)
 						.map(() => Math.round(Math.random() * 9))

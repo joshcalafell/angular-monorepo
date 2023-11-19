@@ -22,6 +22,10 @@
 						<span class="item-value">{{ order.id }}</span>
 					</div>
 					<div class="card-body-item">
+						<span class="item-key">SKU:</span>
+						<span class="item-value">{{ order.sku }}</span>
+					</div>
+					<div class="card-body-item">
 						<span class="item-key">Order Status:</span>
 						<span class="item-value">{{ order.order_status }}</span>
 					</div>
@@ -35,22 +39,32 @@
 					</div>
 
 					<div class="card-body-item">
+						<span class="item-key">Customer:</span>
+						<span class="item-value"> {{ order.customer_name }} </span>
+					</div>
+
+					<div class="card-body-item">
+						<span class="item-key">Shipping Method:</span>
+						<span class="item-value">Ground </span>
+					</div>
+
+					<div class="card-body-item">
 						<span class="item-key">Shipping Fee:</span>
-						<span class="item-value underline bold">$10</span>
+						<span class="item-value">$10 </span>
 					</div>
 
 					<div class="card-body-item">
 						<span class="item-key">Taxes:</span>
-						<span class="item-value underline bold">{{
-							order.order_total / 3 | currency
-						}}</span>
+						<span class="item-value"
+							>{{ order.order_total / 4 | currency }} (25%)</span
+						>
 					</div>
 
-					<div class="card-body-item">
+					<div class="card-body-item underline">
 						<span class="item-key">Order Total:</span>
-						<span class="item-value underline bold">{{
-							order.order_total + order.order_total / 3 + 10 | currency
-						}}</span>
+						<span class="item-value bold"
+							>{{ order.order_total + order.order_total / 4 + 10 | currency }}
+						</span>
 					</div>
 				</div>
 			</div>
