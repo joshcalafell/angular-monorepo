@@ -2,7 +2,7 @@
 
 h2,
 .footer {
-	font-family: 'DM Mono', sans-serif;
+	font-family: 'Inter', sans-serif;
 }
 
 h2 {
@@ -20,11 +20,13 @@ h2 {
 p {
 	display: block;
 	font-size: $font-size-body;
-	font-family: 'DM Mono';
+	font-family: 'Inter';
 }
 
 img {
 	object-fit: cover;
 	border-radius: 8px;
 	margin-bottom: 12px;
+
+	margin: auto;
 }

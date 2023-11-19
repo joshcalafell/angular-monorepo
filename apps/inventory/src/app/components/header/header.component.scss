@@ -1,14 +1,10 @@
 @import '../../../styles/mixin';
 
-.section-title {
-	font-family: 'DM Mono', monospace;
-}
-
 h2 {
-	margin: 0 0px;
+	margin: 0 16px;
 	font-size: 24px;
 	color: #333;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	text-decoration: none;
 	&:active,
 	&:hover,
