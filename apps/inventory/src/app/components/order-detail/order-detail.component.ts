@@ -20,7 +20,7 @@ export class OrderDetailComponent implements OnInit {
 
 	ngOnInit(): void {
 		const id = this.activatedRoute.snapshot.params['id']
-		alert(id)
+
 		try {
 			this.orderService.$orders.subscribe((orders: Order[]) => {
 				const found = orders.find((order) => order.id === id)
