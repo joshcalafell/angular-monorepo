@@ -19,6 +19,12 @@ app-root {
 	);
 }
 
+header {
+	margin-top: 8px;
+	padding-bottom: 8px;
+	border-bottom: solid 1px #333;
+}
+
 h1 {
 	font-size: 32px;
 	text-align: center;
@@ -28,4 +34,8 @@ h1 {
 		color: black;
 		font-weight: 700;
 	}
+}
+
+.angular-monorepo-container {
+	padding: 8px 8px;
 }

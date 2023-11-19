@@ -33,6 +33,10 @@
 			font-family: $font-family-header;
 			font-size: $font-size-header;
 			color: $dark;
+
+			@media screen and (max-width: 1024px) {
+				font-size: 1rem;
+			}
 		}
 
 		.item-cost-pill {

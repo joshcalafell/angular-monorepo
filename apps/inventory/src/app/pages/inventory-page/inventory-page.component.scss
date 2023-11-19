@@ -13,8 +13,8 @@ h2 {
 .row {
 	display: flex;
 	flex-wrap: wrap;
-	margin-right: -15px;
-	margin-left: -15px;
+
+	width: 100%;
 }
 
 .flex-row-between {
@@ -22,6 +22,7 @@ h2 {
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
+	width: 100%;
 }
 
 .flex-col-fs {
@@ -30,12 +31,25 @@ h2 {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+	width: 100%;
 }
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(2, 2fr);
+	width: 100%;
+	grid-template-columns: repeat(3, 2fr);
 	gap: 20px;
+
+	@media screen and (max-width: 1024px) {
+		font-size: 1rem;
+		grid-template-columns: repeat(2, 2fr);
+	}
+
+	@media screen and (max-width: 768px) {
+		font-size: 1rem;
+		width: 100%;
+		grid-template-columns: repeat(1, 2fr);
+	}
 }
 
 h2 {

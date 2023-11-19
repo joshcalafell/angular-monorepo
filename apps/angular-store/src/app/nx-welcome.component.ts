@@ -427,7 +427,7 @@ import { CommonModule } from '@angular/common'
 			}
 		</style>
 		<div class="wrapper">
-			<div class="container">
+			<div class="angular-monorepo-container">
 				<!--  WELCOME  -->
 				<div id="welcome">
 					<h1>
