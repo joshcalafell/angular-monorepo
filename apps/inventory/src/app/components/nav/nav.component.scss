@@ -14,8 +14,13 @@ nav.nav {
 
 ul {
 	@include flex-row();
-	margin: 0 16px;
+	margin: 0 8px;
 	padding: 0;
+
+	@media (max-width: 768px) {
+		@include flex-column;
+		align-items: flex-start;
+	}
 
 	li {
 		list-style: none;
