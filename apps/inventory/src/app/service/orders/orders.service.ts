@@ -73,4 +73,10 @@ export class OrdersService {
 		}
 		return orders
 	}
+
+	getOrder(id: string) {
+		this.$orders.subscribe((orders) => {
+			return orders.find((order) => order.id === id)
+		})
+	}
 }

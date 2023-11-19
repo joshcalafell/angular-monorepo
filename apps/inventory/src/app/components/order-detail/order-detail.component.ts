@@ -20,12 +20,15 @@ export class OrderDetailComponent implements OnInit {
 
 	ngOnInit(): void {
 		const id = this.activatedRoute.snapshot.params['id']
-		this.orderService.$orders
-			.subscribe((orders: Order[]) => {
-				const found = orders?.length && orders.find((order) => order.id == id)
+		alert(id)
+		try {
+			this.orderService.$orders.subscribe((orders: Order[]) => {
+				const found = orders.find((order) => order.id === id)
 				if (found) this.order = found
-				else this.router.navigate(['/orders', { skipLocationChange: true }])
 			})
-			.unsubscribe()
+		} catch (error) {
+			console.error(error)
+			this.router.navigate(['/orders'])
+		}
 	}
 }
