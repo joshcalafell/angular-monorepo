@@ -1,32 +1,14 @@
 @import '../../../styles/mixin';
 
-h2,
-.footer {
-	font-family: 'Inter', sans-serif;
-}
-
-h2 {
-	margin-left: 16px;
-	font-size: $font-size-header;
-}
-
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: -15px;
-	margin-left: -15px;
-}
-
 p {
 	display: block;
 	font-size: $font-size-body;
-	font-family: 'Inter';
+	font-family: $font-family-body, monospace;
 }
 
 img {
 	object-fit: cover;
 	border-radius: 8px;
 	margin-bottom: 12px;
-
 	margin: auto;
 }

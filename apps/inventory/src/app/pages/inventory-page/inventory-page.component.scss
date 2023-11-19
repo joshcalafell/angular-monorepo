@@ -1,39 +1,5 @@
 @import '../../../styles/mixin';
 
-h2,
-.footer {
-	font-family: 'Inter', sans-serif;
-}
-
-h2 {
-	margin-left: 16px;
-	font-size: $font-size-header;
-}
-
-.row {
-	display: flex;
-	flex-wrap: wrap;
-
-	width: 100%;
-}
-
-.flex-row-between {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-}
-
-.flex-col-fs {
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	width: 100%;
-}
-
 .grid-container {
 	display: grid;
 	width: 100%;
@@ -50,19 +16,4 @@ h2 {
 		width: 100%;
 		grid-template-columns: repeat(1, 2fr);
 	}
-}
-
-h2 {
-	margin-bottom: 16px;
-}
-
-p {
-	margin-left: 16px;
-	margin-top: 8px;
-}
-
-img {
-	object-fit: scale-down;
-	border-radius: 0px;
-	margin-bottom: 8px;
 }

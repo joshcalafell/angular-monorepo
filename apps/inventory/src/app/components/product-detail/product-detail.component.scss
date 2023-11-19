@@ -1,10 +1,5 @@
 @import '../../../styles/mixin';
 
-h2,
-.footer {
-	font-family: 'Inter', sans-serif;
-}
-
 p {
 	display: block;
 	margin: 1em 0;
@@ -13,7 +8,7 @@ p {
 }
 
 p {
-	font-family: 'Inter', monospace;
+	font-family: $font-family-body, monospace;
 	font-size: 20px;
 	line-height: 1.5;
 	margin-left: 0px;
