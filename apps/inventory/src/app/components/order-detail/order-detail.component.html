@@ -28,25 +28,27 @@
 					<div class="card-body-item">
 						<span class="item-key">Last Updated:</span>
 						<span class="item-value">
-							{{ order.order_date | date : 'mediumDate' }}</span
+							{{ order.order_date | date : 'mediumDate' }}&nbsp;{{
+								order.order_date | date : 'shortTime'
+							}}</span
 						>
 					</div>
 
 					<div class="card-body-item">
 						<span class="item-key">Shipping Fee:</span>
-						<span class="item-value">$10</span>
+						<span class="item-value underline bold">$10</span>
 					</div>
 
 					<div class="card-body-item">
 						<span class="item-key">Taxes:</span>
-						<span class="item-value">{{
+						<span class="item-value underline bold">{{
 							order.order_total / 3 | currency
 						}}</span>
 					</div>
 
 					<div class="card-body-item">
 						<span class="item-key">Order Total:</span>
-						<span class="item-value">{{
+						<span class="item-value underline bold">{{
 							order.order_total + order.order_total / 3 + 10 | currency
 						}}</span>
 					</div>

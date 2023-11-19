@@ -24,7 +24,7 @@ export class OrderDetailComponent implements OnInit {
 			.subscribe((orders: Order[]) => {
 				const found = orders?.length && orders.find((order) => order.id == id)
 				if (found) this.order = found
-				else this.router.navigate(['/404'])
+				else this.router.navigate(['/orders', { skipLocationChange: true }])
 			})
 			.unsubscribe()
 	}
