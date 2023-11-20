@@ -1,7 +1,18 @@
 @import '../../../styles/mixin';
 
+h2,
+.footer {
+	font-family: 'Inter', sans-serif;
+}
+
+p {
+	display: block;
+	margin: 1em 0;
+	padding: 0 1em;
+	font-family: 'Inter', monospace;
+}
+
 .card {
-	width: 100%;
 	font-family: $font-family-body;
 	background-color: $lightest;
 	border: 1px solid $tertiary;
@@ -10,6 +21,7 @@
 	overflow: hidden;
 	margin: $margin-common;
 	transition: transform 0.3s ease-in-out;
+	width: 100%;
 
 	&:hover {
 		transform: scale(1.03);
@@ -33,10 +45,6 @@
 			font-family: $font-family-header;
 			font-size: $font-size-header;
 			color: $dark;
-
-			@media screen and (max-width: 1024px) {
-				font-size: 1rem;
-			}
 		}
 
 		.item-cost-pill {
@@ -50,13 +58,10 @@
 
 	.card-image {
 		position: relative;
-		display: inline;
-		align-content: center;
+
 		img {
 			width: 100%;
 			height: auto;
-			max-width: 700px;
-			margin: auto;
 			border-top-left-radius: 8px;
 			border-top-right-radius: 8px;
 		}
@@ -85,4 +90,8 @@
 			}
 		}
 	}
+}
+
+.bold {
+	font-weight: bold;
 }

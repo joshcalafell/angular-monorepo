@@ -147,7 +147,7 @@ export class InventoryService {
 					i,
 					coolCandleNames[Math.floor(Math.random() * coolCandleNames.length)],
 					'Item ' + i + ' description',
-					Math.floor(Math.random() * 1000),
+					Math.floor(Math.random() * 100),
 					'https://via.placeholder.com/350x150',
 					new Date(),
 					Math.floor(Math.random() * 5),
