@@ -3,68 +3,67 @@
 		<angular-monorepo-header [title]="'Order Detail'"></angular-monorepo-header>
 		<br />
 
-		<div class="card">
-			<div class="card-row">
-				<div class="card-item-header">
-					<span class="item-title">Candle Order</span>
-					<span class="item-cost-pill"> ${{ order.order_total }}</span>
+		<div class="flex-row">
+			<div class="card">
+				<div class="card-row">
+					<div class="card-image">
+						<img src="https://via.placeholder.com/350x200" alt="Candle 1" />
+					</div>
 				</div>
 			</div>
-			<div class="card-row">
-				<div class="card-image">
-					<img src="https://via.placeholder.com/350x150" alt="Candle 1" />
-				</div>
-			</div>
-			<div class="card-row">
-				<div class="card-body-column">
-					<div class="card-body-item">
-						<span class="item-key">Order ID:</span>
-						<span class="item-value">{{ order.id }}</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">SKU:</span>
-						<span class="item-value">{{ order.sku }}</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">Order Status:</span>
-						<span class="item-value">{{ order.order_status }}</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">Last Updated:</span>
-						<span class="item-value">
-							{{ order.order_date | date : 'mediumDate' }}&nbsp;{{
-								order.order_date | date : 'shortTime'
-							}}</span
-						>
-					</div>
 
-					<div class="card-body-item">
-						<span class="item-key">Customer:</span>
-						<span class="item-value"> {{ order.customer_name }} </span>
-					</div>
+			<div class="card">
+				<div class="card-row">
+					<div class="card-body-column">
+						<div class="card-body-item">
+							<span class="item-key">Order ID:</span>
+							<span class="item-value">{{ order.id }}</span>
+						</div>
+						<div class="card-body-item">
+							<span class="item-key">SKU:</span>
+							<span class="item-value">{{ order.sku }}</span>
+						</div>
+						<div class="card-body-item">
+							<span class="item-key">Order Status:</span>
+							<span class="item-value">{{ order.order_status }}</span>
+						</div>
+						<div class="card-body-item">
+							<span class="item-key">Last Updated:</span>
+							<span class="item-value">
+								{{ order.order_date | date : 'mediumDate' }}&nbsp;{{
+									order.order_date | date : 'shortTime'
+								}}</span
+							>
+						</div>
 
-					<div class="card-body-item">
-						<span class="item-key">Shipping Method:</span>
-						<span class="item-value">Ground </span>
-					</div>
+						<div class="card-body-item">
+							<span class="item-key">Customer:</span>
+							<span class="item-value"> {{ order.customer_name }} </span>
+						</div>
 
-					<div class="card-body-item">
-						<span class="item-key">Shipping Fee:</span>
-						<span class="item-value">$10 </span>
-					</div>
+						<div class="card-body-item">
+							<span class="item-key">Shipping Method:</span>
+							<span class="item-value">Ground </span>
+						</div>
 
-					<div class="card-body-item">
-						<span class="item-key">Taxes:</span>
-						<span class="item-value"
-							>{{ order.order_total / 4 | currency }} (25%)</span
-						>
-					</div>
+						<div class="card-body-item">
+							<span class="item-key">Shipping Fee:</span>
+							<span class="item-value">$10 </span>
+						</div>
 
-					<div class="card-body-item underline">
-						<span class="item-key">Order Total:</span>
-						<span class="item-value bold"
-							>{{ order.order_total + order.order_total / 4 + 10 | currency }}
-						</span>
+						<div class="card-body-item">
+							<span class="item-key">Taxes:</span>
+							<span class="item-value"
+								>{{ order.order_total / 4 | currency }} (25%)</span
+							>
+						</div>
+
+						<div class="card-body-item underline">
+							<span class="item-key">Order Total:</span>
+							<span class="item-value bold"
+								>{{ order.order_total + order.order_total / 4 + 10 | currency }}
+							</span>
+						</div>
 					</div>
 				</div>
 			</div>

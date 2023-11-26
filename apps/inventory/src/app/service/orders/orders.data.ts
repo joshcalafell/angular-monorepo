@@ -29,6 +29,8 @@ export const randomFirstNames = [
 	'Adam',
 	'Addison',
 	'Adeline',
+	'Adrian',
+	'Aiden',
 ]
 
 export const randomLastNames = [
@@ -60,4 +62,6 @@ export const randomLastNames = [
 	'Baker',
 	'Gonzalez',
 	'Nelson',
+	'Carter',
+	'Mitchell',
 ]

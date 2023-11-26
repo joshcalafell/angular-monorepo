@@ -1,10 +1,7 @@
 <section class="section-wrapper">
 	<div class="angular-monorepo-container">
 		<angular-monorepo-header [title]="'Orders'"></angular-monorepo-header>
-		<angular-monorepo-table-sort
-			[displayedColumns]="displayedColumns"
-			[columns]="orders"
-		>
+		<angular-monorepo-table-sort [displayedColumns]="displayedColumns">
 			<tr *ngFor="let order of orders; let i = index">
 				<td>{{ order.id }}</td>
 				<td>{{ order.customer_name }}</td>
@@ -12,7 +9,6 @@
 				<td>{{ order.order_status }}</td>
 				<td>{{ order.order_total | currency }}</td>
 				<td>
-					<!-- <a [routerLink]="['/order', order.id]" class="btn btn-primary">View</a> -->
 					<button class="btn btn-primary" [routerLink]="['/orders', order.id]">
 						View
 					</button>

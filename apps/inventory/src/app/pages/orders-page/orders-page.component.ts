@@ -39,8 +39,8 @@ export interface Column {
 export class OrdersPageComponent implements OnInit {
 	private orderService = inject(OrdersService)
 	title = '- Recent Orders'
-	orders: Order[] = []
 
+	orders: Order[] = []
 	sortedByIdAsc = true
 	sortedByTotalAsc = true
 	sortedByNameAsc = true
