@@ -3,13 +3,10 @@
 		<angular-monorepo-header [title]="'Inventory'"></angular-monorepo-header>
 		<br />
 		<div class="grid-container">
-			<!-- Mock content for 9 items -->
-
 			<angular-monorepo-inventory-item
 				*ngFor="let item of $inventory | async"
 				[item]="item"
 			></angular-monorepo-inventory-item>
-			<!-- Repeat this block for other items -->
 		</div>
 	</div>
 </section>

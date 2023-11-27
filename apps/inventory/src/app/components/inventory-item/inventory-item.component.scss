@@ -1,10 +1,5 @@
 @import '../../../styles/mixin';
 
-h2,
-.footer {
-	font-family: 'Inter', sans-serif;
-}
-
 p {
 	display: block;
 	margin: 1em 0;
@@ -23,8 +18,19 @@ p {
 	transition: transform 0.3s ease-in-out;
 	width: 100%;
 
-	&:hover {
-		transform: scale(1.03);
+	button {
+		background-color: $primary;
+		color: $lightest;
+		padding: $padding-small $padding-common;
+		border-radius: 20px;
+		font-weight: bold;
+	}
+
+	img {
+		margin: auto;
+		height: auto;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
 	}
 
 	.card-row {
@@ -46,22 +52,12 @@ p {
 			font-size: $font-size-header;
 			color: $dark;
 		}
-
-		.item-cost-pill {
-			background-color: $primary;
-			color: $lightest;
-			padding: $padding-small $padding-common;
-			border-radius: 20px;
-			font-weight: bold;
-		}
 	}
 
 	.card-image {
 		position: relative;
 
 		img {
-			width: 100%;
-			height: auto;
 			border-top-left-radius: 8px;
 			border-top-right-radius: 8px;
 		}

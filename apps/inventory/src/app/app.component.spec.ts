@@ -1,11 +1,26 @@
 import { TestBed } from '@angular/core/testing'
 import { AppComponent } from './app.component'
 import { RouterTestingModule } from '@angular/router/testing'
+import { ActivatedRoute, RouterLink } from '@angular/router'
 
 describe('AppComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [AppComponent, RouterTestingModule],
+			imports: [RouterTestingModule.withRoutes([]), AppComponent, RouterLink],
+			providers: [
+				{
+					provide: ActivatedRoute,
+					useValue: {
+						snapshot: {
+							data: {},
+							params: {},
+							queryParams: {},
+							fragment: {},
+							outlet: {},
+						},
+					},
+				},
+			],
 		}).compileComponents()
 	})
 

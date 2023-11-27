@@ -15,5 +15,5 @@ import { ActivatedRoute } from '@angular/router'
 export class ProductDetailComponent {
 	title = '- Product Detail'
 	@Inject('route') router: ActivatedRoute = {} as ActivatedRoute
-	@Inject('product') product: InventoryItem = {} as InventoryItem
+	@Inject('item') item: InventoryItem = {} as InventoryItem
 }

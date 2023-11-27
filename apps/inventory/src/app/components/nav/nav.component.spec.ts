@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { NavComponent } from './nav.component'
+import { ActivatedRoute, RouterLink } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
-import { ActivatedRoute } from '@angular/router'
-
+import { NavComponent } from './nav.component'
 describe('NavComponent', () => {
 	let component: NavComponent
 	let fixture: ComponentFixture<NavComponent>
@@ -19,7 +18,15 @@ describe('NavComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [NavComponent, RouterTestingModule.withRoutes([])],
+			imports: [
+				RouterTestingModule.withRoutes([
+					{ path: 'testimonials', component: NavComponent },
+					{ path: 'inventory', component: NavComponent },
+					{ path: 'orders', component: NavComponent },
+				]),
+				NavComponent,
+				RouterLink,
+			],
 			providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],
 		}).compileComponents()
 

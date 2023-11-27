@@ -11,8 +11,8 @@ describe('InventoryItemComponent', () => {
 	const fakeActivatedRoute = {
 		snapshot: {
 			data: {},
-			params: {},
-			queryParams: {},
+			params: { id: 1 },
+			queryParams: { id: 1 },
 			fragment: {},
 			outlet: {},
 		},
@@ -42,17 +42,15 @@ describe('InventoryItemComponent', () => {
 		expect(component).toBeTruthy()
 	})
 
-	it('should render item-title', () => {
+	it('should render name as h2', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('.item-title')?.textContent).toContain(
-			mockItem.name
-		)
+		expect(compiled.querySelector('h2')?.textContent).toContain(mockItem.name)
 	})
 
-	it('should render item-cost-pill', () => {
+	it('should render add to cart button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('.item-cost-pill')?.textContent).toContain(
-			'$' + mockItem.price
-		)
+		expect(
+			compiled.querySelector('button.btn-add-to-cart')?.textContent
+		).toContain('+ Add to Cart')
 	})
 })

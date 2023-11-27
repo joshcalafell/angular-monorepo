@@ -149,7 +149,7 @@ export class InventoryService {
 					'Item ' + i + ' description',
 					Math.floor(Math.random() * 100),
 					'https://via.placeholder.com/350x150',
-					new Date(),
+					new Date('12/31/2023'),
 					Math.floor(Math.random() * 5),
 					Math.floor(Math.random() * 100),
 					'In Stock',

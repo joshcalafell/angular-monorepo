@@ -2,9 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ActivatedRoute, RouterLink } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 
-import { BlockquoteComponent } from '@angular-monorepo/blockquote'
-
 import { InventoryPageComponent } from './inventory-page.component'
+import { InventoryItemComponent } from '../../components/inventory-item/inventory-item.component'
 
 describe('InventoryPageComponent', () => {
 	let component: InventoryPageComponent
@@ -23,9 +22,9 @@ describe('InventoryPageComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			imports: [
-				RouterTestingModule.withRoutes([]),
+				RouterTestingModule,
 				InventoryPageComponent,
-				BlockquoteComponent,
+				InventoryItemComponent,
 				RouterLink,
 			],
 			providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],

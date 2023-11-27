@@ -1,63 +1,40 @@
-<div class="card" [routerLink]="['/inventory', item.id]">
+<div class="card">
 	<div class="card-row">
-		<div class="card-item-header">
-			<span class="item-title">{{ item.name || 'Candle 1' }}</span>
-			<span class="item-cost-pill"> ${{ item.price || 33 }} </span>
+		<div class="flex items-center justify-between p-4 border-b">
+			<div class="flex items-between">
+				<!-- Product Image -->
+
+				<!-- Product Details -->
+				<div>
+					<h2 class="text-lg">{{ item.name }}</h2>
+				</div>
+			</div>
+
+			<!-- Price and Add to Cart Button -->
+			<div class="flex items-center">
+				<!-- Add to Cart Button -->
+				<button
+					[routerLink]="['/inventory/detail', item.id]"
+					class="btn-add-to-cart bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+				>
+					{{ 'See Details' }}
+				</button>
+			</div>
 		</div>
 	</div>
 	<div class="card-row">
 		<div class="card-column"></div>
 		<div class="card-image">
-			<img [src]="'https://via.placeholder.com/350x150'" alt="Candle 1" />
+			<img src="https://via.placeholder.com/500x350" alt="Candle 1" />
 			<div class="card-row">
 				<div class="card-body-column">
 					<div class="card-body-item">
-						<span class="item-key">Weight:</span>
-						<span class="item-value">240g</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">Wax Type:</span>
-						<span class="item-value">Paraffin, Soy</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">Wick:</span>
-						<span class="item-value">Cotton</span>
-					</div>
-				</div>
-				<div class="card-body-column">
-					<div class="card-body-item">
-						<span class="item-key">Cost:</span>
-						<span class="item-value">$33</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">Weight:</span>
-						<span class="item-value">240g</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">Dimensions:</span>
-						<span class="item-value">50x50x100cm</span>
-					</div>
-
-					<div class="card-body-item">
-						<span class="item-key">Burn Time:</span>
-						<span class="item-value">24 hours</span>
-					</div>
-				</div>
-
-				<div class="card-body-column">
-					<div class="card-body-item">
-						<span class="item-key">Scent:</span>
-						<span class="item-value">Vanilla</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">Colors:</span>
-						<span class="item-value">Red, Yellow, Aqua</span>
-					</div>
-					<div class="card-body-item">
-						<span class="item-key">Date Added:</span>
-						<span class="item-value date">
-							{{ mockDate | date : 'longDate' }}</span
+						<span class="item-key"
+							><span class="text-lg font-semibold mr-4">{{
+								item.price | currency
+							}}</span></span
 						>
+						<span class="item-value"> In Stock!</span>
 					</div>
 				</div>
 			</div>

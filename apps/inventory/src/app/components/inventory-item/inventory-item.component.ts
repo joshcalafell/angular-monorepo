@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { Component, Input } from '@angular/core'
 import { RouterLink } from '@angular/router'
 import { InventoryItem } from '../../service/inventory/inventory.model'
 
@@ -11,6 +11,6 @@ import { InventoryItem } from '../../service/inventory/inventory.model'
 	styleUrls: ['./inventory-item.component.scss'],
 })
 export class InventoryItemComponent {
-	mockDate: string = new Date().toISOString()
+	mockDate: string = new Date('12/31/2023').toISOString()
 	@Input() item: InventoryItem = {} as InventoryItem
 }

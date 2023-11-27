@@ -3,7 +3,7 @@
 .grid-container {
 	display: grid;
 	width: 100%;
-	grid-template-columns: repeat(3, 2fr);
+	grid-template-columns: repeat(3, 3fr);
 	gap: 20px;
 
 	@media screen and (max-width: 1024px) {
