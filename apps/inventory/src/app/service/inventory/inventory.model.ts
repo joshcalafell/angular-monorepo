@@ -13,6 +13,7 @@ export class InventoryItem {
 		public waxType?: string,
 		public weight?: string,
 		public wickType?: string,
-		public burnTime?: string
+		public burnTime?: string,
+		public inCart?: boolean
 	) {}
 }

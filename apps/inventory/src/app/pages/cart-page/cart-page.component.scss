@@ -1,6 +1,6 @@
-@import '../../styles/mixin';
+@import '../../../styles/mixin';
 
-button {
+angular-monorepo-cart ::ng-deep button {
 	background-color: $primary;
 	color: $lightest;
 	padding: $padding-small $padding-common;

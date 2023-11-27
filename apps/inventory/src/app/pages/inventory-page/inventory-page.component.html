@@ -4,7 +4,7 @@
 		<br />
 		<div class="grid-container">
 			<angular-monorepo-inventory-item
-				*ngFor="let item of $inventory | async"
+				*ngFor="let item of inventory"
 				[item]="item"
 			></angular-monorepo-inventory-item>
 		</div>

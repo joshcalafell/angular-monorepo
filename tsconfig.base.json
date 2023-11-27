@@ -17,6 +17,7 @@
 		"paths": {
 			"@angular-monorepo/blockquote": ["libs/blockquote/ui/src/index.ts"],
 			"@angular-monorepo/button": ["libs/button/ui/src/index.ts"],
+			"@angular-monorepo/cart": ["libs/cart/src/index.ts"],
 			"@angular-monorepo/header": ["libs/header/ui/src/index.ts"],
 			"@angular-monorepo/layout": ["libs/layout/ui/src/index.ts"],
 			"@angular-monorepo/menu": ["libs/menu/src/index.ts"],

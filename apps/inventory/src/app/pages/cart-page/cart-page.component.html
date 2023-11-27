@@ -1,0 +1,15 @@
+<section class="section-wrapper">
+	<div class="angular-monorepo-container">
+		<angular-monorepo-header
+			[title]="'Shopping Cart'"
+		></angular-monorepo-header>
+
+		<br />
+
+		<angular-monorepo-cart
+			[cartItems]="cartItems"
+			[total]="total"
+			(removeItem)="removeItemFromCart()"
+		></angular-monorepo-cart>
+	</div>
+</section>
