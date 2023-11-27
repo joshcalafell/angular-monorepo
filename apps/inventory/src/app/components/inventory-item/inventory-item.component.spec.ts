@@ -51,6 +51,6 @@ describe('InventoryItemComponent', () => {
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(
 			compiled.querySelector('button.btn-add-to-cart')?.textContent
-		).toContain('+ Add to Cart')
+		).toContain('See Details')
 	})
 })

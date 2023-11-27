@@ -32,6 +32,7 @@ export class NavComponent {
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	trackByFn(index: number, item: unknown): number {
+		console.log('trackByFn', index, item)
 		return index
 	}
 }

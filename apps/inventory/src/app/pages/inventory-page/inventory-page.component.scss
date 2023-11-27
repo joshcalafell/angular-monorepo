@@ -3,8 +3,13 @@
 .grid-container {
 	display: grid;
 	width: 100%;
-	grid-template-columns: repeat(3, 3fr);
+	grid-template-columns: repeat(3, 2fr);
 	gap: 20px;
+
+	@media screen and (max-width: 1230px) {
+		font-size: 1rem;
+		grid-template-columns: repeat(2, 2fr);
+	}
 
 	@media screen and (max-width: 1024px) {
 		font-size: 1rem;
