@@ -1,5 +1,5 @@
 import { Route } from '@angular/router'
-import { InventoryDetailComponent } from './components/inventory-detail/inventory-detail.component'
+import { InventoryDetailComponent } from './inventory-detail/inventory-detail.component'
 import { OrderDetailComponent } from './components/order-detail/order-detail.component'
 import { AboutPageComponent } from './pages/about-page/about-page.component'
 import { CartPageComponent } from './pages/cart-page/cart-page.component'

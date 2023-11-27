@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common'
 import { Component, OnInit, inject } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
-import { InventoryItem } from '../../service/inventory/inventory.model'
-import { InventoryService } from '../../service/inventory/inventory.service'
-import { HeaderComponent } from '../header/header.component'
+import { InventoryItem } from '../service/inventory/inventory.model'
+import { InventoryService } from '../service/inventory/inventory.service'
+import { HeaderComponent } from '../components/header/header.component'
 
 @Component({
 	selector: 'angular-monorepo-inventory-detail',

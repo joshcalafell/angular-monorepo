@@ -13,8 +13,8 @@ body,
 app-root {
 	background: linear-gradient(
 		90deg,
-		hsl(180, 100%, 100%) 350%,
-		hsl(60, 84%, 95%) 65%
+		hsl(231, 65%, 47%) 150%,
+		hsl(177, 89%, 42%) 35%
 	);
 }
 
@@ -23,8 +23,6 @@ app-root {
 }
 
 button {
-	background-color: $primary;
-	color: $lightest;
 	padding: $padding-small $padding-common;
 	border-radius: 20px;
 	width: 160px;

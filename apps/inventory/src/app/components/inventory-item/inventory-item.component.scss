@@ -1,51 +1,26 @@
 @import '../../../styles/mixin';
 
-p {
-	display: block;
-	margin: 1em 0;
-	padding: 0 1em;
-	font-family: 'Inter', monospace;
-}
-
 .card {
 	font-family: $font-family-body;
 	background-color: $lightest;
 	border: 1px solid $tertiary;
-	border-radius: 8px;
+
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
-	margin: $margin-common;
+
 	transition: transform 0.3s ease-in-out;
 	width: 100%;
 
-	button {
-		background-color: $primary;
-		color: $lightest;
-		padding: $padding-small $padding-common;
-		border-radius: 20px;
-		font-weight: bold;
-	}
-
 	img {
 		margin: auto;
-		height: auto;
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
-	}
-
-	.card-row {
-		border-bottom: 1px solid $secondary;
-
-		&:last-child {
-			border: none;
-		}
+		height: 300px;
+		margin-bottom: $margin-common;
 	}
 
 	.card-item-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: $padding-common;
 
 		.item-title {
 			font-family: $font-family-header;
@@ -54,36 +29,15 @@ p {
 		}
 	}
 
-	.card-image {
-		position: relative;
-
-		img {
-			border-top-left-radius: 8px;
-			border-top-right-radius: 8px;
-		}
-	}
-
 	.card-body-column {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: $padding-common;
 
 		.card-body-item {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding: $padding-small;
-
-			.item-key {
-				color: $dark;
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-
-			.item-value {
-				color: $med-dark;
-			}
 		}
 	}
 }
