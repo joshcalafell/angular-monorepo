@@ -14,19 +14,6 @@ table td:last-child {
 	cursor: pointer;
 }
 
-.btn-primary {
-	z-index: 1000;
-	border-radius: 3px;
-	padding: 8px 4px;
-	width: 70px;
-	margin-left: 8px;
-	font-weight: 600;
-	font-family: 'Inter', sans-serif;
-	border: none;
-	background-color: #535353;
-	color: white;
-}
-
 tr td {
 	background-color: #ffffff;
 	padding: 12px 16px;
@@ -37,9 +24,13 @@ tr td:last-child {
 	text-align: center;
 }
 
-.btn-primary:hover {
-	color: white;
-	background-color: #ff6766;
+.btn-primary {
+	background-color: #e0e0e0;
+	color: #333 !important;
+	padding: $padding-small;
+	border-radius: 20px;
+	width: 100px;
+	font-weight: 400;
 }
 
 .sort-last {

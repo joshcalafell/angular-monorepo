@@ -13,7 +13,6 @@ export type DisplayColumns =
 	| 'order_date'
 	| 'order_status'
 	| 'order_total'
-	| 'action'
 
 export interface Column {
 	title: string
@@ -84,14 +83,6 @@ export class OrdersPageComponent implements OnInit {
 			sortable: true,
 			sortDirections: ['asc', 'desc'],
 			sortFn: () => this.sortOrdersByTotal(),
-		},
-
-		{
-			title: 'Action',
-			column_key: 'order_number',
-			sortable: false,
-			sortDirections: [],
-			sortFn: () => {},
 		},
 	]
 

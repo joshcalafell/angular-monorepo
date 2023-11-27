@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { CartItemComponent } from '../cart-item/cart-item.component'
 
 @Component({
 	selector: 'angular-monorepo-cart',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, CartItemComponent],
 	templateUrl: './cart.component.html',
 	styleUrls: ['./cart.component.scss'],
 })

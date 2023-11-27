@@ -1,38 +1,22 @@
 <div class="mx-auto p-4">
-	<h2 class="text-2xl font-semibold mb-4 px-0 mx-0">
-		{{ cartItems.length + '&nbsp;Items' }}
-	</h2>
+	<hr />
 
-	<h2 class="text-2xl font-semibold mb-4 px-0 mx-0">
-		{{ total | currency }}
-	</h2>
+	<div class="mx-auto p-4">
+		<p class="text-2xl font-semibold mb-4 px-0 mx-0">
+			{{ cartItems.length + '&nbsp;Items' }} currently selected
+		</p>
 
-	<div
-		*ngFor="let item of cartItems; let i = index"
-		class="flex items-center justify-between border-b py-2"
-	>
-		<div class="flex items-center">
-			<img
-				[src]="'https://via.placeholder.com/500x350'"
-				class="h-12 w-12 object-cover rounded mr-4"
-			/>
-			<div>
-				<p class="text-black-800 font-bold">{{ 'Candle ' + (i + 1) }}</p>
-				<p class="text-black-600">{{ '17.5' | currency }}</p>
-			</div>
+		<p class="text-2xl mb-4 px-0 mx-0">Total: {{ total | currency }}</p>
+
+		<div *ngFor="let item of cartItems; let i = index">
+			<angular-monorepo-cart-item
+				[item]="item"
+				[index]="i"
+			></angular-monorepo-cart-item>
 		</div>
 
-		<div class="flex items-center">
-			<button
-				class="text-gray-500 hover:text-red-500 focus:outline-none"
-				(click)="removeFromCart(item)"
-			>
-				Remove
-			</button>
+		<div *ngIf="cartItems.length === 0" class="text-center text-gray-600 mt-4">
+			Your cart is empty.
 		</div>
-	</div>
-
-	<div *ngIf="cartItems.length === 0" class="text-center text-gray-600 mt-4">
-		Your cart is empty.
 	</div>
 </div>

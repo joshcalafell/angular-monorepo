@@ -21,3 +21,12 @@ app-root {
 .angular-monorepo-container {
 	padding: 8px 8px;
 }
+
+button {
+	background-color: $primary;
+	color: $lightest;
+	padding: $padding-small $padding-common;
+	border-radius: 20px;
+	width: 160px;
+	font-weight: bold;
+}

@@ -17,12 +17,12 @@ export class NavComponent {
 			name: 'About',
 		},
 		{
-			path: '/inventory',
-			name: 'Inventory',
-		},
-		{
 			path: '/testimonials',
 			name: 'Testimonials',
+		},
+		{
+			path: '/inventory',
+			name: 'Inventory',
 		},
 		{
 			path: '/orders',

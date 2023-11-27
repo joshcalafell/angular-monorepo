@@ -1,11 +1,5 @@
 @import '../../../styles/mixin';
 
-angular-monorepo-cart ::ng-deep button {
-	background-color: $primary;
-	color: $lightest;
-	padding: $padding-small $padding-common;
-	border-radius: 20px;
-	font-weight: bold;
-	width: 150px;
-	height: 40px;
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }

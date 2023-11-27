@@ -2,17 +2,15 @@
 	<div class="angular-monorepo-container">
 		<angular-monorepo-header [title]="'Orders'"></angular-monorepo-header>
 		<angular-monorepo-table-sort [displayedColumns]="displayedColumns">
-			<tr *ngFor="let order of orders; let i = index">
+			<tr
+				*ngFor="let order of orders; let i = index"
+				[routerLink]="['/orders/detail', order.id]"
+			>
 				<td>{{ order.id }}</td>
 				<td>{{ order.customer_name }}</td>
 				<td>{{ order.order_date | date }}</td>
 				<td>{{ order.order_status }}</td>
 				<td>{{ order.order_total | currency }}</td>
-				<td>
-					<button class="btn btn-primary" [routerLink]="['/orders', order.id]">
-						View
-					</button>
-				</td>
 			</tr>
 		</angular-monorepo-table-sort>
 	</div>
