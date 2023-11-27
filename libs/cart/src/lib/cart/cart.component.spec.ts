@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { CartComponent } from './cart.component'
+import { CartItemComponent } from '../cart-item/cart-item.component'
 
 describe('CartComponent', () => {
 	let component: CartComponent<any>
@@ -8,7 +9,7 @@ describe('CartComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [CartComponent],
+			imports: [CartComponent, CartItemComponent],
 		}).compileComponents()
 	})
 
