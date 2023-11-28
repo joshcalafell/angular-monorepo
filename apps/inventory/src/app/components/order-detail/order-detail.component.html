@@ -17,28 +17,28 @@
 					<div class="card-body-column">
 						<div class="card-body-item">
 							<span class="item-key">Order ID:</span>
-							<span class="item-value">{{ order.id }}</span>
+							<span class="item-value">{{ item.id }}</span>
 						</div>
 						<div class="card-body-item">
 							<span class="item-key">SKU:</span>
-							<span class="item-value">{{ order.sku }}</span>
+							<span class="item-value">{{ item.sku }}</span>
 						</div>
 						<div class="card-body-item">
 							<span class="item-key">Order Status:</span>
-							<span class="item-value">{{ order.order_status }}</span>
+							<span class="item-value">{{ item.order_status }}</span>
 						</div>
 						<div class="card-body-item">
 							<span class="item-key">Last Updated:</span>
 							<span class="item-value">
-								{{ order.order_date | date : 'mediumDate' }}&nbsp;{{
-									order.order_date | date : 'shortTime'
+								{{ item.order_date | date : 'mediumDate' }}&nbsp;{{
+									item.order_date | date : 'shortTime'
 								}}</span
 							>
 						</div>
 
 						<div class="card-body-item">
 							<span class="item-key">Customer:</span>
-							<span class="item-value"> {{ order.customer_name }} </span>
+							<span class="item-value"> {{ item.customer_name }} </span>
 						</div>
 
 						<div class="card-body-item">
@@ -54,14 +54,14 @@
 						<div class="card-body-item">
 							<span class="item-key">Taxes:</span>
 							<span class="item-value"
-								>{{ order.order_total / 4 | currency }} (25%)</span
+								>{{ item.order_total / 4 | currency }} (25%)</span
 							>
 						</div>
 
 						<div class="card-body-item underline">
 							<span class="item-key">Order Total:</span>
 							<span class="item-value bold"
-								>{{ order.order_total + order.order_total / 4 + 10 | currency }}
+								>{{ item.order_total + item.order_total / 4 + 10 | currency }}
 							</span>
 						</div>
 					</div>

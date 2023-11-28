@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common'
 import { Component, OnInit, inject } from '@angular/core'
 
 import { CartComponent } from '@angular-monorepo/cart'
-import { ActivatedRoute, Router, RouterLink } from '@angular/router'
+import { RouterLink } from '@angular/router'
 import { HeaderComponent } from '../../components/header/header.component'
 import { InventoryItemComponent } from '../../components/inventory-item/inventory-item.component'
 import { InventoryItem } from '../../service/inventory/inventory.model'
@@ -24,8 +24,6 @@ import { InventoryService } from '../../service/inventory/inventory.service'
 })
 export class InventoryPageComponent implements OnInit {
 	private inventoryService = inject(InventoryService)
-	private activatedRoute = inject(ActivatedRoute)
-	private router = inject(Router)
 
 	items = [] as InventoryItem[]
 

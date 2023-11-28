@@ -16,18 +16,16 @@ export class OrderDetailComponent implements OnInit {
 	private orderService = inject(OrdersService)
 	private activatedRoute = inject(ActivatedRoute)
 	private router = inject(Router)
-	order: Order = {} as Order
+	item: Order = {} as Order
 
 	ngOnInit(): void {
-		const id = this.activatedRoute.snapshot.params['id']
-
+		const { id } = this.activatedRoute.snapshot.params
 		try {
-			this.orderService.$orders.subscribe((orders: Order[]) => {
-				const found = orders.find((order) => order.id === id)
-				if (found) this.order = found
-			})
+			const found = this.orderService.items.find((order) => order.id == id)
+			if (found) this.item = found
+			else throw new Error('Item not found')
 		} catch (error) {
-			console.error(error)
+			console.log(error)
 			this.router.navigate(['/404'])
 		}
 	}
