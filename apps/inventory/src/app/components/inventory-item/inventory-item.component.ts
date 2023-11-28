@@ -11,6 +11,5 @@ import { InventoryItem } from '../../service/inventory/inventory.model'
 	styleUrls: ['./inventory-item.component.scss'],
 })
 export class InventoryItemComponent {
-	mockDate: string = new Date('12/31/2023').toISOString()
 	@Input() item: InventoryItem = {} as InventoryItem
 }
