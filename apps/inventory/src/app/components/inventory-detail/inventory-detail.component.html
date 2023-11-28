@@ -1,6 +1,6 @@
 <div class="max-w-2xl mx-auto p-8">
 	<div class="flex items-center justify-between mb-4">
-		<h2 class="text-2xl font-semibold">{{ item.name || 'Sample Name' }}</h2>
+		<h2 class="text-2xl font-semibold">{{ item.name }}</h2>
 		<button
 			class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 		>
@@ -15,23 +15,17 @@
 		/>
 
 		<div class="mb-4">
-			<p class="text-lg font-semibold">{{ item.price || 17 | currency }}</p>
+			<p class="text-lg font-semibold">{{ item.price | currency }}</p>
 
-			<p class="text-gray-600">
-				Dimensions: {{ item.dimensions || '3x3x5in' }}
-			</p>
-			<p class="text-gray-600">
-				Wax Type: {{ item.waxType || 'Paraffin, Soy Blend' }}
-			</p>
+			<p class="text-gray-600">Dimensions: {{ item.dimensions }}</p>
+			<p class="text-gray-600">Wax Type: {{ item.waxType }}</p>
 			<!-- Add more details as needed -->
 
 			<p class="text-gray-600">
-				Inventory Date: {{ item.inventoryDate || sampleDate | date }}
+				Inventory Date: {{ item.inventoryDate | date }}
 			</p>
-			<p class="text-gray-600">Quantity: {{ item.quantity || 3 | number }}</p>
-			<p class="text-gray-600">
-				Inventory Status: {{ item.inventoryStatus || 'In Stock!' }}
-			</p>
+			<p class="text-gray-600">Quantity: {{ item.quantity | number }}</p>
+			<p class="text-gray-600">Inventory Status: {{ item.inventoryStatus }}</p>
 		</div>
 	</div>
 

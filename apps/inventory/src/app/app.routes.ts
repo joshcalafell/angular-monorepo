@@ -42,11 +42,11 @@ export const appRoutes: Route[] = [
 		path: 'cart',
 		component: CartPageComponent,
 	},
-	{
+	/* 	{
 		path: '**',
 		redirectTo: '404',
 		pathMatch: 'full',
-	},
+	},*/
 	{
 		path: '404',
 		component: NotFoundPageComponent,

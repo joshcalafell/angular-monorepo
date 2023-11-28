@@ -55,15 +55,12 @@ export class OrdersService {
 			orders.push(
 				new Order(
 					i.toString(),
-					new Array(8)
-						.fill(null)
-						.map(() => Math.round(Math.random() * 9))
-						.join('')
-						.toString(),
+					'',
 					randomName,
 					randomDateWithinPastYear,
 					randomStatus,
-					Math.floor(Math.random() * 100 + 30)
+					Math.floor(Math.random() * 100),
+					[]
 				)
 			)
 		}

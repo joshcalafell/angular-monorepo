@@ -18,12 +18,11 @@ export class CartPageComponent {
 	total = 0
 
 	constructor() {
-		this.inventoryService.$inventory.subscribe((inventory) => {
-			if (inventory) {
-				this.cartItems = inventory
-				console.log('this.cartItems', this.cartItems)
-			}
-		})
+		this.cartItems = this.inventoryService.items
+		this.total = this.inventoryService.items.reduce(
+			(acc, item) => acc + Number(item.price),
+			0
+		)
 	}
 
 	removeItemFromCart(item: InventoryItem) {

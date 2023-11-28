@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { Component, OnInit, inject } from '@angular/core'
 
 import { CartComponent } from '@angular-monorepo/cart'
-import { RouterLink } from '@angular/router'
+import { ActivatedRoute, Router, RouterLink } from '@angular/router'
 import { HeaderComponent } from '../../components/header/header.component'
 import { InventoryItemComponent } from '../../components/inventory-item/inventory-item.component'
 import { InventoryItem } from '../../service/inventory/inventory.model'
@@ -22,15 +22,16 @@ import { InventoryService } from '../../service/inventory/inventory.service'
 	styleUrls: ['./inventory-page.component.scss'],
 	providers: [InventoryService, RouterLink],
 })
-export class InventoryPageComponent {
-	inventory: InventoryItem[] = {} as InventoryItem[]
+export class InventoryPageComponent implements OnInit {
+	private inventoryService = inject(InventoryService)
+	private activatedRoute = inject(ActivatedRoute)
+	private router = inject(Router)
 
-	constructor(private inventoryService: InventoryService) {
-		this.inventoryService.$inventory.subscribe((inventory) => {
-			console.log('inventory', inventory)
-			if (inventory) {
-				this.inventory = inventory
-			}
-		})
+	items = [] as InventoryItem[]
+
+	constructor() {}
+
+	ngOnInit(): void {
+		this.items = this.inventoryService.items
 	}
 }

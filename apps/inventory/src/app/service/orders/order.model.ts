@@ -1,3 +1,5 @@
+import { InventoryItem } from '../inventory/inventory.model'
+
 export enum OrderStatus {
 	Processing = 1,
 	InTransit = 2,
@@ -25,7 +27,8 @@ export class Order {
 		public customer_name: string,
 		public order_date: Date,
 		public order_status: string,
-		public order_total: number
+		public order_total: number,
+		public order_inventory: InventoryItem[]
 	) {
 		this.id = id
 		this.sku = sku
@@ -33,5 +36,6 @@ export class Order {
 		this.order_date = order_date
 		this.order_status = order_status
 		this.order_total = order_total
+		this.order_inventory = order_inventory
 	}
 }
