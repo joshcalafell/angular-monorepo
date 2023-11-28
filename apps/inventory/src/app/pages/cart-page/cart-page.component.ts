@@ -20,15 +20,14 @@ export class CartPageComponent {
 	constructor() {
 		this.inventoryService.$inventory.subscribe((inventory) => {
 			if (inventory) {
-				this.cartItems = inventory.filter((item) => !item.inCart)
-				this.total = this.cartItems.reduce(
-					// eslint-disable-next-line @typescript-eslint/no-unused-vars
-					(total, item) => total + 17.5,
-					0
-				)
+				this.cartItems = inventory
+				console.log('this.cartItems', this.cartItems)
 			}
 		})
 	}
 
-	removeItemFromCart() {}
+	removeItemFromCart(item: InventoryItem) {
+		console.log('removeItemFromCart', item)
+		this.inventoryService.removeFromCart(item)
+	}
 }

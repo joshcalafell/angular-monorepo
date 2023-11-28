@@ -28,11 +28,15 @@ export class NavComponent {
 			path: '/orders',
 			name: 'Orders',
 		},
+		{
+			path: '/cart',
+			name: 'Cart',
+		},
 	]
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	trackByFn(index: number, item: unknown): number {
-		console.log('trackByFn', index, item)
+		// console.log('trackByFn', index, item)
 		return index
 	}
 }

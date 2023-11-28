@@ -4,8 +4,8 @@ import { CartComponent } from './cart.component'
 import { CartItemComponent } from '../cart-item/cart-item.component'
 
 describe('CartComponent', () => {
-	let component: CartComponent<any>
-	let fixture: ComponentFixture<CartComponent<any>>
+	let component: CartComponent
+	let fixture: ComponentFixture<CartComponent>
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({

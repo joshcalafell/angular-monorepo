@@ -30,7 +30,7 @@ export class InventoryDetailComponent implements OnInit {
 				if (found) this.item = found
 			})
 		} catch (error) {
-			console.error(error)
+			console.log(error)
 			this.router.navigate(['/404'])
 		}
 	}

@@ -8,8 +8,17 @@ import { CommonModule } from '@angular/common'
 	templateUrl: './cart-item.component.html',
 	styleUrls: ['./cart-item.component.scss'],
 })
-export class CartItemComponent<T> {
-	@Input() item: T = {} as T
+export class CartItemComponent {
+	@Input() item: unknown = {} as unknown
 	@Input() index = 0
-	@Output() removeItem = new EventEmitter<T>()
+	@Output() removeItem = new EventEmitter()
+
+	removeItemFromCart(item: unknown): void {
+		// Implement the logic to remove an item from the cart
+		// You might want to use a service to manage the cart state
+		// For simplicity, I'm emitting an event to the parent component
+		// which should handle the removal logic
+		console.log('[CartItem] removeItemFromCart', item)
+		this.removeItem.emit(item)
+	}
 }

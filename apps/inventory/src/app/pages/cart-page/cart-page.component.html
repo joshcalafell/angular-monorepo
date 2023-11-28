@@ -9,7 +9,7 @@
 		<angular-monorepo-cart
 			[cartItems]="cartItems"
 			[total]="total"
-			(removeItem)="removeItemFromCart()"
+			(removeItem)="removeItemFromCart($event)"
 		></angular-monorepo-cart>
 	</div>
 </section>

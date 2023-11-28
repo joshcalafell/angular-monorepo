@@ -1,15 +1,20 @@
-<div class="mx-auto p-4">
+<div class="mx-auto px-0">
 	<hr />
 
-	<div class="mx-auto p-4">
-		<p class="text-2xl font-semibold mb-4 px-0 mx-0">
-			{{ cartItems.length + '&nbsp;Items' }} currently selected
-		</p>
+	<div class="mx-auto py-3 px-4 pb-0">
+		<div class="flex flex-row flex-row justify-between align-center">
+			<p class="text-xl font-semibold mb-4 px-0 mx-0">
+				{{ cartItems.length + '&nbsp;Items' }} currently selected
+			</p>
 
-		<p class="text-2xl mb-4 px-0 mx-0">Total: {{ total | currency }}</p>
+			<p class="text-2xl px-0 mx-0">Total: {{ total || 175 | currency }}</p>
+		</div>
+
+		<hr />
 
 		<div *ngFor="let item of cartItems; let i = index">
 			<angular-monorepo-cart-item
+				(removeItem)="removeItemFromCart($event)"
 				[item]="item"
 				[index]="i"
 			></angular-monorepo-cart-item>

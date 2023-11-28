@@ -9,16 +9,17 @@ import { CartItemComponent } from '../cart-item/cart-item.component'
 	templateUrl: './cart.component.html',
 	styleUrls: ['./cart.component.scss'],
 })
-export class CartComponent<T> {
-	@Input() cartItems: T[] = []
+export class CartComponent {
+	@Input() cartItems: unknown[] = []
 	@Input() total = 0
-	@Output() removeItem = new EventEmitter<T>()
+	@Output() removeItem = new EventEmitter()
 
-	removeFromCart(item: T): void {
+	removeItemFromCart(item: unknown): void {
 		// Implement the logic to remove an item from the cart
 		// You might want to use a service to manage the cart state
 		// For simplicity, I'm emitting an event to the parent component
 		// which should handle the removal logic
+		console.log('[Cart] removeItemFromCart', item)
 		this.removeItem.emit(item)
 	}
 }

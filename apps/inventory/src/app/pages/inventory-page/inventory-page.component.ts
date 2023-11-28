@@ -26,17 +26,11 @@ export class InventoryPageComponent {
 	inventory: InventoryItem[] = {} as InventoryItem[]
 
 	constructor(private inventoryService: InventoryService) {
-		this.inventoryService.fillWithRandomData(10)
 		this.inventoryService.$inventory.subscribe((inventory) => {
 			console.log('inventory', inventory)
 			if (inventory) {
 				this.inventory = inventory
 			}
 		})
-	}
-
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	removeItemFromCart(item: InventoryItem) {
-		// this.inventoryService.removeItemFromCart(item)
 	}
 }

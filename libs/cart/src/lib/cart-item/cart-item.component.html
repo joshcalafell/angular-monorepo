@@ -1,4 +1,4 @@
-<div class="flex items-center justify-between border-b py-2">
+<div class="item flex items-center justify-between border-b py-2">
 	<div class="flex items-center">
 		<img
 			[src]="'https://via.placeholder.com/150x150'"
@@ -6,13 +6,16 @@
 		/>
 		<div>
 			<p class="text-black-800 font-bold">{{ 'Candle ' + (index + 1) }}</p>
-			<p class="text-black-600">{{ '17.5' | currency }}</p>
+			<p class="text-black-600">{{ 17 | currency }}</p>
 		</div>
 	</div>
 
 	<div class="flex items-center">
-		<button class="text-lg hover:text-black-500 focus:outline-none">
-			🗑️ Remove
+		<button
+			class="bg-gray-200 hover:bg-gray-300 text-black font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+			(click)="removeItemFromCart(item)"
+		>
+			Remove Item
 		</button>
 	</div>
 </div>
