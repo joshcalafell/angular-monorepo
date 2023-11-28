@@ -20,18 +20,20 @@
 		</div>
 	</div>
 	<div class="card-row">
-		<div class="card-column p-4">
+		<div class="card-column">
 			<div class="card-image">
-				<img src="https://via.placeholder.com/500x350" alt="Candle 1" />
+				<img src="https://via.placeholder.com/650x350" alt="Candle 1" />
 				<div class="card-row">
-					<div class="card-body-column">
+					<div class="card-body-column p-3 mb-2">
 						<div class="card-body-item">
 							<span class="item-key"
-								><span class="text-lg font-semibold mr-4">{{
+								><span class="text-lg font-semibold mr-4 mx-0">{{
 									item.price | currency
 								}}</span></span
 							>
-							<span class="item-value"> In Stock!</span>
+							<span class="text-lg font-semibold">
+								{{ item.quantity }} In Stock</span
+							>
 						</div>
 					</div>
 				</div>
