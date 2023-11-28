@@ -20,10 +20,21 @@ describe('InventoryItemComponent', () => {
 
 	const mockItem: InventoryItem = {
 		id: 1,
-		name: 'test',
-		description: 'test',
+		name: 'Test Item',
+		description: 'Test Description',
 		price: 1,
 		quantity: 1,
+		imageUrl: 'https://via.placeholder.com/150',
+		inventoryStatus: 'InStock',
+		starRating: 1,
+		starRatingCount: 1,
+		inventoryDate: '2021-09-01',
+		dimensions: '1x1x1',
+		waxType: 'Test Wax Type',
+		weight: '1lb',
+		wickType: 'Test Wick Type',
+		burnTime: '1hr',
+		inCart: false,
 	}
 
 	beforeEach(async () => {
