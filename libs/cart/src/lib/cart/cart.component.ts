@@ -13,6 +13,7 @@ import { CartItemComponent } from '../cart-item/cart-item.component'
 export class CartComponent implements OnInit {
 	@Input() cartItems: any[] = []
 	@Input() total = 0
+
 	@Output() removeItem = new EventEmitter()
 	@Output() addItem = new EventEmitter()
 

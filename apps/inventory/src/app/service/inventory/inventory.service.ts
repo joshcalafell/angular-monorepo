@@ -18,9 +18,6 @@ export class InventoryService {
 
 	removeFromCart(item: InventoryItem) {
 		console.log('[InventoryService] removeFromCart', item)
-		this.cart = [
-			...this.cart.slice(0, this.cart.indexOf(item)),
-			...this.cart.slice(this.cart.indexOf(item) + 1),
-		]
+		this.cart = this.cart.filter((i) => i.id !== item.id)
 	}
 }

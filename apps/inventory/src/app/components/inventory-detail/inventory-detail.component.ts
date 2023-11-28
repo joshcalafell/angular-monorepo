@@ -32,4 +32,8 @@ export class InventoryDetailComponent implements OnInit {
 			this.router.navigate(['/404'])
 		}
 	}
+
+	addToCartHandler(item: InventoryItem) {
+		this.inventoryService.addToCart(item)
+	}
 }
