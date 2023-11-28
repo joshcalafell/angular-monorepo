@@ -14,6 +14,7 @@ export class CartComponent implements OnInit {
 	@Input() cartItems: any[] = []
 	@Input() total = 0
 	@Output() removeItem = new EventEmitter()
+	@Output() addItem = new EventEmitter()
 
 	ngOnInit(): void {
 		console.log('[Cart] ngOnInit', this.cartItems)
@@ -30,5 +31,10 @@ export class CartComponent implements OnInit {
 		// which should handle the removal logic
 		console.log('[Cart] removeItemFromCart', item)
 		this.removeItem.emit(item)
+	}
+
+	addItemToCart(item: unknown): void {
+		console.log('[Cart] addToCart', item)
+		this.addItem.emit(item)
 	}
 }
