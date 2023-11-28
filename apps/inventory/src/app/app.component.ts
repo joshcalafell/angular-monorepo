@@ -40,12 +40,12 @@ export class AppComponent {
 			name: 'Inventory',
 		},
 		{
-			path: '/orders',
-			name: 'Orders',
-		},
-		{
 			path: '/cart',
 			name: 'Cart',
+		},
+		{
+			path: '/orders',
+			name: 'Orders',
 		},
 	]
 
