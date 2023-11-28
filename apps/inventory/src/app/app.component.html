@@ -1,34 +1,8 @@
 <section class="wrapper">
-	<header class="header flex-row">
-		<hgroup class="flex-row-fs header-left">
-			<svg width="50" height="100" xmlns="http://www.w3.org/2000/svg">
-				<!-- Candle body -->
-				<rect x="5" y="36" width="20" height="50" fill="#FFD700" />
-				<!-- Flame -->
-				<circle cx="15" cy="30" r="15" fill="#ff6766" />
-			</svg>
-			<h1 class="title">
-				<a
-					class="title-link"
-					routerLink="about"
-					title="Genesis Candles"
-					alt="Genesis Candles"
-					rel="noopener"
-					>{{ title }}</a
-				>
-			</h1>
-			<angular-monorepo-nav></angular-monorepo-nav>
-		</hgroup>
-		<hgroup class="header-right">
-			<button class="btn btn-primary" id="btn-login">
-				<span>Login / Sign Up</span>
-			</button>
-		</hgroup>
-	</header>
-
-	<br />
-	<hr />
-	<br />
+	<angular-monorepo-header
+		[title]="title"
+		[links]="links"
+	></angular-monorepo-header>
 
 	<router-outlet></router-outlet>
 

@@ -1,7 +1,6 @@
 <section class="section-wrapper" *ngIf="items?.length">
 	<div class="angular-monorepo-container">
-		<angular-monorepo-header [title]="'Inventory'"></angular-monorepo-header>
-		<br />
+		<h2>Inventory</h2>
 		<div class="grid-container">
 			<angular-monorepo-inventory-item
 				*ngFor="let item of items"

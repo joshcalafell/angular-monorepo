@@ -3,3 +3,11 @@
 		background-color: #f5f5f5;
 	}
 }
+
+button {
+	width: 120px;
+}
+
+button:not(last-child) {
+	margin-left: 16px;
+}

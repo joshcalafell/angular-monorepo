@@ -2,7 +2,13 @@ import { Component } from '@angular/core'
 
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router'
 import { FooterComponent } from './components/footer/footer.component'
-import { NavComponent } from './components/nav/nav.component'
+import { HeaderComponent } from './components/header/header.component'
+
+export interface AppLink {
+	name: string
+	path: string
+	pageTitle?: string
+}
 
 @Component({
 	standalone: true,
@@ -10,8 +16,8 @@ import { NavComponent } from './components/nav/nav.component'
 		RouterLink,
 		RouterLinkActive,
 		RouterOutlet,
-		NavComponent,
 		FooterComponent,
+		HeaderComponent,
 	],
 	selector: 'angular-monorepo-root',
 	templateUrl: './app.component.html',
@@ -19,4 +25,33 @@ import { NavComponent } from './components/nav/nav.component'
 })
 export class AppComponent {
 	title = 'GENESIS CANDLES'
+
+	links: AppLink[] = [
+		{
+			path: '/about',
+			name: 'About',
+		},
+		{
+			path: '/testimonials',
+			name: 'Testimonials',
+		},
+		{
+			path: '/inventory',
+			name: 'Inventory',
+		},
+		{
+			path: '/orders',
+			name: 'Orders',
+		},
+		{
+			path: '/cart',
+			name: 'Cart',
+		},
+	]
+
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	trackByFn(index: number, item: unknown): number {
+		// console.log('trackByFn', index, item)
+		return index
+	}
 }

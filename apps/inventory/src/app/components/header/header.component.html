@@ -1,3 +1,46 @@
-<h1>
-	<a *ngIf="link" class="title-link" routerLink="link"></a>{{ ' ' + title }}
-</h1>
+<header class="header flex flex-row items-center justify-between">
+	<hgroup class="flex items-center">
+		<svg
+			width="50"
+			height="100"
+			xmlns="http://www.w3.org/2000/svg"
+			class="fill-current text-yellow-500 mr-2"
+		>
+			<!-- Candle body -->
+			<rect x="5" y="36" width="20" height="50" />
+			<!-- Flame -->
+			<circle cx="15" cy="30" r="15" class="text-red-500" />
+		</svg>
+		<h1 class="text-lg font-semibold">
+			<a
+				class="title-link"
+				routerLink="about"
+				title="Genesis Candles"
+				alt="Genesis Candles"
+				rel="noopener"
+				>{{ title }}</a
+			>
+		</h1>
+		<nav class="hidden md:flex ml-4">
+			<ul class="flex space-x-4">
+				<li *ngFor="let link of links">
+					<a
+						[routerLink]="link.path"
+						routerLinkActive="active"
+						class="text-lg font-semibold"
+						>{{ link.name }}</a
+					>
+				</li>
+			</ul>
+		</nav>
+	</hgroup>
+
+	<hgroup class="hidden md:flex">
+		<button
+			class="text-lg p-3 bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-5 rounded focus:outline-none focus:shadow-outline"
+			id="btn-login"
+		>
+			<span>Login / Sign Up</span>
+		</button>
+	</hgroup>
+</header>
