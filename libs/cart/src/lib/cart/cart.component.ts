@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { CartItemComponent } from '../cart-item/cart-item.component'
 
@@ -9,10 +10,18 @@ import { CartItemComponent } from '../cart-item/cart-item.component'
 	templateUrl: './cart.component.html',
 	styleUrls: ['./cart.component.scss'],
 })
-export class CartComponent {
-	@Input() cartItems: unknown[] = []
+export class CartComponent implements OnInit {
+	@Input() cartItems: any[] = []
 	@Input() total = 0
 	@Output() removeItem = new EventEmitter()
+
+	ngOnInit(): void {
+		console.log('[Cart] ngOnInit', this.cartItems)
+		this.total = this.cartItems.reduce(
+			(acc, item) => acc + Number(item.price),
+			0
+		)
+	}
 
 	removeItemFromCart(item: unknown): void {
 		// Implement the logic to remove an item from the cart

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
@@ -9,11 +10,11 @@ import { CommonModule } from '@angular/common'
 	styleUrls: ['./cart-item.component.scss'],
 })
 export class CartItemComponent {
-	@Input() item: unknown = {} as unknown
+	@Input() item: any = {}
 	@Input() index = 0
 	@Output() removeItem = new EventEmitter()
 
-	removeItemFromCart(item: unknown): void {
+	removeItemFromCart(item: any): void {
 		// Implement the logic to remove an item from the cart
 		// You might want to use a service to manage the cart state
 		// For simplicity, I'm emitting an event to the parent component

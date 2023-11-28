@@ -6,8 +6,9 @@ import { Order } from './order.model'
 	providedIn: 'root',
 })
 export class OrdersService {
-	items: Order[] = JSON.parse(data)
+	items: Order[] = JSON.parse(data) // Temp for now...
 	cart: Order[] = []
+
 	constructor() {
 		console.log(`'OrderService constructor'`)
 	}

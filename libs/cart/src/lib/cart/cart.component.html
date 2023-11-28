@@ -1,27 +1,30 @@
 <div class="mx-auto px-0">
 	<hr />
 
-	<div class="mx-auto py-3 px-4 pb-0">
+	<section class="mx-auto py-3 px-4 pb-0">
 		<div class="flex flex-row flex-row justify-between align-center">
 			<p class="text-xl font-semibold mb-4 px-0 mx-0">
 				{{ cartItems.length + '&nbsp;Items' }} currently selected
 			</p>
 
-			<p class="text-2xl px-0 mx-0">Total: {{ total || 175 | currency }}</p>
+			<p class="text-2xl font-semibold px-0 mx-0">
+				Total: {{ total | currency }}
+			</p>
 		</div>
-
 		<hr />
 
-		<div *ngFor="let item of cartItems; let i = index">
-			<angular-monorepo-cart-item
-				(removeItem)="removeItemFromCart($event)"
-				[item]="item"
-				[index]="i"
-			></angular-monorepo-cart-item>
-		</div>
+		<ul id="list-cart" class="list-cart" aria-label="list-cart">
+			<li *ngFor="let item of cartItems; let i = index" class="list-item">
+				<angular-monorepo-cart-item
+					[item]="item"
+					[index]="i"
+					(removeItemFromCart)="removeItemFromCart($event)"
+				></angular-monorepo-cart-item>
+			</li>
+		</ul>
 
 		<div *ngIf="cartItems.length === 0" class="text-center text-gray-600 mt-4">
 			Your cart is empty.
 		</div>
-	</div>
+	</section>
 </div>

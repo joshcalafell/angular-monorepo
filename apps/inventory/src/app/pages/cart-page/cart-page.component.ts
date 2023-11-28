@@ -18,8 +18,8 @@ export class CartPageComponent {
 	total = 0
 
 	constructor() {
-		this.cartItems = this.inventoryService.items
-		this.total = this.inventoryService.items.reduce(
+		this.cartItems = this.inventoryService.cart.slice(0, 10)
+		this.total = this.inventoryService.cart.reduce(
 			(acc, item) => acc + Number(item.price),
 			0
 		)

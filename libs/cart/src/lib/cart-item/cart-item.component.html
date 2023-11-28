@@ -6,9 +6,9 @@
 		/>
 		<div>
 			<p class="text-black-800 font-bold text-lg">
-				{{ 'Candle ' + (index + 1) }}
+				{{ item.name }}
 			</p>
-			<p class="text-black-900 font-semibold">{{ 17 | currency }}</p>
+			<p class="text-black-900 font-semibold">{{ item.price | currency }}</p>
 		</div>
 	</div>
 

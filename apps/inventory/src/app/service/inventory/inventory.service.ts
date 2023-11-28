@@ -6,7 +6,7 @@ import { data } from './inventory.mock'
 })
 export class InventoryService {
 	items: InventoryItem[] = JSON.parse(data)
-	cart: InventoryItem[] = []
+	cart: InventoryItem[] = JSON.parse(data)
 	constructor() {
 		console.log(`'InventoryService constructor'`)
 	}
