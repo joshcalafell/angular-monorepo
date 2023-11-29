@@ -7,10 +7,18 @@
 						(cartItems.length === 1 ? ' Item in cart' : ' Items in cart')
 				}}
 			</p>
-
-			<p class="text-2xl font-semibold px-0 mx-0">
-				Total: {{ total | currency }}
-			</p>
+			<div class="flex flex-row flex-row justify-between align-center">
+				<p class="text-2xl font-semibold px-0 mx-0">
+					Total: {{ total | currency }}
+				</p>
+				<button
+					*ngIf="cartItems.length > 0"
+					class="btn-clear bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+					(click)="clearCartHandler()"
+				>
+					Clear Cart
+				</button>
+			</div>
 		</div>
 
 		<ul id="list-cart" class="list-cart" aria-label="list-cart">

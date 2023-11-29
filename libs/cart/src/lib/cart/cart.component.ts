@@ -13,17 +13,18 @@ import { CartItemComponent } from '../cart-item/cart-item.component'
 })
 export class CartComponent implements OnInit {
 	@Input() cartItems: any[] = []
-	@Input() total = 0
+	total = 0
 
 	@Output() removeItemEmitter = new EventEmitter()
 	@Output() wishlistItemEmitter = new EventEmitter()
+	@Output() clearCartEmitter = new EventEmitter()
 
 	ngOnInit(): void {
-		console.log('[Cart] ngOnInit', this.cartItems)
-		this.total = this.cartItems.reduce(
-			(acc, item) => acc + Number(item.price),
-			0
-		)
+		this.total = this.getCartTotal(this.cartItems)
+	}
+
+	getCartTotal(items: any[]): number {
+		return items.reduce((acc, item) => acc + Number(item.price), 0)
 	}
 
 	removeItemHandler(item: unknown): void {
@@ -31,12 +32,18 @@ export class CartComponent implements OnInit {
 		// You might want to use a service to manage the cart state
 		// For simplicity, I'm emitting an event to the parent component
 		// which should handle the removal logic
-		console.log('[Cart] removeItemFromCart', item)
+		console.log('[Cart] removeItemHandler', item)
 		this.removeItemEmitter.emit(item)
 	}
 
+	// TODO: Implement
 	wishlistItemHandler(item: unknown): void {
-		// TODO: Implement
-		console.log('[Cart] addToCart', item)
+		console.log('[Cart] wishlistItemHandler', item)
+	}
+
+	// TODO: Implement
+	clearCartHandler() {
+		console.log('[Cart] clearCartHandler')
+		this.clearCartEmitter.emit()
 	}
 }

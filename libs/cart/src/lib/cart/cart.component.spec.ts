@@ -22,4 +22,15 @@ describe('CartComponent', () => {
 	it('should create', () => {
 		expect(component).toBeTruthy()
 	})
+
+	it('has button for clearing cart', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('button.btn-clear')).toBeTruthy()
+	})
+
+	it('should emit clear event', () => {
+		const spy = jest.spyOn(component.clearCartEmitter, 'emit')
+		component.clearCartHandler()
+		expect(spy).toHaveBeenCalled()
+	})
 })
