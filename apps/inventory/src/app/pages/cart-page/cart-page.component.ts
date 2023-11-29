@@ -1,6 +1,6 @@
 import { CartComponent } from '@angular-monorepo/cart'
 import { CommonModule } from '@angular/common'
-import { Component, inject } from '@angular/core'
+import { Component, OnChanges, SimpleChanges, inject } from '@angular/core'
 import { InventoryItem } from '../../service/inventory/inventory.model'
 import { InventoryService } from '../../service/inventory/inventory.service'
 import { HeaderComponent } from '../../components/header/header.component'
@@ -12,7 +12,7 @@ import { HeaderComponent } from '../../components/header/header.component'
 	templateUrl: './cart-page.component.html',
 	styleUrls: ['./cart-page.component.scss'],
 })
-export class CartPageComponent {
+export class CartPageComponent implements OnChanges {
 	cartItems: InventoryItem[] = []
 	inventoryService = inject(InventoryService)
 	total = 0
@@ -25,9 +25,21 @@ export class CartPageComponent {
 		)
 	}
 
+	ngOnChanges(changes: SimpleChanges): void {
+		console.log('changes', changes)
+	}
+
 	removeItemFromCart(item: InventoryItem) {
 		console.log('removeItemFromCart', item)
 		this.inventoryService.removeFromCart(item.id)
+		setTimeout(() => this.updateTemplateTemp(), 100)
+	}
+
+	updateTemplateTemp() {
 		this.cartItems = this.inventoryService.cart
+		this.total = this.inventoryService.cart.reduce(
+			(acc, item) => acc + Number(item.price),
+			0
+		)
 	}
 }
