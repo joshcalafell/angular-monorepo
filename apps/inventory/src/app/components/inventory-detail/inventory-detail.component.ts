@@ -35,5 +35,6 @@ export class InventoryDetailComponent implements OnInit {
 
 	addToCartHandler(item: InventoryItem) {
 		this.inventoryService.addToCart(item)
+		this.router.navigate(['/inventory'])
 	}
 }

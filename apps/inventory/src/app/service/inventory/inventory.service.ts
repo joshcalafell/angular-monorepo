@@ -16,8 +16,21 @@ export class InventoryService {
 		console.log('[InventoryService] addToCart', item)
 	}
 
-	removeFromCart(item: InventoryItem) {
-		console.log('[InventoryService] removeFromCart', item)
-		this.cart = this.cart.filter((i) => i.id !== item.id)
+	removeFromCart(id: number) {
+		console.log('[InventoryService] removeFromCart', id)
+		const idx = this.cart.findIndex((item) => item.id === id)
+		try {
+			if (idx) {
+				console.log('[InventoryService] removeFromCart', id)
+				const idx = this.cart.findIndex((item) => item.id === id)
+				if (idx >= 0)
+					this.cart = [
+						...this.cart.splice(0, idx),
+						...this.cart.splice(idx + 1),
+					]
+			} else throw new Error('Item not found')
+		} catch (error) {
+			console.log(error)
+		}
 	}
 }
