@@ -24,9 +24,7 @@ export class InventoryDetailComponent implements OnInit {
 	ngOnInit(): void {
 		const { id } = this.activatedRoute.snapshot.params
 		try {
-			const found =
-				this.inventoryService.items?.find((order) => order.id == id) ||
-				({} as InventoryItem)
+			const found = this.inventoryService.getItem(id)
 			if (found) this.item = found
 			else throw new Error('Item not found')
 		} catch (error) {
@@ -35,8 +33,12 @@ export class InventoryDetailComponent implements OnInit {
 		}
 	}
 
-	addToCartHandler(item: InventoryItem) {
+	addToCart(item: InventoryItem) {
 		this.inventoryService.addToCart(item)
 		this.router.navigate(['/inventory'])
+	}
+
+	addToWishlist(item: InventoryItem) {
+		this.inventoryService.addToWishlist(item)
 	}
 }

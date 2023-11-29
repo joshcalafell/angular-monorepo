@@ -11,6 +11,10 @@ export class InventoryService {
 		console.log(`'InventoryService constructor'`)
 	}
 
+	getItem(id: number) {
+		return this.items.find((item) => item.id == id)
+	}
+
 	addToCart(item: InventoryItem) {
 		this.cart.push(item)
 		console.log('[InventoryService] addToCart', item)
@@ -35,5 +39,9 @@ export class InventoryService {
 		} catch (error) {
 			console.log(error)
 		}
+	}
+
+	addToWishlist(item: InventoryItem) {
+		console.log('[InventoryService] addToWishlist', item)
 	}
 }

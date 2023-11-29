@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { HeaderComponent } from './header.component'
 import { RouterTestingModule } from '@angular/router/testing'
+import { HeaderComponent } from './header.component'
+import { LINKS } from '../../header.nav.links'
 
 describe('HeaderComponent', () => {
 	let component: HeaderComponent
@@ -15,11 +16,7 @@ describe('HeaderComponent', () => {
 		component = fixture.componentInstance
 
 		component.title = 'GENESIS CANDLES'
-		component.links = [
-			{ path: '/inventory', name: 'Inventory' },
-			{ path: '/orders', name: 'Orders' },
-			{ path: '/cart', name: 'Cart' },
-		]
+		component.links = LINKS
 
 		fixture.detectChanges()
 	})
@@ -45,9 +42,9 @@ describe('HeaderComponent', () => {
 		expect(compiled.querySelectorAll('nav ul').length).toBe(1)
 	})
 
-	it('should render 3 li', () => {
+	it('should render 5 li', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelectorAll('nav ul li').length).toBe(3)
+		expect(compiled.querySelectorAll('nav ul li').length).toBe(5)
 	})
 
 	it('should contain svg', () => {
@@ -57,7 +54,7 @@ describe('HeaderComponent', () => {
 
 	it('should render 3 links', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelectorAll('nav ul li a').length).toBe(3)
+		expect(compiled.querySelectorAll('nav ul li a').length).toBe(5)
 	})
 
 	it('should contain button', () => {
