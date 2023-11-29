@@ -1,17 +1,17 @@
 <div class="mx-auto px-0">
-	<hr />
-
 	<section class="mx-auto py-3 px-4 pb-0">
 		<div class="flex flex-row flex-row justify-between align-center">
 			<p class="text-xl font-semibold mb-4 px-0 mx-0">
-				{{ cartItems.length + '&nbsp;Items' }} currently selected
+				{{
+					cartItems.length +
+						(cartItems.length === 1 ? ' Item in cart' : ' Items in cart')
+				}}
 			</p>
 
 			<p class="text-2xl font-semibold px-0 mx-0">
 				Total: {{ total | currency }}
 			</p>
 		</div>
-		<hr />
 
 		<ul id="list-cart" class="list-cart" aria-label="list-cart">
 			<li *ngFor="let item of cartItems; let i = index" class="list-item">
@@ -24,8 +24,12 @@
 			</li>
 		</ul>
 
-		<div *ngIf="cartItems.length === 0" class="text-center text-gray-600 mt-4">
-			Your cart is empty.
+		<div
+			*ngIf="cartItems.length === 0"
+			class="text-center text-gray-800 mb-0 text-xl mt-8"
+		>
+			Your cart is empty<!--  Add items from
+			<a [routerLink]="['/inventory']">the inventory page</a>. -->
 		</div>
 	</section>
 </div>
