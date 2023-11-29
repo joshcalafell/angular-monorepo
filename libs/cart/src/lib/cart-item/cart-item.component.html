@@ -5,10 +5,12 @@
 			class="h-14 w-14 object-cover rounded mr-4"
 		/>
 		<div>
-			<p class="text-black-800 font-bold text-lg">
+			<p class="name text-black-800 font-bold text-lg">
 				{{ item.name }}
 			</p>
-			<p class="text-black-900 font-semibold">{{ item.price | currency }}</p>
+			<p class="price text-black-900 font-semibold">
+				{{ item.price | currency }}
+			</p>
 		</div>
 	</div>
 
@@ -20,7 +22,7 @@
 			Remove
 		</button>
 		<button
-			class="btn-remove bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+			class="btn-wishlist bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 			(click)="wishlistItemHandler(item)"
 		>
 			Wish List
