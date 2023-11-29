@@ -1,20 +1,18 @@
 <section class="section-wrapper">
-	<div class="angular-monorepo-container">
-		<h2>Orders</h2>
+	<h2>Orders</h2>
 
-		<div class="mx-4">
-			<angular-monorepo-table-sort [displayedColumns]="displayedColumns">
-				<tr
-					*ngFor="let order of items; let i = index"
-					[routerLink]="['/orders/detail', order.id]"
-				>
-					<td>{{ order.id }}</td>
-					<td>{{ order.customer_name }}</td>
-					<td>{{ order.order_date | date }}</td>
-					<td>{{ order.order_status }}</td>
-					<td>{{ order.order_total | currency }}</td>
-				</tr>
-			</angular-monorepo-table-sort>
-		</div>
+	<div class="mx-4">
+		<angular-monorepo-table-sort [displayedColumns]="displayedColumns">
+			<tr
+				*ngFor="let order of items; let i = index"
+				[routerLink]="['/orders/detail', order.id]"
+			>
+				<td>{{ order.id }}</td>
+				<td>{{ order.customer_name }}</td>
+				<td>{{ order.order_date | date }}</td>
+				<td>{{ order.order_status }}</td>
+				<td>{{ order.order_total | currency }}</td>
+			</tr>
+		</angular-monorepo-table-sort>
 	</div>
 </section>

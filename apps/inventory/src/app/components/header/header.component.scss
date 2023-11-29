@@ -17,8 +17,31 @@ header {
 	margin-bottom: $padding-large;
 }
 
-.active {
-	color: #ff6766;
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+		li {
+			margin-right: $padding-common;
+			a {
+				text-decoration: none;
+				color: black;
+				font-weight: 600;
+
+				&:hover,
+				&:active,
+				&:focus {
+					color: #ff6766;
+				}
+			}
+		}
+	}
+	margin-right: 16px;
 }
 
 #btn-login {

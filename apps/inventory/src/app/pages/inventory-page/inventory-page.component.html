@@ -1,11 +1,9 @@
 <section class="section-wrapper" *ngIf="items?.length">
-	<div class="angular-monorepo-container">
-		<h2>Inventory</h2>
-		<div class="grid-container">
-			<angular-monorepo-inventory-item
-				*ngFor="let item of items"
-				[item]="item"
-			></angular-monorepo-inventory-item>
-		</div>
+	<h2>Inventory</h2>
+	<div class="grid-container">
+		<angular-monorepo-inventory-item
+			*ngFor="let item of items"
+			[item]="item"
+		></angular-monorepo-inventory-item>
 	</div>
 </section>
