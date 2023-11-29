@@ -17,7 +17,7 @@ body {
 	margin: 0;
 	padding: 0px;
 	font-family: 'Inter', sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.5;
 	color: #333333;
@@ -30,6 +30,7 @@ svg {
 
 p {
 	margin: 8px 16px;
+	font-size: 16px;
 }
 
 hr {
@@ -38,7 +39,7 @@ hr {
 
 h1 {
 	margin: 0 16px;
-	font-size: 24px;
+	font-size: 20px;
 	font-family: 'Anton', sans-serif;
 	text-decoration: none;
 	font-weight: 600;
@@ -54,7 +55,7 @@ h1 {
 
 h2 {
 	margin: 16px;
-	font-size: 24px;
+	font-size: 20px;
 	font-family: 'Poppins', sans-serif;
 	text-decoration: none;
 	font-weight: 600;
@@ -75,15 +76,6 @@ h2 {
 
 .text-muted {
 	color: #555;
-}
-
-.btn-primary {
-	background: #333333;
-	color: white;
-	padding: $padding-small $padding-common;
-	border-radius: 8px !important;
-	width: 160px;
-	font-weight: bold;
 }
 
 .section-wrapper {

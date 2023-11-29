@@ -75,16 +75,16 @@ describe('InventoryDetailComponent', () => {
 
 	it('should render add to cart button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('button.add')?.textContent).toContain(
-			'Add to Cart'
-		)
+		expect(
+			compiled.querySelector('button#btn-add-to-cart')?.textContent
+		).toContain('Add to Cart')
 	})
 
 	it('should render add to wishlist button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('button.wishlist')?.textContent).toContain(
-			'Add to Wishlist'
-		)
+		expect(
+			compiled.querySelector('button#btn-add-to-wishlist')?.textContent
+		).toContain('Add to Wishlist')
 	})
 
 	it('should render name as h2', () => {

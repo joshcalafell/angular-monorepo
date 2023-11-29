@@ -1,6 +1,23 @@
 <section class="section-wrapper">
 	<div class="angular-monorepo-container">
-		<h2>Cart</h2>
+		<div class="flex flex-row flex-row justify-between align-center">
+			<h2>Cart</h2>
+			<div class="flex flex-row flex-row justify-between align-center">
+				<button
+					class="mr-4 btn-clear-cart bg-white-400 hover:bg-white-500 font-semibold text-black outline px-4 rounded focus:shadow-outline"
+				>
+					Clear Cart
+				</button>
+				<button
+					class="btn-checkout bg-purple-400 hover:bg-purple-500 font-semibold text-white px-4 rounded focus:outline-none focus:shadow-outline"
+				>
+					Checkout
+				</button>
+			</div>
+		</div>
+
+		<hr />
+
 		<angular-monorepo-cart
 			[cartItems]="cartItems"
 			[total]="total"

@@ -1,24 +1,29 @@
 <div class="max-w-2xl mx-auto p-8">
-	<div class="flex items-center justify-between mb-4">
-		<h2 class="text-2xl font-semibold">{{ item.name }}</h2>
-		<button
-			(click)="addToCart(item)"
-			class="add bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-		>
-			+ Add to Cart
-		</button>
-		<button
-			(click)="addToWishlist(item)"
-			class="wishlist bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-		>
-			+ Add to Wishlist
-		</button>
+	<div class="flex items-center justify-start mb-4">
+		<h2 class="text-2xl font-semibold pl-0 ml-0">{{ item.name }}</h2>
+		<div class="spacer"></div>
+		<div class="flex flex-row justify-end ml-0 pl-0">
+			<button
+				(click)="addToCart(item)"
+				id="btn-add-to-cart"
+				class="ml-0 pl-0 bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+			>
+				+ Add to Cart
+			</button>
+			<button
+				(click)="addToWishlist(item)"
+				id="btn-add-to-wishlist"
+				class="ml-4 bg-white-400 hover:bg-white-500 text-black font-semibold py-2 px-4 rounded outline focus:shadow-outline"
+			>
+				+ Add to Wishlist
+			</button>
+		</div>
 	</div>
 
 	<div class="flex mb-4">
 		<img [src]="item.imageUrl" class="h-48 w-48 object-cover rounded mr-4" />
 
-		<div class="mb-4">
+		<div class="mb-4 px-4">
 			<p class="text-lg font-semibold price">{{ item.price | currency }}</p>
 
 			<p class="text-gray-600">Dimensions: {{ item.dimensions }}</p>
