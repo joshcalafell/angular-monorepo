@@ -2,7 +2,6 @@
 import { CommonModule } from '@angular/common'
 import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { FadeInOut } from './animations'
-
 @Component({
 	selector: 'angular-monorepo-cart-item',
 	standalone: true,
