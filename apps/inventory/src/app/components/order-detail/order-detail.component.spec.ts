@@ -1,9 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { OrderDetailComponent } from './order-detail.component'
 import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 import { OrdersService } from '../../service/orders/orders.service'
-import { of } from 'rxjs'
+import { OrderDetailComponent } from './order-detail.component'
 
 describe('OrderDetailComponent', () => {
 	let component: OrderDetailComponent
@@ -19,7 +18,18 @@ describe('OrderDetailComponent', () => {
 		},
 	} as ActivatedRoute
 
-	const mockService = { $orders: of([]) }
+	const mockService = {
+		items: [
+			{
+				id: 1,
+				name: 'Candle',
+				description: 'A candle',
+				price: 10,
+				quantity: 1,
+				image: 'https://via.placeholder.com/150',
+			},
+		],
+	}
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({

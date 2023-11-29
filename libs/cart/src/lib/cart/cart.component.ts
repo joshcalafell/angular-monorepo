@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { CartItemComponent } from '../cart-item/cart-item.component'
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 import { RouterLink } from '@angular/router'
+import { CartItemComponent } from '../cart-item/cart-item.component'
 
 @Component({
 	selector: 'angular-monorepo-cart',
@@ -15,8 +15,8 @@ export class CartComponent implements OnInit {
 	@Input() cartItems: any[] = []
 	@Input() total = 0
 
-	@Output() removeItem = new EventEmitter()
-	@Output() addItem = new EventEmitter()
+	@Output() removeItemEmitter = new EventEmitter()
+	@Output() wishlistItemEmitter = new EventEmitter()
 
 	ngOnInit(): void {
 		console.log('[Cart] ngOnInit', this.cartItems)
@@ -26,17 +26,17 @@ export class CartComponent implements OnInit {
 		)
 	}
 
-	removeItemFromCart(item: unknown): void {
+	removeItemHandler(item: unknown): void {
 		// Implement the logic to remove an item from the cart
 		// You might want to use a service to manage the cart state
 		// For simplicity, I'm emitting an event to the parent component
 		// which should handle the removal logic
 		console.log('[Cart] removeItemFromCart', item)
-		this.removeItem.emit(item)
+		this.removeItemEmitter.emit(item)
 	}
 
-	addItemToCart(item: unknown): void {
+	wishlistItemHandler(item: unknown): void {
+		// TODO: Implement
 		console.log('[Cart] addToCart', item)
-		this.addItem.emit(item)
 	}
 }

@@ -24,7 +24,9 @@ export class InventoryDetailComponent implements OnInit {
 	ngOnInit(): void {
 		const { id } = this.activatedRoute.snapshot.params
 		try {
-			const found = this.inventoryService.items.find((order) => order.id == id)
+			const found =
+				this.inventoryService.items?.find((order) => order.id == id) ||
+				({} as InventoryItem)
 			if (found) this.item = found
 			else throw new Error('Item not found')
 		} catch (error) {

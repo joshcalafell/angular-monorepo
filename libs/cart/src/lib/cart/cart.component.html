@@ -18,8 +18,8 @@
 				<angular-monorepo-cart-item
 					[item]="item"
 					[index]="i"
-					(removeItem)="removeItemFromCart($event)"
-					(addItem)="addItemToCart($event)"
+					(removeItemEmitter)="removeItemHandler($event)"
+					(wishlistItemEmitter)="wishlistItemHandler($event)"
 				></angular-monorepo-cart-item>
 			</li>
 		</ul>

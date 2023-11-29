@@ -29,10 +29,10 @@ export class CartPageComponent implements OnChanges {
 		console.log('changes', changes)
 	}
 
-	removeItemFromCart(item: InventoryItem) {
+	removeItemHandler(item: InventoryItem) {
 		console.log('removeItemFromCart', item)
 		this.inventoryService.removeFromCart(item.id)
-		setTimeout(() => this.updateTemplateTemp(), 100)
+		setTimeout(() => this.updateTemplateTemp(), 1.33)
 	}
 
 	updateTemplateTemp() {

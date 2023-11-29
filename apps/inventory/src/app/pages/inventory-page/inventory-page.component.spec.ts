@@ -2,8 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ActivatedRoute, RouterLink } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 
-import { InventoryPageComponent } from './inventory-page.component'
 import { InventoryItemComponent } from '../../components/inventory-item/inventory-item.component'
+import { InventoryService } from '../../service/inventory/inventory.service'
+import { InventoryPageComponent } from './inventory-page.component'
 
 describe('InventoryPageComponent', () => {
 	let component: InventoryPageComponent
@@ -19,15 +20,26 @@ describe('InventoryPageComponent', () => {
 		},
 	} as ActivatedRoute
 
+	const mockService = {
+		items: [
+			{
+				id: 1,
+				name: 'Candle',
+				description: 'A candle',
+				price: 10,
+				quantity: 1,
+				image: 'https://via.placeholder.com/150',
+			},
+		],
+	}
+
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [
-				RouterTestingModule,
-				InventoryPageComponent,
-				InventoryItemComponent,
-				RouterLink,
+			imports: [RouterTestingModule, RouterLink, InventoryItemComponent],
+			providers: [
+				{ provide: ActivatedRoute, useValue: fakeActivatedRoute },
+				{ provide: InventoryService, useValue: mockService },
 			],
-			providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(InventoryPageComponent)

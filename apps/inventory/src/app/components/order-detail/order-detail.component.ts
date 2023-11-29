@@ -21,7 +21,9 @@ export class OrderDetailComponent implements OnInit {
 	ngOnInit(): void {
 		const { id } = this.activatedRoute.snapshot.params
 		try {
-			const found = this.orderService.items.find((order) => order.id == id)
+			const found =
+				this.orderService.items?.find((order) => order.id == id) ||
+				({} as Order)
 			if (found) this.item = found
 			else throw new Error('Item not found')
 		} catch (error) {

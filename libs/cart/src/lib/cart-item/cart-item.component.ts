@@ -2,11 +2,11 @@
 import { CommonModule } from '@angular/common'
 import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { FadeInOut } from './animations'
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @Component({
 	selector: 'angular-monorepo-cart-item',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, BrowserAnimationsModule],
 	templateUrl: './cart-item.component.html',
 	styleUrls: ['./cart-item.component.scss'],
 	animations: [FadeInOut(200, 200, true)],
@@ -14,20 +14,20 @@ import { FadeInOut } from './animations'
 export class CartItemComponent {
 	@Input() item: any = {}
 	@Input() index = 0
-	@Output() removeItem = new EventEmitter()
-	@Output() addItem = new EventEmitter()
+	@Output() removeItemEmitter = new EventEmitter()
+	@Output() wishlistItemEmitter = new EventEmitter()
 
-	removeItemFromCart(item: any): void {
+	removeItemHandler(item: any): void {
 		// Implement the logic to remove an item from the cart
 		// You might want to use a service to manage the cart state
 		// For simplicity, I'm emitting an event to the parent component
 		// which should handle the removal logic
 		console.log('[CartItem] removeItemFromCart', item)
-		this.removeItem.emit(item)
+		this.removeItemEmitter.emit(item)
 	}
 
-	addItemToCart(item: any): void {
-		console.log('[CartItem] addItemToCart', item)
-		this.addItem.emit(item)
+	wishlistItemHandler(item: any): void {
+		console.log('[CartItem] wishlistItemHandler', item)
+		this.wishlistItemEmitter.emit(item)
 	}
 }
