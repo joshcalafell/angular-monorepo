@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common'
 import { Component, OnChanges, SimpleChanges, inject } from '@angular/core'
 import { InventoryItem } from '../../service/inventory/inventory.model'
 import { InventoryService } from '../../service/inventory/inventory.service'
-import { HeaderComponent } from '../../components/header/header.component'
 
 @Component({
 	selector: 'angular-monorepo-cart-page',
 	standalone: true,
-	imports: [CommonModule, CartComponent, HeaderComponent],
+	imports: [CommonModule, CartComponent],
 	templateUrl: './cart-page.component.html',
 	styleUrls: ['./cart-page.component.scss'],
 })

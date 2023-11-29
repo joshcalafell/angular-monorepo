@@ -2,11 +2,11 @@
 import { CommonModule } from '@angular/common'
 import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { FadeInOut } from './animations'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 @Component({
 	selector: 'angular-monorepo-cart-item',
 	standalone: true,
-	imports: [CommonModule, BrowserAnimationsModule],
+	imports: [CommonModule],
 	templateUrl: './cart-item.component.html',
 	styleUrls: ['./cart-item.component.scss'],
 	animations: [FadeInOut(200, 200, true)],

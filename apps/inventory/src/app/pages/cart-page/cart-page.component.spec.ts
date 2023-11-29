@@ -1,3 +1,4 @@
+import { CartComponent } from '@angular-monorepo/cart'
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { CartPageComponent } from './cart-page.component'
 
@@ -7,7 +8,7 @@ describe('CartPageComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [CartPageComponent],
+			imports: [CartPageComponent, CartComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(CartPageComponent)

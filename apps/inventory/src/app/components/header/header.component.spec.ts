@@ -13,6 +13,14 @@ describe('HeaderComponent', () => {
 
 		fixture = TestBed.createComponent(HeaderComponent)
 		component = fixture.componentInstance
+
+		component.title = 'GENESIS CANDLES'
+		component.links = [
+			{ path: '/inventory', name: 'Inventory' },
+			{ path: '/orders', name: 'Orders' },
+			{ path: '/cart', name: 'Cart' },
+		]
+
 		fixture.detectChanges()
 	})
 
@@ -21,20 +29,39 @@ describe('HeaderComponent', () => {
 	})
 
 	it('should render title', () => {
-		const fixture = TestBed.createComponent(HeaderComponent)
-		fixture.detectChanges()
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(compiled.querySelector('h1 a')?.textContent).toContain(
 			'GENESIS CANDLES'
 		)
 	})
 
-	it('should render title', () => {
-		const fixture = TestBed.createComponent(HeaderComponent)
-		fixture.detectChanges()
+	it('should render 1 nav', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('h1 a')?.textContent).toContain(
-			'GENESIS CANDLES'
-		)
+		expect(compiled.querySelectorAll('nav').length).toBe(1)
+	})
+
+	it('should render 1 ul', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelectorAll('nav ul').length).toBe(1)
+	})
+
+	it('should render 3 li', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelectorAll('nav ul li').length).toBe(3)
+	})
+
+	it('should contain svg', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('svg')).toBeTruthy()
+	})
+
+	it('should render 3 links', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelectorAll('nav ul li a').length).toBe(3)
+	})
+
+	it('should contain button', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('button')).toBeTruthy()
 	})
 })

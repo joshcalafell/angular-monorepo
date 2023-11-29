@@ -20,7 +20,6 @@ import { InventoryService } from '../../service/inventory/inventory.service'
 	],
 	templateUrl: './inventory-page.component.html',
 	styleUrls: ['./inventory-page.component.scss'],
-	providers: [InventoryService, RouterLink],
 })
 export class InventoryPageComponent implements OnInit {
 	private inventoryService = inject(InventoryService)

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { ActivatedRoute, RouterLink } from '@angular/router'
+import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 
 import { InventoryItemComponent } from '../../components/inventory-item/inventory-item.component'
@@ -35,7 +35,11 @@ describe('InventoryPageComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [RouterTestingModule, RouterLink, InventoryItemComponent],
+			imports: [
+				RouterTestingModule.withRoutes([]),
+				InventoryPageComponent,
+				InventoryItemComponent,
+			],
 			providers: [
 				{ provide: ActivatedRoute, useValue: fakeActivatedRoute },
 				{ provide: InventoryService, useValue: mockService },

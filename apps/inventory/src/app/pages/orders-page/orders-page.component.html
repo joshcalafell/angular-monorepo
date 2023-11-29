@@ -5,7 +5,7 @@
 		<angular-monorepo-table-sort [displayedColumns]="displayedColumns">
 			<tr
 				*ngFor="let order of items; let i = index"
-				[routerLink]="['/orders/detail', order.id]"
+				[routerLink]="['/orders/detail', order?.id]"
 			>
 				<td>{{ order.id }}</td>
 				<td>{{ order.customer_name }}</td>

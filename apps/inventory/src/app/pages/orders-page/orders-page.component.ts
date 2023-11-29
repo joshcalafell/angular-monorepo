@@ -1,10 +1,9 @@
+import { TableSortComponent } from '@angular-monorepo/table'
 import { CommonModule } from '@angular/common'
 import { Component, OnInit, inject } from '@angular/core'
 import { RouterLink, RouterLinkActive } from '@angular/router'
-import { HeaderComponent } from '../../components/header/header.component'
 import { Order } from '../../service/orders/order.model'
 import { OrdersService } from '../../service/orders/orders.service'
-import { TableSortComponent } from '@angular-monorepo/table'
 
 export type DisplayColumns =
 	| 'id'
@@ -25,13 +24,7 @@ export interface Column {
 @Component({
 	selector: 'angular-monorepo-orders-page',
 	standalone: true,
-	imports: [
-		CommonModule,
-		RouterLink,
-		HeaderComponent,
-		TableSortComponent,
-		RouterLinkActive,
-	],
+	imports: [CommonModule, RouterLink, TableSortComponent, RouterLinkActive],
 	templateUrl: './orders-page.component.html',
 	styleUrls: ['./orders-page.component.scss'],
 })
