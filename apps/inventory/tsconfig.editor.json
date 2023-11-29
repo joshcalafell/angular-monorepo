@@ -1,6 +1,10 @@
 {
 	"extends": "./tsconfig.json",
-	"include": ["src/**/*.ts", "src/app/service/orders/order.model.ts"],
+	"include": [
+		"src/**/*.ts",
+		"src/app/service/orders/order.model.ts",
+		"../../libs/cart/src/lib/cart-item/animations.ts"
+	],
 	"compilerOptions": {
 		"types": ["jest", "node"]
 	}

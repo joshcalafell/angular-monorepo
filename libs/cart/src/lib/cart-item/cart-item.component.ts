@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { FadeInOut } from './animations'
 
 @Component({
 	selector: 'angular-monorepo-cart-item',
@@ -8,6 +9,7 @@ import { CommonModule } from '@angular/common'
 	imports: [CommonModule],
 	templateUrl: './cart-item.component.html',
 	styleUrls: ['./cart-item.component.scss'],
+	animations: [FadeInOut(200, 200, true)],
 })
 export class CartItemComponent {
 	@Input() item: any = {}

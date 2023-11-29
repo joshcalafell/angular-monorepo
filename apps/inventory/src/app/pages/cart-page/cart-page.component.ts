@@ -28,5 +28,6 @@ export class CartPageComponent {
 	removeItemFromCart(item: InventoryItem) {
 		console.log('removeItemFromCart', item)
 		this.inventoryService.removeFromCart(item.id)
+		this.cartItems = this.inventoryService.cart
 	}
 }
