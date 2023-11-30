@@ -6,8 +6,9 @@ p {
 }
 
 img {
-	object-fit: cover;
+	object-fit: scale-down;
 	border-radius: 8px;
 	margin-bottom: 12px;
 	margin: auto;
+	max-height: 500px;
 }

@@ -11,35 +11,20 @@ h1 {
 	}
 }
 
-img {
-	height: 150px;
-}
-
 header {
 	border-bottom: solid 1px #666666;
 	padding-bottom: $padding-common;
 }
 
 nav {
-	margin-left: $margin-large;
+	margin-left: 32px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	ul {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		list-style: none;
-		li {
-			margin-right: $padding-small;
-			a {
-				text-decoration: none;
-				font-weight: 600;
-			}
-		}
-	}
+}
 
-	margin-right: 16px;
+li a {
+	margin: 8px;
 }
 
 .active {

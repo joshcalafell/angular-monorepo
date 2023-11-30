@@ -6,7 +6,7 @@ import { InventoryItem } from '../../service/inventory/inventory.model'
 import { InventoryDetailComponent } from './inventory-detail.component'
 import { InventoryService } from '../../service/inventory/inventory.service'
 
-xdescribe('InventoryDetailComponent', () => {
+describe('InventoryDetailComponent', () => {
 	let component: InventoryDetailComponent
 	let fixture: ComponentFixture<InventoryDetailComponent>
 
@@ -26,7 +26,7 @@ xdescribe('InventoryDetailComponent', () => {
 		description: 'Test Description',
 		price: 100,
 		quantity: 1000,
-		imageUrl: 'https://via.placeholder.com/150x150',
+		imageUrl: 'http://localhost/assets/images/candle_purple_1650x1650.png',
 		inventoryStatus: 'InStock',
 		starRating: 1,
 		starRatingCount: 1,
@@ -61,7 +61,7 @@ xdescribe('InventoryDetailComponent', () => {
 
 		fixture = TestBed.createComponent(InventoryDetailComponent)
 		component = fixture.componentInstance
-		component.item = mockService.getItem(1) || ({} as InventoryItem)
+		component.item = mockItem
 		fixture.detectChanges()
 	})
 
@@ -109,7 +109,7 @@ xdescribe('InventoryDetailComponent', () => {
 	it('should render image as img', () => {
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(compiled.querySelector('img')?.src).toContain(
-			'https://via.placeholder.com/150x150'
+			'http://localhost/assets/images/candle_purple_1650x1650.png'
 		)
 	})
 })

@@ -24,6 +24,13 @@ body {
 	background-color: #f5f5f5;
 }
 
+p,
+blockquote {
+	margin: 0;
+	padding: 0;
+	font-size: 18px !important;
+}
+
 svg {
 	margin-left: 16px;
 }
@@ -83,4 +90,12 @@ h2 {
 	flex-direction: column;
 	min-height: calc(100vh + 64px) !important;
 	margin-bottom: 64px;
+}
+
+button {
+	width: 175px;
+}
+
+button:not(:first-child) {
+	margin-left: 16px;
 }
