@@ -58,7 +58,7 @@ describe('InventoryItemComponent', () => {
 		expect(compiled.querySelector('h2')?.textContent).toContain(mockItem.name)
 	})
 
-	it('should render add to cart button', () => {
+	it('should render see details button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(
 			compiled.querySelector('button.btn-add-to-cart')?.textContent
