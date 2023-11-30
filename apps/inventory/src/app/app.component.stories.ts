@@ -19,6 +19,6 @@ export const Heading: Story = {
 	args: {},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/GENESIS CANDLES/gi)).toBeTruthy()
+		expect(canvas.getByText(/Candle Company/gi)).toBeTruthy()
 	},
 }
