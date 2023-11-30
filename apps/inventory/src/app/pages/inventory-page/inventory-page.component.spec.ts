@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 
-import { InventoryItemComponent } from '../../components/inventory-item/inventory-item.component'
+import { InventoryItemComponent } from '../../common/inventory-item/inventory-item.component'
 import { InventoryService } from '../../service/inventory/inventory.service'
 import { InventoryPageComponent } from './inventory-page.component'
 

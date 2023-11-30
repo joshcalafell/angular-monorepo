@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { BlockquoteComponent } from '@angular-monorepo/blockquote'
-import { HeaderComponent } from '../../components/header/header.component'
+import { HeaderComponent } from '../../common/header/header.component'
 
 @Component({
 	selector: 'angular-monorepo-testimonials-page',

@@ -3,8 +3,8 @@ import { Component, OnInit, inject } from '@angular/core'
 
 import { CartComponent } from '@angular-monorepo/cart'
 import { RouterLink } from '@angular/router'
-import { HeaderComponent } from '../../components/header/header.component'
-import { InventoryItemComponent } from '../../components/inventory-item/inventory-item.component'
+import { HeaderComponent } from '../../common/header/header.component'
+import { InventoryItemComponent } from '../../common/inventory-item/inventory-item.component'
 import { InventoryItem } from '../../service/inventory/inventory.model'
 import { InventoryService } from '../../service/inventory/inventory.service'
 

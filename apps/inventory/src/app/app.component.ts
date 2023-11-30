@@ -3,8 +3,8 @@ import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router'
 import { AppLink } from './app.link.model'
-import { FooterComponent } from './components/footer/footer.component'
-import { HeaderComponent } from './components/header/header.component'
+import { FooterComponent } from './common/footer/footer.component'
+import { HeaderComponent } from './common/header/header.component'
 import { LINKS } from './header.nav.links'
 
 @Component({
