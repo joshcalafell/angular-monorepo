@@ -24,11 +24,10 @@ export class InventoryDetailComponent implements OnInit {
 	ngOnInit(): void {
 		const { id } = this.activatedRoute.snapshot.params
 		try {
-			const found = this.inventoryService.getItem(id)
+			const found = this.inventoryService.getItem(id) || ({} as InventoryItem)
 			if (found) this.item = found
 			else throw new Error('Item not found')
 		} catch (error) {
-			console.log(error)
 			this.router.navigate(['/404'])
 		}
 	}

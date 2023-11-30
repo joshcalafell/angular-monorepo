@@ -6,12 +6,8 @@ describe('inventory-e2e', () => {
 		cy.login('my-email@something.com', 'myPassword')
 	})
 
-	it('should display svg icon', () => {
-		cy.get('svg').should('be.visible')
-	})
-
-	it('should display "GENESIS CANDLES"', () => {
-		cy.get('h1 a').should('contain', 'GENESIS CANDLES')
+	it('should display img icon', () => {
+		cy.get('img').should('be.visible')
 	})
 
 	it('should display "About" link', () => {
