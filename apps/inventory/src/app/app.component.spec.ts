@@ -24,9 +24,9 @@ describe('AppComponent', () => {
 		}).compileComponents()
 	})
 
-	it(`should have as title 'Candle Company'`, () => {
+	it(`should have as title 'Genesis Candles'`, () => {
 		const fixture = TestBed.createComponent(AppComponent)
 		const app = fixture.componentInstance
-		expect(app.title).toEqual('Candle Company')
+		expect(app.title).toEqual('Genesis Candles')
 	})
 })

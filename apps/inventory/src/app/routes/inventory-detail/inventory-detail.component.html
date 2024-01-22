@@ -1,4 +1,4 @@
-<div class="max-w-2xl mx-auto p-8" *ngIf="item && item.id >= 0">
+<div class="max-w-2xl mx-auto p-2" *ngIf="item && item.id >= 0">
 	<div class="flex items-center justify-start mb-4">
 		<h2 class="text-2xl font-semibold pl-0 ml-0">{{ item.name }}</h2>
 		<div class="spacer"></div>
@@ -8,7 +8,7 @@
 				[buttonDisabled]="item.quantity === 0"
 				[buttonId]="'add-to-cart-' + item.id"
 				[buttonText]="'Add to Cart'"
-				[buttonClass]="'primary'"
+				[buttonClass]="'secondary'"
 				[buttonType]="'button'"
 			></angular-monorepo-button>
 			<angular-monorepo-button
@@ -16,7 +16,7 @@
 				[buttonDisabled]="item.quantity === 0"
 				[buttonId]="'add-to-wishlist-' + item.id"
 				[buttonText]="'Add to Wishlist'"
-				[buttonClass]="'secondary'"
+				[buttonClass]="'primary'"
 				[buttonType]="'button'"
 			></angular-monorepo-button>
 		</div>
@@ -24,7 +24,7 @@
 
 	<div class="flex mb-4">
 		<img
-			[src]="item.imageUrl || 'https://via.placeholder.com/150x150'"
+			[src]="'assets/images/candle_gray_500x667.png'"
 			class="h-48 w-48 object-cover rounded mr-4"
 		/>
 

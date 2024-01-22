@@ -22,7 +22,7 @@ import { LINKS } from './header.nav.links'
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	title = 'Candle Company'
+	title = 'Genesis Candles'
 
 	links: AppLink[] = LINKS
 

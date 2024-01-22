@@ -20,7 +20,7 @@ xdescribe('HeaderComponent', () => {
 		fixture = TestBed.createComponent(HeaderComponent)
 		component = fixture.componentInstance
 
-		component.title = 'Candle Company'
+		component.title = 'Genesis Candles'
 		component.links = LINKS
 
 		fixture.detectChanges()
@@ -38,7 +38,7 @@ xdescribe('HeaderComponent', () => {
 	xit('should render title', () => {
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(compiled.querySelector('h1 a')?.textContent).toContain(
-			'Candle Company'
+			'Genesis Candles'
 		)
 	})
 

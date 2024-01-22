@@ -27,7 +27,7 @@ describe('InventoryDetailComponent', () => {
 		description: 'Test Description',
 		price: 100,
 		quantity: 1000,
-		imageUrl: 'http://localhost/assets/images/candle_purple_1650x1650.png',
+		imageUrl: 'http://localhost/assets/images/candle_gray_500x667.png',
 		inventoryStatus: 'InStock',
 		starRating: 1,
 		starRatingCount: 1,
@@ -116,7 +116,7 @@ describe('InventoryDetailComponent', () => {
 	it('should render image as img', () => {
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(compiled.querySelector('img')?.src).toContain(
-			'http://localhost/assets/images/candle_purple_1650x1650.png'
+			'http://localhost/assets/images/candle_gray_500x667.png'
 		)
 	})
 })
