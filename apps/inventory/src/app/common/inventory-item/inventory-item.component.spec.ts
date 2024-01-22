@@ -65,8 +65,8 @@ describe('InventoryItemComponent', () => {
 
 	it('should render see details button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(
-			compiled.querySelector('button.btn-add-to-cart')?.textContent
-		).toContain('See Details')
+		expect(compiled.querySelector('#btn-see-details-1')?.textContent).toContain(
+			'See Details'
+		)
 	})
 })

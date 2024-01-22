@@ -32,12 +32,12 @@ describe('CartItemComponent', () => {
 
 	it('has button for removing item', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('button.btn-add')).toBeTruthy()
+		expect(compiled.querySelector('#btn-remove-1')).toBeTruthy()
 	})
 
 	it('has button for wishlisting item', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('button.btn-wishlist')).toBeTruthy()
+		expect(compiled.querySelector('#btn-add-to-wishlist-1')).toBeTruthy()
 	})
 
 	it('should emit remove event', () => {

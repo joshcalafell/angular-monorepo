@@ -1,7 +1,7 @@
 @import '../../../styles/mixin';
 
 .card {
-	font-family: 0.8rem;
+	font-family: $font-family-body;
 	background-color: $lightest;
 	border: 1px solid $tertiary;
 
@@ -13,7 +13,7 @@
 
 	img {
 		margin: auto;
-		max-height: 500px;
+		max-height: 580px;
 		margin-bottom: $margin-common;
 	}
 

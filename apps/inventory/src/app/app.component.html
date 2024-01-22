@@ -1,5 +1,7 @@
 <section class="app-wrapper">
 	<angular-monorepo-header
+		[loggedIn]="loggedIn"
+		(loginClicked)="loginHandler()"
 		[title]="title"
 		[links]="links"
 	></angular-monorepo-header>

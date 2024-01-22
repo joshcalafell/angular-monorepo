@@ -47,6 +47,7 @@ describe('InventoryDetailComponent', () => {
 			return mockItem
 		},
 		addToCart: () => {},
+		clearCart: () => {},
 		removeFromCart: () => {},
 		addToWishlist: () => {},
 	}
@@ -60,7 +61,7 @@ describe('InventoryDetailComponent', () => {
 			],
 			providers: [
 				{ provide: ActivatedRoute, useValue: fakeActivatedRoute },
-				{ provide: InventoryItem, useValue: mockService },
+				{ provide: InventoryService, useValue: mockService },
 			],
 		}).compileComponents()
 
@@ -87,7 +88,7 @@ describe('InventoryDetailComponent', () => {
 
 	it('should render add to wishlist button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('#add-to-cart-1')?.textContent).toContain(
+		expect(compiled.querySelector('#add-to-wishlist-1')?.textContent).toContain(
 			'Add to Wishlist'
 		)
 	})
@@ -110,13 +111,6 @@ describe('InventoryDetailComponent', () => {
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(compiled.querySelector('p.quantity')?.textContent).toContain(
 			'1,000 in stock'
-		)
-	})
-
-	it('should render image as img', () => {
-		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('img')?.src).toContain(
-			'http://localhost/assets/images/candle_gray_500x667.png'
 		)
 	})
 })

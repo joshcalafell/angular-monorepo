@@ -24,11 +24,18 @@ import { LINKS } from './header.nav.links'
 export class AppComponent {
 	title = 'Genesis Candles'
 
+	loggedIn = false
+
 	links: AppLink[] = LINKS
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	trackByFn(index: number, item: unknown): number {
 		// console.log('trackByFn', index, item)
 		return index
+	}
+
+	loginHandler(): void {
+		console.log('loginHandler')
+		this.loggedIn = !this.loggedIn
 	}
 }
