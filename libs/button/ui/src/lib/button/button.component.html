@@ -1,1 +1,9 @@
-{{ 'Hi' }}
+<button
+	[id]="buttonId"
+	[type]="buttonType"
+	[disabled]="buttonDisabled"
+	[ngClass]="buttonClass"
+	(click)="buttonOnClickHandler($event)"
+>
+	<span *ngIf="buttonDisabled"> {{ buttonText }}</span>
+</button>

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+$bg-opacity: 1;
+
+$white: #fff;
+$black: #000;
+$purple: #c994f1;
+$green: #9dedb0;
+$gray-dark: #343a40;
+$gray: #6c757d;
+
+$font-size: 1rem;
+$font-family: 'Inter', sans-serif;
+
+$padding-regular: 1rem;
+$padding-small: 0.5rem;
+
+$border-radius: 3px;
+
+$primary: $purple;
+$secondary: $white;
+$tertiary: $green;
+
+$border: 1px solid $gray-dark;
+
+button {
+	@include mixin('max-height', '40px');
+	@include mixin('margin-top', '16px');
+	border-radius: $border-radius;
+	border: $border;
+	padding-top: $padding-small;
+	padding-bottom: $padding-small;
+	padding-left: $padding-regular;
+	padding-right: $padding-regular;
+	font-size: $font-size;
+
+	&:last-child {
+		@include mixin('margin-right', '16px');
+	}
+
+	&.primary {
+		@include mixin('background-color', '$primary');
+		@include mixin('color', '$white');
+	}
+
+	&.secondary {
+		@include mixin('background-color', '$secondary');
+		@include mixin('color', '$white');
+	}
+
+	&.tertiary {
+		@include mixin('background-color', '$tertiary');
+		@include mixin('color', '$white');
+	}
+}
