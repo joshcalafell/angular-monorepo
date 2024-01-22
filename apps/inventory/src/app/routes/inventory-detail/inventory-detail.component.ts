@@ -20,13 +20,13 @@ export class InventoryDetailComponent implements OnInit {
 
 	item: InventoryItem = {} as InventoryItem
 
-	sampleDate: string = new Date('12/31/2023').toISOString()
+	sampleDate: string = new Date('12/31/2049').toISOString()
 
 	ngOnInit(): void {
 		const { id } = this.activatedRoute.snapshot.params
 		try {
 			const found = this.inventoryService.getItem(id) || ({} as InventoryItem)
-			if (found?.id) this.item = found
+			if (found.id) this.item = found
 			else throw new Error('Item not found')
 		} catch (error) {
 			this.router.navigate(['/404'])

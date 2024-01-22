@@ -3,6 +3,7 @@ import { InventoryItemComponent } from './inventory-item.component'
 import { RouterTestingModule } from '@angular/router/testing'
 import { ActivatedRoute } from '@angular/router'
 import { InventoryItem } from '../../service/inventory/inventory.model'
+import { ButtonComponent } from '@angular-monorepo/button'
 
 describe('InventoryItemComponent', () => {
 	let component: InventoryItemComponent
@@ -39,7 +40,11 @@ describe('InventoryItemComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [InventoryItemComponent, RouterTestingModule.withRoutes([])],
+			imports: [
+				InventoryItemComponent,
+				RouterTestingModule.withRoutes([]),
+				ButtonComponent,
+			],
 			providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],
 		}).compileComponents()
 

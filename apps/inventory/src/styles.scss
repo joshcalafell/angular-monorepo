@@ -6,7 +6,7 @@
 @import './styles/mixin';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton:wght@100;300;400;500;600;700;800&display=swap');
 
 * {
@@ -63,7 +63,7 @@ h1 {
 h2 {
 	margin: 16px;
 	font-size: 20px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Inter', sans-serif;
 	text-decoration: none;
 	font-weight: 600;
 	.title-link {

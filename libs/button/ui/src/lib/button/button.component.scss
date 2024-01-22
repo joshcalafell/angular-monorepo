@@ -1,27 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-$bg-opacity: 0;
+$bg-opacity: 1;
 
 $white: #fff;
 $black: #000;
-$purple: #c994f1;
-$green: #9dedb0;
-$orange: #f56b6b;
 $gray-dark: #343a40;
 $gray: #6c757d;
 
-$font-size: 1rem;
-$font-family: 'Poppins', sans-serif;
-$font-weight: 700;
+$purple: rgb(143, 101, 233);
+$green: #9dedb0;
+$orange: #f56b6b;
 
-$padding-regular: 16px;
+$font-size: 0.96rem;
+$font-family: 'Inter', sans-serif;
+$font-weight: 500;
+
+$padding-regular: 12px;
 $padding-small: 0.5rem;
 
 $border-radius: 5px;
 $margin-regular: 16px;
 
-$primary: $purple;
-$secondary: $white;
+$primary: $white;
+$secondary: $purple;
 $tertiary: $green;
 
 $border: 2px solid $black;
@@ -42,6 +43,7 @@ button {
 	padding-left: $padding-regular;
 	padding-right: $padding-regular;
 	font-size: $font-size;
+	font-weight: $font-weight;
 	margin-left: $margin-regular;
 
 	&:not(:first-child) {
@@ -49,23 +51,23 @@ button {
 	}
 
 	&.primary {
-		@include mixin('background-color', '$primary');
-		@include mixin('color', '$white');
+		@include mixin('background-color', $primary);
+		@include mixin('color', $black);
 	}
 
 	&.secondary {
-		@include mixin('background-color', '$secondary');
-		@include mixin('color', '$white');
+		@include mixin('background-color', $secondary);
+		@include mixin('color', $white);
 	}
 
 	&.tertiary {
-		@include mixin('background-color', '$tertiary');
-		@include mixin('color', '$white');
+		@include mixin('background-color', $tertiary);
+		@include mixin('color', $white);
 	}
 }
 
 button {
-	width: 175px;
+	width: 155px;
 }
 
 button:not(:first-child) {

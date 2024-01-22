@@ -18,6 +18,17 @@ const mockItem: InventoryItem = {
 	description: 'test',
 	price: 1,
 	quantity: 1,
+	imageUrl: '',
+	inventoryDate: '',
+	starRating: 0,
+	starRatingCount: 0,
+	inventoryStatus: 'InStock',
+	dimensions: '',
+	waxType: '',
+	weight: '',
+	wickType: '',
+	burnTime: '',
+	inCart: false,
 }
 
 export const Primary: Story = {

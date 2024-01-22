@@ -1,6 +1,6 @@
 export const data = JSON.stringify([
 	{
-		id: 0,
+		id: 1,
 		name: 'Driftwood',
 		description: 'Sample candle description',
 		price: 47,
@@ -18,7 +18,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 1,
+		id: 2,
 		name: 'Twisted Peppermint',
 		description: 'Sample candle description',
 		price: 83,
@@ -26,7 +26,7 @@ export const data = JSON.stringify([
 		inventoryDate: '2023-12-31T08:00:00.000Z',
 		starRating: 4,
 		starRatingCount: 21,
-		quantity: 97,
+		quantity: 0,
 		inventoryStatus: 'InStock',
 		dimensions: '3x3x5in',
 		waxType: 'Cotton, Hemp',
@@ -36,7 +36,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 2,
+		id: 3,
 		name: 'Spiced Apple Toddy',
 		description: 'Sample candle description',
 		price: 53,
@@ -54,7 +54,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 3,
+		id: 4,
 		name: 'Tiki Beach',
 		description: 'Sample candle description',
 		price: 93,
@@ -72,7 +72,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 4,
+		id: 5,
 		name: 'Lemon Mint Leaf',
 		description: 'Sample candle description',
 		price: 45,
@@ -80,7 +80,7 @@ export const data = JSON.stringify([
 		inventoryDate: '2023-12-31T08:00:00.000Z',
 		starRating: 0,
 		starRatingCount: 75,
-		quantity: 22,
+		quantity: 3,
 		inventoryStatus: 'InStock',
 		dimensions: '3x3x5in',
 		waxType: 'Cotton, Hemp',
@@ -90,7 +90,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 5,
+		id: 6,
 		name: 'Marshmallow Fireside',
 		description: 'Sample candle description',
 		price: 29,
@@ -108,7 +108,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 6,
+		id: 7,
 		name: 'Buttercream',
 		description: 'Sample candle description',
 		price: 2,
@@ -126,7 +126,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 7,
+		id: 8,
 		name: 'Cherry Blossom',
 		description: 'Sample candle description',
 		price: 83,
@@ -144,7 +144,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 8,
+		id: 9,
 		name: 'Rose Water & Ivy',
 		description: 'Sample candle description',
 		price: 66,
@@ -152,7 +152,7 @@ export const data = JSON.stringify([
 		inventoryDate: '2023-12-31T08:00:00.000Z',
 		starRating: 0,
 		starRatingCount: 1,
-		quantity: 51,
+		quantity: 0,
 		inventoryStatus: 'InStock',
 		dimensions: '3x3x5in',
 		waxType: 'Cotton, Hemp',
@@ -162,7 +162,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 9,
+		id: 10,
 		name: 'Orange Blossom',
 		description: 'Sample candle description',
 		price: 50,
@@ -180,7 +180,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 10,
+		id: 11,
 		name: 'Blueberry Scone',
 		description: 'Sample candle description',
 		price: 50,
@@ -198,7 +198,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 11,
+		id: 12,
 		name: 'Pink Petal Tea Cake',
 		description: 'Sample candle description',
 		price: 49,
@@ -216,7 +216,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 12,
+		id: 13,
 		name: 'Verbena Waters',
 		description: 'Sample candle description',
 		price: 16,
@@ -234,7 +234,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 13,
+		id: 14,
 		name: 'Pink Sands',
 		description: 'Sample candle description',
 		price: 61,
@@ -252,7 +252,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 14,
+		id: 15,
 		name: 'Lemon Verbena',
 		description: 'Sample candle description',
 		price: 63,
@@ -270,7 +270,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 15,
+		id: 16,
 		name: 'Fresh Strawberry Tart',
 		description: 'Sample candle description',
 		price: 8,
@@ -288,7 +288,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 16,
+		id: 17,
 		name: 'Vanilla Pumpkin Marshmallow',
 		description: 'Sample candle description',
 		price: 18,
@@ -306,7 +306,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 17,
+		id: 18,
 		name: 'Chocolate Layer Cake',
 		description: 'Sample candle description',
 		price: 53,
@@ -324,7 +324,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 18,
+		id: 19,
 		name: 'Napa Valley Sunset',
 		description: 'Sample candle description',
 		price: 52,
@@ -342,7 +342,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 19,
+		id: 20,
 		name: 'Sun-Drenched Apricot Rose',
 		description: 'Sample candle description',
 		price: 76,
@@ -360,7 +360,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 20,
+		id: 21,
 		name: 'Sparkling Icicles',
 		description: 'Sample candle description',
 		price: 22,
@@ -378,7 +378,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 21,
+		id: 22,
 		name: 'Red Velvet Cupcake',
 		description: 'Sample candle description',
 		price: 41,
@@ -396,7 +396,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 22,
+		id: 23,
 		name: 'Brown Sugar & Cinnamon',
 		description: 'Sample candle description',
 		price: 4,
@@ -414,7 +414,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 23,
+		id: 24,
 		name: 'Mango Peach Salsa',
 		description: 'Sample candle description',
 		price: 4,
@@ -432,7 +432,7 @@ export const data = JSON.stringify([
 		inCart: false,
 	},
 	{
-		id: 24,
+		id: 25,
 		name: 'Blueberry Scone',
 		description: 'Sample candle description',
 		price: 30,

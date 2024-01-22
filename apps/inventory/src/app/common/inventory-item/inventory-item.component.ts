@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common'
 import { Component, Input } from '@angular/core'
 import { RouterLink } from '@angular/router'
 import { InventoryItem } from '../../service/inventory/inventory.model'
+import { ButtonComponent } from '@angular-monorepo/button'
 
 @Component({
 	selector: 'angular-monorepo-inventory-item',
 	standalone: true,
-	imports: [CommonModule, RouterLink],
+	imports: [CommonModule, RouterLink, ButtonComponent],
 	templateUrl: './inventory-item.component.html',
 	styleUrls: ['./inventory-item.component.scss'],
 })
