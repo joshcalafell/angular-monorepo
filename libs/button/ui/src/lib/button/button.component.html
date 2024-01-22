@@ -3,7 +3,6 @@
 	[type]="buttonType"
 	[disabled]="buttonDisabled"
 	[ngClass]="buttonClass"
-	(click)="buttonOnClickHandler($event)"
 >
-	<span *ngIf="buttonDisabled"> {{ buttonText }}</span>
+	<span *ngIf="buttonText"> {{ buttonText }}</span>
 </button>

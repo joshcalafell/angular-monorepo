@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common'
 import { Component, OnChanges, SimpleChanges, inject } from '@angular/core'
 import { InventoryItem } from '../../service/inventory/inventory.model'
 import { InventoryService } from '../../service/inventory/inventory.service'
+import { ButtonComponent } from '@angular-monorepo/button'
 
 @Component({
 	selector: 'angular-monorepo-cart-page',
 	standalone: true,
-	imports: [CommonModule, CartComponent],
+	imports: [CommonModule, CartComponent, ButtonComponent],
 	templateUrl: './cart-page.component.html',
 	styleUrls: ['./cart-page.component.scss'],
 })
@@ -40,5 +41,11 @@ export class CartPageComponent implements OnChanges {
 			(acc, item) => acc + Number(item.price),
 			0
 		)
+	}
+
+	clearCartHandler() {
+		console.log('clearCartHandler')
+		this.inventoryService.clearCart()
+		setTimeout(() => this.updateTemplateTemp(), 1.33)
 	}
 }

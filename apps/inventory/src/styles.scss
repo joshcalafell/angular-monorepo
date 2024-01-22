@@ -91,11 +91,3 @@ h2 {
 	min-height: calc(100vh + 64px) !important;
 	margin-bottom: 64px;
 }
-
-button {
-	width: 175px;
-}
-
-button:not(:first-child) {
-	margin-left: 16px;
-}

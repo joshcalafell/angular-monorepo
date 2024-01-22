@@ -1,31 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-$bg-opacity: 1;
+$bg-opacity: 0;
 
 $white: #fff;
 $black: #000;
 $purple: #c994f1;
 $green: #9dedb0;
+$orange: #f56b6b;
 $gray-dark: #343a40;
 $gray: #6c757d;
 
 $font-size: 1rem;
-$font-family: 'Inter', sans-serif;
+$font-family: 'Poppins', sans-serif;
+$font-weight: 700;
 
-$padding-regular: 1rem;
+$padding-regular: 16px;
 $padding-small: 0.5rem;
 
-$border-radius: 3px;
+$border-radius: 5px;
+$margin-regular: 16px;
 
 $primary: $purple;
 $secondary: $white;
 $tertiary: $green;
 
-$border: 1px solid $gray-dark;
+$border: 2px solid $black;
+
+@mixin mixin($property, $value) {
+	#{$property}: $value;
+}
 
 button {
 	@include mixin('max-height', '40px');
 	@include mixin('margin-top', '16px');
+	@include mixin('font-family', $font-family);
+
 	border-radius: $border-radius;
 	border: $border;
 	padding-top: $padding-small;
@@ -33,9 +42,10 @@ button {
 	padding-left: $padding-regular;
 	padding-right: $padding-regular;
 	font-size: $font-size;
+	margin-left: $margin-regular;
 
-	&:last-child {
-		@include mixin('margin-right', '16px');
+	&:not(:first-child) {
+		margin-left: 0px;
 	}
 
 	&.primary {
@@ -52,4 +62,12 @@ button {
 		@include mixin('background-color', '$tertiary');
 		@include mixin('color', '$white');
 	}
+}
+
+button {
+	width: 175px;
+}
+
+button:not(:first-child) {
+	margin-left: 16px;
 }

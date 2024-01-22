@@ -1,4 +1,4 @@
-<header class="header flex flex-row items-center justify-between pt-4 px-4">
+<header class="header flex flex-row items-center justify-between pt-4">
 	<hgroup class="flex items-center">
 		<h1>Candle Company</h1>
 
@@ -17,11 +17,12 @@
 	</hgroup>
 
 	<hgroup class="hidden md:flex">
-		<button
-			class="p-3 bg-white-700 hover:bg-white-800 text-black font-semibold py-2 px-3 rounded outline focus:shadow-outline"
-			id="btn-login"
-		>
-			<span>Login / Sign Up</span>
-		</button>
+		<angular-monorepo-button
+			[buttonDisabled]="false"
+			[buttonId]="'btn-login'"
+			[buttonText]="'Login / Sign Up'"
+			[buttonClass]="'primary'"
+			[buttonType]="'button'"
+		></angular-monorepo-button>
 	</hgroup>
 </header>

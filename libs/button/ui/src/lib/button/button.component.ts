@@ -9,16 +9,13 @@ import { CommonModule } from '@angular/common'
 	styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit, OnDestroy {
-	@Input() buttonText: string = 'Button'
-	@Input() buttonType: string = 'button'
-	@Input() buttonClass: string = 'btn btn-primary'
-	@Input() buttonDisabled: boolean = false
-	@Input() buttonId: string = ''
-	@Input() buttonOnClick: (event: Event) => void = () => {}
+	@Input() buttonText?: string = 'Button'
+	@Input() buttonType?: string = 'button'
+	@Input() buttonClass?: string = 'btn btn-primary'
+	@Input() buttonDisabled?: boolean = false
+	@Input() buttonId?: string = ''
 
-	constructor() {
-		this.buttonOnClick = () => {}
-	}
+	constructor() {}
 
 	ngOnInit(): void {
 		this.buttonText = this.buttonText || 'Button'
@@ -26,7 +23,6 @@ export class ButtonComponent implements OnInit, OnDestroy {
 		this.buttonClass = this.buttonClass || 'primary'
 		this.buttonDisabled = this.buttonDisabled || false
 		this.buttonId = this.buttonId || ''
-		this.buttonOnClick = this.buttonOnClick || (() => {})
 	}
 
 	ngOnDestroy(): void {
@@ -35,10 +31,5 @@ export class ButtonComponent implements OnInit, OnDestroy {
 		this.buttonClass = ''
 		this.buttonDisabled = false
 		this.buttonId = ''
-		this.buttonOnClick = () => {}
-	}
-
-	buttonOnClickHandler(event: Event) {
-		this.buttonOnClick(event)
 	}
 }

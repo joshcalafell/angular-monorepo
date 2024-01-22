@@ -20,6 +20,11 @@ export class InventoryService {
 		console.log('[InventoryService] addToCart', item)
 	}
 
+	clearCart() {
+		this.cart = []
+		console.log('[InventoryService] clearCart')
+	}
+
 	removeFromCart(id: number) {
 		console.log('[InventoryService] removeFromCart', id)
 		const idx = Number(this.cart.findIndex((item) => item.id == id))

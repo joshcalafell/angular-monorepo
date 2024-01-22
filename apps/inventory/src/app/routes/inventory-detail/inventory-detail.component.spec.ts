@@ -5,6 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing'
 import { InventoryItem } from '../../service/inventory/inventory.model'
 import { InventoryDetailComponent } from './inventory-detail.component'
 import { InventoryService } from '../../service/inventory/inventory.service'
+import { ButtonComponent } from '@angular-monorepo/button'
 
 describe('InventoryDetailComponent', () => {
 	let component: InventoryDetailComponent
@@ -22,7 +23,7 @@ describe('InventoryDetailComponent', () => {
 
 	const mockItem: InventoryItem = {
 		id: 1,
-		name: 'Test Item',
+		name: 'Rainbow Sunset',
 		description: 'Test Description',
 		price: 100,
 		quantity: 1000,
@@ -52,7 +53,11 @@ describe('InventoryDetailComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [RouterTestingModule.withRoutes([]), InventoryDetailComponent],
+			imports: [
+				RouterTestingModule.withRoutes([]),
+				InventoryDetailComponent,
+				ButtonComponent,
+			],
 			providers: [
 				{ provide: ActivatedRoute, useValue: fakeActivatedRoute },
 				{ provide: InventoryItem, useValue: mockService },
@@ -75,21 +80,23 @@ describe('InventoryDetailComponent', () => {
 
 	it('should render add to cart button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(
-			compiled.querySelector('button#btn-add-to-cart')?.textContent
-		).toContain('Add to Cart')
+		expect(compiled.querySelector('#add-to-cart-1')?.textContent).toContain(
+			'Add to Cart'
+		)
 	})
 
 	it('should render add to wishlist button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(
-			compiled.querySelector('button#btn-add-to-wishlist')?.textContent
-		).toContain('Add to Wishlist')
+		expect(compiled.querySelector('#add-to-cart-1')?.textContent).toContain(
+			'Add to Wishlist'
+		)
 	})
 
 	it('should render name as h2', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('h2')?.textContent).toContain('Test Item')
+		expect(compiled.querySelector('h2')?.textContent).toContain(
+			'Rainbow Sunset'
+		)
 	})
 
 	it('should render price as p', () => {
