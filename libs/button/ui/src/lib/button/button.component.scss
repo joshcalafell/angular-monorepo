@@ -27,6 +27,8 @@ $tertiary: $green;
 
 $border: 1px solid $black;
 
+$width-btn: 155px;
+
 @mixin mixin($property, $value) {
 	#{$property}: $value;
 }
@@ -45,10 +47,17 @@ button {
 	font-size: $font-size;
 	font-weight: $font-weight;
 	margin-left: $margin-regular;
+	width: $width-btn;
+  transition: all 0.3s ease-in-out;
+
+  cursor: pointer;
 
 	&:not(:first-child) {
-		margin-left: 0px;
+		margin-left: 0;
 	}
+
+  &:not(:first-child) {
+    margin-left: $margin-regular;
 
 	&.primary {
 		@include mixin('background-color', $primary);
@@ -64,12 +73,4 @@ button {
 		@include mixin('background-color', $tertiary);
 		@include mixin('color', $white);
 	}
-}
-
-button {
-	width: 155px;
-}
-
-button:not(:first-child) {
-	margin-left: 16px;
 }
