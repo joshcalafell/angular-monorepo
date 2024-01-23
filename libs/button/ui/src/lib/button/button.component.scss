@@ -13,7 +13,7 @@ $orange: #f56b6b;
 
 $font-size: 0.96rem;
 $font-family: 'Inter', sans-serif;
-$font-weight: 500;
+$font-weight: 400;
 
 $padding-regular: 12px;
 $padding-small: 0.5rem;
@@ -25,7 +25,7 @@ $primary: $white;
 $secondary: $purple;
 $tertiary: $green;
 
-$border: 2px solid $black;
+$border: 1px solid $black;
 
 @mixin mixin($property, $value) {
 	#{$property}: $value;
