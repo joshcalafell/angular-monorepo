@@ -36,6 +36,7 @@ describe('InventoryItemComponent', () => {
 		wickType: 'Test Wick Type',
 		burnTime: '1hr',
 		inCart: false,
+		quantityInCart: 0,
 	}
 
 	beforeEach(async () => {

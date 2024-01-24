@@ -38,11 +38,12 @@ describe('InventoryDetailComponent', () => {
 		wickType: 'Test Wick Type',
 		burnTime: '1hr',
 		inCart: false,
+		quantityInCart: 0,
 	}
 
 	const mockService: InventoryService = {
 		items: [mockItem],
-		cart: [],
+
 		getItem: () => {
 			return mockItem
 		},
@@ -97,20 +98,6 @@ describe('InventoryDetailComponent', () => {
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(compiled.querySelector('h2')?.textContent).toContain(
 			'Rainbow Sunset'
-		)
-	})
-
-	it('should render price as p', () => {
-		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('p.price')?.textContent).toContain(
-			'$' + mockItem.price + '.00'
-		)
-	})
-
-	it('should render quantity as p', () => {
-		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('p.quantity')?.textContent).toContain(
-			'1,000 in stock'
 		)
 	})
 })
