@@ -12,10 +12,18 @@
 				<!-- Add to Cart Button -->
 
 				<angular-monorepo-button
+					(click)="addToCart(item)"
+					[buttonId]="'btn-add-item-' + item.id"
+					[buttonText]="'Add'"
+					[buttonClass]="'btn secondary small'"
+					[buttonType]="'button'"
+				></angular-monorepo-button>
+
+				<angular-monorepo-button
 					[routerLink]="['/inventory/detail', item.id]"
 					[buttonId]="'btn-see-details-' + item.id"
-					[buttonText]="'See Details'"
-					[buttonClass]="'btn secondary'"
+					[buttonText]="'Details'"
+					[buttonClass]="'btn primary small'"
 					[buttonType]="'button'"
 				></angular-monorepo-button>
 			</div>

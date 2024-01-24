@@ -48,16 +48,17 @@ button {
 	font-weight: $font-weight;
 	margin-left: $margin-regular;
 	width: $width-btn;
-  transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 
-  cursor: pointer;
+	cursor: pointer;
 
 	&:not(:first-child) {
 		margin-left: 0;
 	}
 
-  &:not(:first-child) {
-    margin-left: $margin-regular;
+	&:not(:first-child) {
+		margin-left: $margin-regular;
+	}
 
 	&.primary {
 		@include mixin('background-color', $primary);
@@ -72,5 +73,12 @@ button {
 	&.tertiary {
 		@include mixin('background-color', $tertiary);
 		@include mixin('color', $white);
+	}
+
+	.small {
+		@include mixin('max-height', '30px');
+		@include mixin('margin-top', '8px');
+		@include mixin('font-size', '0.8rem');
+		width: 80px !important;
 	}
 }

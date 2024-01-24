@@ -34,7 +34,7 @@ export class OrdersPageComponent implements OnInit {
 
 	sortedByIdAsc = true
 	sortedByTotalAsc = true
-	sortedByNameAsc = true
+
 	sortedByDateAsc = true
 	sortedByStatus = true
 
@@ -50,13 +50,7 @@ export class OrdersPageComponent implements OnInit {
 			sortDirections: ['asc', 'desc'],
 			sortFn: () => this.sortOrdersById(),
 		},
-		{
-			title: 'Customer Name',
-			column_key: 'customer_name',
-			sortable: true,
-			sortDirections: ['asc', 'desc'],
-			sortFn: () => this.sortOrdersByName(),
-		},
+
 		{
 			title: 'Order Date',
 			column_key: 'order_date',
@@ -93,20 +87,6 @@ export class OrdersPageComponent implements OnInit {
 			return this.sortedByIdAsc
 				? a.id.localeCompare(b.id)
 				: b.id.localeCompare(a.id)
-		})
-	}
-
-	sortOrdersByName() {
-		this.lastSortedBy = 'customer_name'
-		this.sortedByNameAsc = !this.sortedByNameAsc
-		this.items.sort((a, b) => {
-			return this.sortedByNameAsc
-				? a.customer_name
-						.split(' ')[1]
-						.localeCompare(b.customer_name.split(' ')[1])
-				: b.customer_name
-						.split(' ')[1]
-						.localeCompare(a.customer_name.split(' ')[1])
 		})
 	}
 

@@ -8,7 +8,6 @@
 				[routerLink]="['/orders/detail', order?.id]"
 			>
 				<td>{{ order.id }}</td>
-				<td>{{ order.customer_name }}</td>
 				<td>{{ order.order_date | date }}</td>
 				<td>{{ order.order_status }}</td>
 				<td>{{ order.order_total | currency }}</td>
