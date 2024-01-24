@@ -9,7 +9,7 @@
 			>
 				<td>{{ order.id }}</td>
 				<td>{{ order.order_date | date }}</td>
-				<td>{{ order.order_status }}</td>
+				<td>{{ order.order_status | fromCamel }}</td>
 				<td>{{ order.order_total | currency }}</td>
 			</tr>
 		</angular-monorepo-table-sort>

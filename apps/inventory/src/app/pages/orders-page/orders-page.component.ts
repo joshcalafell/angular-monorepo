@@ -4,6 +4,7 @@ import { Component, OnInit, inject } from '@angular/core'
 import { RouterLink, RouterLinkActive } from '@angular/router'
 import { Order } from '../../service/orders/order.model'
 import { OrdersService } from '../../service/orders/orders.service'
+import { FromCamelPipe } from '../../pipes/from-camel/from-camel.pipe'
 
 export type DisplayColumns =
 	| 'id'
@@ -24,7 +25,13 @@ export interface Column {
 @Component({
 	selector: 'angular-monorepo-orders-page',
 	standalone: true,
-	imports: [CommonModule, RouterLink, TableSortComponent, RouterLinkActive],
+	imports: [
+		CommonModule,
+		RouterLink,
+		TableSortComponent,
+		RouterLinkActive,
+		FromCamelPipe,
+	],
 	templateUrl: './orders-page.component.html',
 	styleUrls: ['./orders-page.component.scss'],
 })
