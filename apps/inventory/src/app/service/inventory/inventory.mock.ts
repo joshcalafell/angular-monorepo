@@ -16,6 +16,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 2,
@@ -34,6 +35,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 3,
@@ -52,6 +54,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 4,
@@ -70,6 +73,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 5,
@@ -88,6 +92,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 6,
@@ -106,6 +111,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 7,
@@ -124,6 +130,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 8,
@@ -142,6 +149,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 9,
@@ -160,6 +168,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 10,
@@ -178,6 +187,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 11,
@@ -196,6 +206,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 12,
@@ -214,6 +225,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 13,
@@ -232,6 +244,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 14,
@@ -250,6 +263,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 15,
@@ -268,6 +282,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 16,
@@ -286,6 +301,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 17,
@@ -304,6 +320,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 18,
@@ -322,6 +339,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 19,
@@ -340,6 +358,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 20,
@@ -358,6 +377,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 21,
@@ -376,6 +396,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 22,
@@ -394,6 +415,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 23,
@@ -412,6 +434,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 24,
@@ -430,6 +453,7 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 	{
 		id: 25,
@@ -448,5 +472,6 @@ export const data = JSON.stringify([
 		wickType: 'Lead-Free Cotton',
 		burnTime: '30-35 hours',
 		inCart: false,
+		quantityInCart: 0,
 	},
 ])

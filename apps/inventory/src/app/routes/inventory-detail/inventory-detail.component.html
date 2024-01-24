@@ -1,11 +1,19 @@
-<div class="max-w-2xl mx-auto p-2" *ngIf="item && item.id >= 0">
-	<div class="flex items-center justify-start mb-4">
-		<h2 class="text-2xl font-semibold pl-0 ml-0">{{ item.name }}</h2>
-		<div class="spacer"></div>
-		<div class="flex flex-row justify-end ml-0 pl-0">
+<div class="py-3 px-0 ml-4" *ngIf="item && item.id >= 0">
+	<div class="flex mb-4 justify-between">
+		<h2 class="text-xl font-semibold pl-0 ml-0">{{ item.name }}</h2>
+
+		<div class="flex justify-center items-center ml-0 pl-0">
 			<angular-monorepo-button
+				*ngIf="item.quantity === 0"
 				(click)="addToCart(item)"
-				[buttonDisabled]="item.quantity === 0"
+				[buttonId]="'add-backorder-' + item.id"
+				[buttonText]="'Backorder'"
+				[buttonClass]="'tertiary'"
+				[buttonType]="'button'"
+			></angular-monorepo-button>
+			<angular-monorepo-button
+				*ngIf="item.quantity > 0"
+				(click)="addToCart(item)"
 				[buttonId]="'add-to-cart-' + item.id"
 				[buttonText]="'Add to Cart'"
 				[buttonClass]="'secondary'"
@@ -13,37 +21,71 @@
 			></angular-monorepo-button>
 			<angular-monorepo-button
 				(click)="addToWishlist(item)"
-				[buttonDisabled]="item.quantity === 0"
 				[buttonId]="'add-to-wishlist-' + item.id"
-				[buttonText]="'Add to Wishlist'"
+				[buttonText]="'Wishlist'"
 				[buttonClass]="'primary'"
 				[buttonType]="'button'"
 			></angular-monorepo-button>
 		</div>
 	</div>
+</div>
 
-	<div class="flex mb-4">
-		<img
-			[src]="'assets/images/candle_gray_500x667.png'"
-			class="h-48 w-48 object-cover rounded mr-4"
-		/>
+<div class="flex justify-center items-start">
+	<img
+		[src]="'assets/images/candle_gray_500x667.png'"
+		class="object-cover rounded mr-4"
+	/>
 
-		<div class="mb-4 px-4">
-			<p class="text-lg font-semibold price">{{ item.price | currency }}</p>
+	<table class="mt-2 ml-4 inventory-table">
+		<tr>
+			<td>
+				<span class="text-xl p-3 rounded bg-yellow-200 text-black-400">{{
+					item.price | currency
+				}}</span>
+			</td>
+		</tr>
 
-			<p class="text-gray-600">Dimensions: {{ item.dimensions }}</p>
-			<p class="text-gray-600">Wax Type: {{ item.waxType }}</p>
-			<!-- Add more details as needed -->
+		<br />
 
-			<p class="text-gray-600">
-				Inventory Date: {{ item.inventoryDate | date }}
-			</p>
-			<p class="text-gray-600 quantity">
-				{{ item.quantity | number }} in stock
-			</p>
-			<p class="text-gray-600">Inventory Status: {{ item.inventoryStatus }}</p>
-		</div>
-	</div>
+		<tr class="mt-4 pt-4">
+			<th>{{ item.description }}</th>
+		</tr>
+
+		<br />
+
+		<tr>
+			<td>Dimensions:</td>
+			<td>{{ item.dimensions }}</td>
+		</tr>
+
+		<tr>
+			<td>Weight:</td>
+			<td>{{ item.weight }}</td>
+		</tr>
+
+		<tr>
+			<td>Wick Type:</td>
+			<td>{{ item.wickType }}</td>
+		</tr>
+
+		<tr>
+			<td>Wax Type:</td>
+			<td>{{ item.waxType }}</td>
+		</tr>
+
+		<tr>
+			<td>In Stock:</td>
+			<td>{{ item.quantity | number }}</td>
+		</tr>
+		<tr>
+			<td>In Cart:</td>
+			<td>
+				{{
+					item.quantityInCart === 0 ? 'None' : (item.quantityInCart | number)
+				}}
+			</td>
+		</tr>
+	</table>
 
 	<!-- Add more details as needed -->
 </div>

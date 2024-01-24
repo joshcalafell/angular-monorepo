@@ -13,16 +13,12 @@ import { ButtonComponent } from '@angular-monorepo/button'
 	styleUrls: ['./cart-page.component.scss'],
 })
 export class CartPageComponent implements OnChanges {
-	cartItems: InventoryItem[] = []
+	items: InventoryItem[] = []
 	inventoryService = inject(InventoryService)
 	total = 0
 
 	constructor() {
-		this.cartItems = this.inventoryService.cart
-		this.total = this.inventoryService.cart.reduce(
-			(acc, item) => acc + Number(item.price),
-			0
-		)
+		this.updateTemplateTemp()
 	}
 
 	ngOnChanges(changes: SimpleChanges): void {
@@ -36,11 +32,10 @@ export class CartPageComponent implements OnChanges {
 	}
 
 	updateTemplateTemp() {
-		this.cartItems = this.inventoryService.cart
-		this.total = this.inventoryService.cart.reduce(
-			(acc, item) => acc + Number(item.price),
-			0
+		this.items = this.inventoryService.items.filter(
+			(item) => item.quantityInCart > 0
 		)
+		this.total = this.items.reduce((acc, item) => acc + Number(item.price), 0)
 	}
 
 	clearCartHandler() {

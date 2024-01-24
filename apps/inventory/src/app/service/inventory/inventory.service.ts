@@ -6,7 +6,7 @@ import { data } from './inventory.mock'
 })
 export class InventoryService {
 	items: InventoryItem[] = JSON.parse(data)
-	cart: InventoryItem[] = []
+
 	constructor() {
 		console.log(`'InventoryService constructor'`)
 	}
@@ -16,33 +16,26 @@ export class InventoryService {
 	}
 
 	addToCart(item: InventoryItem) {
-		this.cart.push(item)
-		console.log('[InventoryService] addToCart', item)
+		if (item.quantity > 0) {
+			item.quantity--
+			console.log('[InventoryService] addToCart', item)
+			item.quantityInCart++
+		}
 	}
 
 	clearCart() {
-		this.cart = []
-		console.log('[InventoryService] clearCart')
+		this.items.forEach((item) => {
+			if (item.inCart) {
+				item.quantity += item.quantityInCart
+			}
+		})
 	}
 
 	removeFromCart(id: number) {
-		console.log('[InventoryService] removeFromCart', id)
-		const idx = Number(this.cart.findIndex((item) => item.id == id))
-		try {
-			if (idx != 0) {
-				console.log('[InventoryService] removeFromCart', idx)
-				const newCart = [
-					...this.cart.slice(0, idx),
-					...this.cart.slice(idx + 1),
-				]
-				this.cart = newCart
-			} else if (idx == 0) {
-				console.log('[InventoryService] removeFromCart', idx)
-				const newCart = [...this.cart.slice(idx + 1)]
-				this.cart = newCart
-			} else throw new Error('Item not found')
-		} catch (error) {
-			console.log(error)
+		const item = this.getItem(id)
+		if (item) {
+			item.quantity++
+			item.quantityInCart--
 		}
 	}
 

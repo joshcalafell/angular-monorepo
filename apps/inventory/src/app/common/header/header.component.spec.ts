@@ -72,10 +72,8 @@ xdescribe('HeaderComponent', () => {
 		expect(compiled.querySelector('button')).toBeTruthy()
 	})
 
-	it('should contain button qith text "Login / Sign Up"', () => {
+	it('should contain button qith text "Login"', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('button')?.textContent).toContain(
-			'Login / Sign Up'
-		)
+		expect(compiled.querySelector('button')?.textContent).toContain('Login')
 	})
 })

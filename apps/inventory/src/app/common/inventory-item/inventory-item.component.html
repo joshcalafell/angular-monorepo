@@ -12,10 +12,20 @@
 				<!-- Add to Cart Button -->
 
 				<angular-monorepo-button
+					*ngIf="item.quantity === 0"
+					(click)="addToBackorder(item)"
+					[buttonId]="'add-backorder-' + item.id"
+					[buttonText]="'Backorder'"
+					[buttonClass]="'tertiary'"
+					[buttonType]="'button'"
+				></angular-monorepo-button>
+
+				<angular-monorepo-button
+					*ngIf="item.quantity > 0"
 					(click)="addToCart(item)"
-					[buttonId]="'btn-add-item-' + item.id"
-					[buttonText]="'Add'"
-					[buttonClass]="'btn secondary small'"
+					[buttonId]="'add-to-cart-' + item.id"
+					[buttonText]="'Add to Cart'"
+					[buttonClass]="'secondary'"
 					[buttonType]="'button'"
 				></angular-monorepo-button>
 
@@ -41,7 +51,12 @@
 									item.price | currency
 								}}</span></span
 							>
-							<span class="text-lg"> {{ item.quantity }} In Stock</span>
+							<span class="text-lg" *ngIf="item.quantity > 0">
+								{{ item.quantity }} In Stock</span
+							>
+							<span class="text-lg" *ngIf="item.quantity <= 0">
+								Out of Stock</span
+							>
 						</div>
 					</div>
 				</div>

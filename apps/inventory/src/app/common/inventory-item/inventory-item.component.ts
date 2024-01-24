@@ -20,4 +20,8 @@ export class InventoryItemComponent {
 		this.inventoryService.addToCart(item)
 		console.log('addToCart', item)
 	}
+
+	addToBackorder(item: InventoryItem): void {
+		console.log('addToBackorder', item)
+	}
 }

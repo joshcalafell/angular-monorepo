@@ -89,7 +89,7 @@ describe('InventoryDetailComponent', () => {
 	it('should render add to wishlist button', () => {
 		const compiled = fixture.nativeElement as HTMLElement
 		expect(compiled.querySelector('#add-to-wishlist-1')?.textContent).toContain(
-			'Add to Wishlist'
+			'Wishlist'
 		)
 	})
 

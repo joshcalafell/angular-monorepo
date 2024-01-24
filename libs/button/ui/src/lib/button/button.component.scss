@@ -8,14 +8,14 @@ $gray-dark: #343a40;
 $gray: #6c757d;
 
 $purple: rgb(143, 101, 233);
-$green: #9dedb0;
+$green: rgb(51, 172, 176);
 $orange: #f56b6b;
 
-$font-size: 0.96rem;
+$font-size: 0.85rem;
 $font-family: 'Inter', sans-serif;
 $font-weight: 400;
 
-$padding-regular: 12px;
+$padding-regular: 8px;
 $padding-small: 0.5rem;
 
 $border-radius: 5px;
@@ -23,10 +23,10 @@ $margin-regular: 16px;
 
 $primary: $white;
 $secondary: $purple;
-$tertiary: $green;
+$tertiary: $orange;
 
 $border: 1px solid $black;
-$width-btn: 155px;
+$width-btn: 135px;
 
 @mixin mixin($property, $value) {
 	#{$property}: $value;
