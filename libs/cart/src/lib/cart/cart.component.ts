@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
 		console.log('[Cart] ngOnInit', this.cartItems)
 		this.calculateTotal()
 	}
+
 	calculateTotal() {
 		this.total = this.cartItems.reduce(
 			(acc, item) => acc + Number(item.price) * item.quantityInCart,

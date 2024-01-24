@@ -20,7 +20,6 @@
 	<div class="flex">
 		<angular-monorepo-button
 			(click)="removeItemHandler(item)"
-			[buttonDisabled]="item.quantity === 0"
 			[buttonId]="'btn-remove-' + item.id"
 			[buttonText]="'Remove'"
 			[buttonClass]="'primary'"
@@ -29,7 +28,6 @@
 
 		<angular-monorepo-button
 			(click)="wishlistItemHandler(item)"
-			[buttonDisabled]="item.quantity === 0"
 			[buttonId]="'btn-add-to-wishlist-' + item.id"
 			[buttonText]="'Wishlist'"
 			[buttonClass]="'primary'"

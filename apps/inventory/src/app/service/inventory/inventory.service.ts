@@ -25,7 +25,7 @@ export class InventoryService {
 
 	clearCart() {
 		this.items.forEach((item) => {
-			if (item.inCart) {
+			if (item.quantityInCart > 0) {
 				item.quantity += item.quantityInCart
 			}
 		})

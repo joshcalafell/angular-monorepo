@@ -28,7 +28,7 @@ export class CartPageComponent implements OnChanges {
 	removeItemHandler(item: InventoryItem) {
 		console.log('removeItemFromCart', item)
 		this.inventoryService.removeFromCart(item.id)
-		setTimeout(() => this.updateTemplateTemp(), 1.33)
+		this.updateTemplateTemp()
 	}
 
 	updateTemplateTemp() {
@@ -41,6 +41,6 @@ export class CartPageComponent implements OnChanges {
 	clearCartHandler() {
 		console.log('clearCartHandler')
 		this.inventoryService.clearCart()
-		setTimeout(() => this.updateTemplateTemp(), 1.33)
+		this.updateTemplateTemp()
 	}
 }
