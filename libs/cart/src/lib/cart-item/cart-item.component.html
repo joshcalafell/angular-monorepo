@@ -1,4 +1,4 @@
-<div class="item flex items-center justify-between border-b py-2">
+<div class="item flex items-center justify-between border-b px-0 py-2">
 	<div class="flex items-center">
 		<img
 			[src]="'assets/images/candle_gray_500x667.png'"
@@ -14,7 +14,7 @@
 		</div>
 	</div>
 
-	<div class="flex items-center">
+	<div class="flex">
 		<angular-monorepo-button
 			(click)="removeItemHandler(item)"
 			[buttonDisabled]="item.quantity === 0"
@@ -28,7 +28,7 @@
 			[buttonDisabled]="item.quantity === 0"
 			[buttonId]="'btn-add-to-wishlist-' + item.id"
 			[buttonText]="'Add to Wishlist'"
-			[buttonClass]="'secondary'"
+			[buttonClass]="'primary'"
 			[buttonType]="'button'"
 		></angular-monorepo-button>
 	</div>
