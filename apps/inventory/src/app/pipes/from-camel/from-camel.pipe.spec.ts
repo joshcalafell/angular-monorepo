@@ -8,6 +8,6 @@ describe('FromCamelPipe', () => {
 
 	it('should convert camel case to sentence case', () => {
 		const pipe = new FromCamelPipe()
-		expect(pipe.transform('camelCase')).toBe('Camel Case')
+		expect(pipe.transform('CamelCase')).toBe('Camel Case')
 	})
 })

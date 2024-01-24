@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 import { OrdersService } from '../../service/orders/orders.service'
 import { OrdersPageComponent } from './orders-page.component'
+import { FromCamelPipe } from '../../pipes/from-camel/from-camel.pipe'
 
 describe('OrdersPageComponent', () => {
 	let component: OrdersPageComponent
@@ -48,6 +49,7 @@ describe('OrdersPageComponent', () => {
 				RouterTestingModule.withRoutes([]),
 				OrdersPageComponent,
 				TableSortComponent,
+				FromCamelPipe,
 			],
 			providers: [
 				{ provide: ActivatedRoute, useValue: fakeActivatedRoute },
