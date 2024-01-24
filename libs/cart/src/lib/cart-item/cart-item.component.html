@@ -8,7 +8,10 @@
 			<p class="name text-black-800 font-bold text-lg">
 				{{ item.name }}
 			</p>
-			<p class="price text-black-900 font-semibold">
+			<p class="name text-black-700 text-md">
+				Quantity: {{ item.quantityInCart }}
+			</p>
+			<p class="price text-black-700">
 				{{ item.price | currency }}
 			</p>
 		</div>

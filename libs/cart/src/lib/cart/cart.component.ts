@@ -20,8 +20,11 @@ export class CartComponent implements OnInit {
 
 	ngOnInit(): void {
 		console.log('[Cart] ngOnInit', this.cartItems)
+		this.calculateTotal()
+	}
+	calculateTotal() {
 		this.total = this.cartItems.reduce(
-			(acc, item) => acc + Number(item.price),
+			(acc, item) => acc + Number(item.price) * item.quantityInCart,
 			0
 		)
 	}
@@ -33,6 +36,7 @@ export class CartComponent implements OnInit {
 		// which should handle the removal logic
 		console.log('[Cart] removeItemFromCart', item)
 		this.removeItemEmitter.emit(item)
+		this.calculateTotal()
 	}
 
 	wishlistItemHandler(item: unknown): void {
