@@ -35,7 +35,7 @@ describe('InventoryItemComponent', () => {
 		weight: '1lb',
 		wickType: 'Test Wick Type',
 		burnTime: '1hr',
-		inCart: false,
+		inWishlist: false,
 		quantityInCart: 0,
 	}
 

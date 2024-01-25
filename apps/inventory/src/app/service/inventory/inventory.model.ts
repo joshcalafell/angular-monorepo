@@ -26,7 +26,7 @@ export class InventoryItem {
 		public weight: string,
 		public wickType: string,
 		public burnTime: string,
-		public inCart: boolean = false,
+		public inWishlist: boolean = false,
 		public quantityInCart: number = 0
 	) {}
 }

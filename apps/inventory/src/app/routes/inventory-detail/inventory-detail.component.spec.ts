@@ -37,20 +37,19 @@ describe('InventoryDetailComponent', () => {
 		weight: '1lb',
 		wickType: 'Test Wick Type',
 		burnTime: '1hr',
-		inCart: false,
+		inWishlist: false,
 		quantityInCart: 0,
 	}
 
 	const mockService: InventoryService = {
 		items: [mockItem],
-
-		getItem: () => {
-			return mockItem
-		},
+		getItem: () => mockItem,
 		addToCart: () => {},
 		clearCart: () => {},
 		removeFromCart: () => {},
 		addToWishlist: () => {},
+		clearWishlist: () => {},
+		removeFromWishlist: () => {},
 	}
 
 	beforeEach(async () => {

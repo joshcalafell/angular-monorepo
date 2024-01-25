@@ -1,0 +1,32 @@
+<div
+	class="item flex items-center justify-between border-b px-0 py-2"
+	*ngIf="item"
+>
+	<div class="flex items-center">
+		<img
+			[src]="'assets/images/candle_gray_500x667.png'"
+			class="h-14 w-14 object-cover rounded mr-4"
+		/>
+		<div>
+			<p class="name text-black-800 font-bold text-lg">
+				{{ item.name }}
+			</p>
+			<p class="name text-black-700 text-md">
+				Quantity: {{ item.quantityInCart }}
+			</p>
+			<p class="price text-black-700">
+				{{ item.price | currency }}
+			</p>
+		</div>
+	</div>
+
+	<div class="flex">
+		<angular-monorepo-button
+			(click)="removeItemHandler(item)"
+			[buttonId]="'btn-remove-' + item.id"
+			[buttonText]="'Remove'"
+			[buttonClass]="'primary'"
+			[buttonType]="'button'"
+		></angular-monorepo-button>
+	</div>
+</div>

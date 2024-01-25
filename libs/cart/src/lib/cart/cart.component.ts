@@ -12,19 +12,19 @@ import { CartItemComponent } from '../cart-item/cart-item.component'
 	styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
-	@Input() cartItems: any[] = []
+	@Input() items: any[] = []
 	@Input() total = 0
 
 	@Output() removeItemEmitter = new EventEmitter()
 	@Output() wishlistItemEmitter = new EventEmitter()
 
 	ngOnInit(): void {
-		console.log('[Cart] ngOnInit', this.cartItems)
+		console.log('[Cart] ngOnInit', this.items)
 		this.calculateTotal()
 	}
 
 	calculateTotal() {
-		this.total = this.cartItems.reduce(
+		this.total = this.items.reduce(
 			(acc, item) => acc + Number(item.price) * item.quantityInCart,
 			0
 		)

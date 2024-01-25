@@ -16,6 +16,10 @@ export const LINKS = [
 		label: 'Cart',
 	},
 	{
+		path: '/wishlist',
+		label: 'Wishlist',
+	},
+	{
 		path: '/orders',
 		label: 'Orders',
 	},

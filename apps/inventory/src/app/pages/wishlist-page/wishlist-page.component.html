@@ -1,0 +1,21 @@
+<section class="section-wrapper">
+	<div class="angular-monorepo-container">
+		<div class="flex flex-row flex-row justify-between">
+			<h2>Wishlist</h2>
+			<div class="flex flex-row flex-row justify-between pt-4">
+				<angular-monorepo-button
+					(click)="clearWishlistHandler()"
+					[buttonDisabled]="false"
+					[buttonId]="'btn-clear-cart'"
+					[buttonText]="'Clear Wishlist'"
+					[buttonClass]="'primary'"
+					[buttonType]="'button'"
+				></angular-monorepo-button>
+			</div>
+		</div>
+
+		<br />
+
+		<angular-monorepo-wishlist [items]="items"></angular-monorepo-wishlist>
+	</div>
+</section>

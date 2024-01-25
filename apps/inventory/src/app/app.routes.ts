@@ -7,6 +7,7 @@ import { InventoryPageComponent } from './pages/inventory-page/inventory-page.co
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component'
 import { OrdersPageComponent } from './pages/orders-page/orders-page.component'
 import { TestimonialsPageComponent } from './pages/testimonials-page/testimonials-page.component'
+import { WishlistPageComponent } from './pages/wishlist-page/wishlist-page.component'
 
 export const appRoutes: Route[] = [
 	{
@@ -33,6 +34,10 @@ export const appRoutes: Route[] = [
 	{
 		path: 'orders',
 		component: OrdersPageComponent,
+	},
+	{
+		path: 'wishlist',
+		component: WishlistPageComponent,
 	},
 	{
 		path: 'orders/detail/:id',

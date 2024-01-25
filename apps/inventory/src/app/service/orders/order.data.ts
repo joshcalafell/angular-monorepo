@@ -95,7 +95,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 			{
@@ -114,7 +114,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 		]
@@ -145,7 +145,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 			{
@@ -164,7 +164,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 		]
@@ -195,7 +195,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 			{
@@ -214,7 +214,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 		]
@@ -245,7 +245,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 			{
@@ -264,7 +264,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 		]
@@ -295,7 +295,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 			{
@@ -314,7 +314,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 		]
@@ -389,7 +389,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 			{
@@ -408,7 +408,7 @@ export const data = JSON.stringify([
 				weight: '1.5lb',
 				wickType: 'Lead-Free Cotton',
 				burnTime: '30-35 hours',
-				inCart: true,
+				inWishlist: true,
 				quantityInCart: 1,
 			},
 		]

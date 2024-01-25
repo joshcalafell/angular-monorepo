@@ -28,7 +28,8 @@ const mockItem: InventoryItem = {
 	weight: '',
 	wickType: '',
 	burnTime: '',
-	inCart: false,
+	inWishlist: false,
+	quantityInCart: 0,
 }
 
 export const Primary: Story = {

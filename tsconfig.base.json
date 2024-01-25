@@ -27,7 +27,8 @@
 			"@angular-monorepo/sort-table-ui": ["libs/sort-table/ui/src/index.ts"],
 			"@angular-monorepo/table": ["libs/table/ui/src/index.ts"],
 			"@angular-monorepo/table-sort": ["libs/table/ui/src/index.ts"],
-			"@angular-monorepo/table-ui": ["libs/table/ui/src/index.ts"]
+			"@angular-monorepo/table-ui": ["libs/table/ui/src/index.ts"],
+			"@angular-monorepo/wishlist": ["libs/wishlist/src/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]

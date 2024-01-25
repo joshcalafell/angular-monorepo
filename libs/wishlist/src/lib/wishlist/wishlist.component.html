@@ -4,7 +4,7 @@
 			<p class="text-xl font-semibold mb-4 px-0 mx-0">
 				{{
 					items.length +
-						(items.length === 1 ? ' Item in cart' : ' Items in cart')
+						(items.length === 1 ? ' Item in wishlist' : ' Items in wishlist')
 				}}
 			</p>
 
@@ -15,12 +15,12 @@
 
 		<ul id="list-cart" class="list-cart" aria-label="list-cart">
 			<li *ngFor="let item of items; let i = index" class="list-item">
-				<angular-monorepo-cart-item
+				<angular-monorepo-wishlist-item
 					[item]="item"
 					[index]="i"
 					(removeItemEmitter)="removeItemHandler($event)"
 					(wishlistItemEmitter)="wishlistItemHandler($event)"
-				></angular-monorepo-cart-item>
+				></angular-monorepo-wishlist-item>
 			</li>
 		</ul>
 
@@ -28,7 +28,7 @@
 			*ngIf="items.length === 0"
 			class="text-center text-gray-800 mb-0 text-xl mt-8"
 		>
-			Your cart is empty
+			Your wishlist is empty
 		</div>
 	</section>
 </div>

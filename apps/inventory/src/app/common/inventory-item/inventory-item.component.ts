@@ -21,6 +21,7 @@ export class InventoryItemComponent {
 		console.log('addToCart', item)
 	}
 
+	// TODO: Implement me!
 	addToBackorder(item: InventoryItem): void {
 		console.log('addToBackorder', item)
 	}

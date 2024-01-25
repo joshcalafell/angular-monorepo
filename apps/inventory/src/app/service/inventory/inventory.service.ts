@@ -31,6 +31,14 @@ export class InventoryService {
 		})
 	}
 
+	clearWishlist() {
+		this.items.forEach((item) => {
+			if (item.quantityInCart > 0) {
+				item.quantity += item.quantityInCart
+			}
+		})
+	}
+
 	removeFromCart(id: number) {
 		const item = this.getItem(id)
 		if (item) {
@@ -40,6 +48,16 @@ export class InventoryService {
 	}
 
 	addToWishlist(item: InventoryItem) {
-		console.log('[InventoryService] addToWishlist', item)
+		if (item.inWishlist === false) {
+			console.log('[InventoryService] addToWishlist', item)
+			item.inWishlist = true
+		}
+	}
+
+	removeFromWishlist(item: InventoryItem) {
+		if (item.inWishlist === true) {
+			console.log('[InventoryService] removeFromWishlist', item)
+			item.inWishlist = false
+		}
 	}
 }
